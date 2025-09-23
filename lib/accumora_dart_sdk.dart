@@ -1,11 +1,10 @@
-/// Support for doing something awesome.
-///
-/// More dartdocs go here.
-library;
+library accumora_dart_sdk;
 
-export 'amor/amor.pb.dart';
-export 'amor/amor.pbenum.dart';
-export 'amor/amor.pbgrpc.dart';
-export 'amor/amor.pbjson.dart';
-
-// TODO: Export any libraries intended for clients of this package.
+// GENERATED EXPORTS
+export 'amor/v1/amor.pb.dart';
+export 'amor/v1/amor.pbenum.dart';
+export 'amor/v1/amor.pbgrpc.dart';
+export 'amor/v1/amor.pbjson.dart';
+export 'amor/v1/types.pb.dart';
+export 'amor/v1/types.pbenum.dart';
+export 'amor/v1/types.pbjson.dart';
