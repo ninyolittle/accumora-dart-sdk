@@ -17,14 +17,11 @@ import 'dart:typed_data' as $typed_data;
 @$core.Deprecated('Use setAsLandLordRequestDescriptor instead')
 const SetAsLandLordRequest$json = {
   '1': 'SetAsLandLordRequest',
-  '2': [
-    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-  ],
 };
 
 /// Descriptor for `SetAsLandLordRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List setAsLandLordRequestDescriptor = $convert
-    .base64Decode('ChRTZXRBc0xhbmRMb3JkUmVxdWVzdBIOCgJpZBgBIAEoCVICaWQ=');
+final $typed_data.Uint8List setAsLandLordRequestDescriptor =
+    $convert.base64Decode('ChRTZXRBc0xhbmRMb3JkUmVxdWVzdA==');
 
 @$core.Deprecated('Use setAsLandLordResponseDescriptor instead')
 const SetAsLandLordResponse$json = {
@@ -184,27 +181,6 @@ final $typed_data.Uint8List updateAccommodationRequestDescriptor = $convert.base
     'IJbG9uZ2l0dWRliAEBQgcKBV9uYW1lQgsKCV9sb2NhdGlvbkIOCgxfZGVzY3JpcHRpb25CBwoF'
     'X3R5cGVCCwoJX2xhdGl0dWRlQgwKCl9sb25naXR1ZGU=');
 
-@$core.Deprecated('Use updateAccommodationResponseDescriptor instead')
-const UpdateAccommodationResponse$json = {
-  '1': 'UpdateAccommodationResponse',
-  '2': [
-    {
-      '1': 'accommodation',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.accumora_rpc.v1.Accommodation',
-      '10': 'accommodation'
-    },
-  ],
-};
-
-/// Descriptor for `UpdateAccommodationResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List updateAccommodationResponseDescriptor =
-    $convert.base64Decode(
-        'ChtVcGRhdGVBY2NvbW1vZGF0aW9uUmVzcG9uc2USRAoNYWNjb21tb2RhdGlvbhgBIAEoCzIeLm'
-        'FjY3Vtb3JhX3JwYy52MS5BY2NvbW1vZGF0aW9uUg1hY2NvbW1vZGF0aW9u');
-
 @$core.Deprecated('Use getUserRequestDescriptor instead')
 const GetUserRequest$json = {
   '1': 'GetUserRequest',
@@ -213,26 +189,6 @@ const GetUserRequest$json = {
 /// Descriptor for `GetUserRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getUserRequestDescriptor =
     $convert.base64Decode('Cg5HZXRVc2VyUmVxdWVzdA==');
-
-@$core.Deprecated('Use getUserResponseDescriptor instead')
-const GetUserResponse$json = {
-  '1': 'GetUserResponse',
-  '2': [
-    {
-      '1': 'user',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.accumora_rpc.v1.User',
-      '10': 'user'
-    },
-  ],
-};
-
-/// Descriptor for `GetUserResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getUserResponseDescriptor = $convert.base64Decode(
-    'Cg9HZXRVc2VyUmVzcG9uc2USKQoEdXNlchgBIAEoCzIVLmFjY3Vtb3JhX3JwYy52MS5Vc2VyUg'
-    'R1c2Vy');
 
 @$core.Deprecated('Use addRoomRequestDescriptor instead')
 const AddRoomRequest$json = {
@@ -617,24 +573,3 @@ final $typed_data.Uint8List addAccommodationRequestDescriptor = $convert.base64D
     'MudjEuTG9jYXRpb25IAFIIbG9jYXRpb24SQAoLY29vcmRpbmF0ZXMYByABKAsyHC5hY2N1bW9y'
     'YV9ycGMudjEuQ29vcmRpbmF0ZXNIAFILY29vcmRpbmF0ZXNCBQoDZ2VvQg4KDF9kZXNjcmlwdG'
     'lvbg==');
-
-@$core.Deprecated('Use addAccommodationResponseDescriptor instead')
-const AddAccommodationResponse$json = {
-  '1': 'AddAccommodationResponse',
-  '2': [
-    {
-      '1': 'accommodation',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.accumora_rpc.v1.Accommodation',
-      '10': 'accommodation'
-    },
-  ],
-};
-
-/// Descriptor for `AddAccommodationResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addAccommodationResponseDescriptor =
-    $convert.base64Decode(
-        'ChhBZGRBY2NvbW1vZGF0aW9uUmVzcG9uc2USRAoNYWNjb21tb2RhdGlvbhgBIAEoCzIeLmFjY3'
-        'Vtb3JhX3JwYy52MS5BY2NvbW1vZGF0aW9uUg1hY2NvbW1vZGF0aW9u');

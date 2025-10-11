@@ -19,13 +19,7 @@ import 'types.pb.dart' as $1;
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 class SetAsLandLordRequest extends $pb.GeneratedMessage {
-  factory SetAsLandLordRequest({
-    $core.String? id,
-  }) {
-    final result = create();
-    if (id != null) result.id = id;
-    return result;
-  }
+  factory SetAsLandLordRequest() => create();
 
   SetAsLandLordRequest._();
 
@@ -41,7 +35,6 @@ class SetAsLandLordRequest extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'id')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -65,15 +58,6 @@ class SetAsLandLordRequest extends $pb.GeneratedMessage {
   static SetAsLandLordRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SetAsLandLordRequest>(create);
   static SetAsLandLordRequest? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get id => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set id($core.String value) => $_setString(0, value);
-  @$pb.TagNumber(1)
-  $core.bool hasId() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearId() => $_clearField(1);
 }
 
 class SetAsLandLordResponse extends $pb.GeneratedMessage {
@@ -446,70 +430,6 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
   void clearLongitude() => $_clearField(8);
 }
 
-class UpdateAccommodationResponse extends $pb.GeneratedMessage {
-  factory UpdateAccommodationResponse({
-    $1.Accommodation? accommodation,
-  }) {
-    final result = create();
-    if (accommodation != null) result.accommodation = accommodation;
-    return result;
-  }
-
-  UpdateAccommodationResponse._();
-
-  factory UpdateAccommodationResponse.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory UpdateAccommodationResponse.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'UpdateAccommodationResponse',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
-      createEmptyInstance: create)
-    ..aOM<$1.Accommodation>(1, _omitFieldNames ? '' : 'accommodation',
-        subBuilder: $1.Accommodation.create)
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  UpdateAccommodationResponse clone() =>
-      UpdateAccommodationResponse()..mergeFromMessage(this);
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  UpdateAccommodationResponse copyWith(
-          void Function(UpdateAccommodationResponse) updates) =>
-      super.copyWith(
-              (message) => updates(message as UpdateAccommodationResponse))
-          as UpdateAccommodationResponse;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static UpdateAccommodationResponse create() =>
-      UpdateAccommodationResponse._();
-  @$core.override
-  UpdateAccommodationResponse createEmptyInstance() => create();
-  static $pb.PbList<UpdateAccommodationResponse> createRepeated() =>
-      $pb.PbList<UpdateAccommodationResponse>();
-  @$core.pragma('dart2js:noInline')
-  static UpdateAccommodationResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<UpdateAccommodationResponse>(create);
-  static UpdateAccommodationResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $1.Accommodation get accommodation => $_getN(0);
-  @$pb.TagNumber(1)
-  set accommodation($1.Accommodation value) => $_setField(1, value);
-  @$pb.TagNumber(1)
-  $core.bool hasAccommodation() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearAccommodation() => $_clearField(1);
-  @$pb.TagNumber(1)
-  $1.Accommodation ensureAccommodation() => $_ensure(0);
-}
-
 class GetUserRequest extends $pb.GeneratedMessage {
   factory GetUserRequest() => create();
 
@@ -549,65 +469,6 @@ class GetUserRequest extends $pb.GeneratedMessage {
   static GetUserRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetUserRequest>(create);
   static GetUserRequest? _defaultInstance;
-}
-
-class GetUserResponse extends $pb.GeneratedMessage {
-  factory GetUserResponse({
-    $1.User? user,
-  }) {
-    final result = create();
-    if (user != null) result.user = user;
-    return result;
-  }
-
-  GetUserResponse._();
-
-  factory GetUserResponse.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory GetUserResponse.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'GetUserResponse',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
-      createEmptyInstance: create)
-    ..aOM<$1.User>(1, _omitFieldNames ? '' : 'user', subBuilder: $1.User.create)
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetUserResponse clone() => GetUserResponse()..mergeFromMessage(this);
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetUserResponse copyWith(void Function(GetUserResponse) updates) =>
-      super.copyWith((message) => updates(message as GetUserResponse))
-          as GetUserResponse;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static GetUserResponse create() => GetUserResponse._();
-  @$core.override
-  GetUserResponse createEmptyInstance() => create();
-  static $pb.PbList<GetUserResponse> createRepeated() =>
-      $pb.PbList<GetUserResponse>();
-  @$core.pragma('dart2js:noInline')
-  static GetUserResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<GetUserResponse>(create);
-  static GetUserResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $1.User get user => $_getN(0);
-  @$pb.TagNumber(1)
-  set user($1.User value) => $_setField(1, value);
-  @$pb.TagNumber(1)
-  $core.bool hasUser() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearUser() => $_clearField(1);
-  @$pb.TagNumber(1)
-  $1.User ensureUser() => $_ensure(0);
 }
 
 class AddRoomRequest extends $pb.GeneratedMessage {
@@ -1766,68 +1627,6 @@ class AddAccommodationRequest extends $pb.GeneratedMessage {
   void clearCoordinates() => $_clearField(7);
   @$pb.TagNumber(7)
   $1.Coordinates ensureCoordinates() => $_ensure(5);
-}
-
-class AddAccommodationResponse extends $pb.GeneratedMessage {
-  factory AddAccommodationResponse({
-    $1.Accommodation? accommodation,
-  }) {
-    final result = create();
-    if (accommodation != null) result.accommodation = accommodation;
-    return result;
-  }
-
-  AddAccommodationResponse._();
-
-  factory AddAccommodationResponse.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory AddAccommodationResponse.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'AddAccommodationResponse',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
-      createEmptyInstance: create)
-    ..aOM<$1.Accommodation>(1, _omitFieldNames ? '' : 'accommodation',
-        subBuilder: $1.Accommodation.create)
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AddAccommodationResponse clone() =>
-      AddAccommodationResponse()..mergeFromMessage(this);
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AddAccommodationResponse copyWith(
-          void Function(AddAccommodationResponse) updates) =>
-      super.copyWith((message) => updates(message as AddAccommodationResponse))
-          as AddAccommodationResponse;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static AddAccommodationResponse create() => AddAccommodationResponse._();
-  @$core.override
-  AddAccommodationResponse createEmptyInstance() => create();
-  static $pb.PbList<AddAccommodationResponse> createRepeated() =>
-      $pb.PbList<AddAccommodationResponse>();
-  @$core.pragma('dart2js:noInline')
-  static AddAccommodationResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<AddAccommodationResponse>(create);
-  static AddAccommodationResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $1.Accommodation get accommodation => $_getN(0);
-  @$pb.TagNumber(1)
-  set accommodation($1.Accommodation value) => $_setField(1, value);
-  @$pb.TagNumber(1)
-  $core.bool hasAccommodation() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearAccommodation() => $_clearField(1);
-  @$pb.TagNumber(1)
-  $1.Accommodation ensureAccommodation() => $_ensure(0);
 }
 
 const $core.bool _omitFieldNames =
