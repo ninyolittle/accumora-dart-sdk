@@ -23,15 +23,6 @@ const SetAsLandLordRequest$json = {
 final $typed_data.Uint8List setAsLandLordRequestDescriptor =
     $convert.base64Decode('ChRTZXRBc0xhbmRMb3JkUmVxdWVzdA==');
 
-@$core.Deprecated('Use setAsLandLordResponseDescriptor instead')
-const SetAsLandLordResponse$json = {
-  '1': 'SetAsLandLordResponse',
-};
-
-/// Descriptor for `SetAsLandLordResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List setAsLandLordResponseDescriptor =
-    $convert.base64Decode('ChVTZXRBc0xhbmRMb3JkUmVzcG9uc2U=');
-
 @$core.Deprecated('Use updateRoomRequestDescriptor instead')
 const UpdateRoomRequest$json = {
   '1': 'UpdateRoomRequest',

@@ -110,7 +110,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$getUser, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.SetAsLandLordResponse> setAsLandLord(
+  $grpc.ResponseFuture<$1.User> setAsLandLord(
     $0.SetAsLandLordRequest request, {
     $grpc.CallOptions? options,
   }) {
@@ -174,10 +174,10 @@ class ProjectAmorClient extends $grpc.Client {
       ($0.GetUserRequest value) => value.writeToBuffer(),
       $1.User.fromBuffer);
   static final _$setAsLandLord =
-      $grpc.ClientMethod<$0.SetAsLandLordRequest, $0.SetAsLandLordResponse>(
+      $grpc.ClientMethod<$0.SetAsLandLordRequest, $1.User>(
           '/accumora_rpc.v1.ProjectAmor/SetAsLandLord',
           ($0.SetAsLandLordRequest value) => value.writeToBuffer(),
-          $0.SetAsLandLordResponse.fromBuffer);
+          $1.User.fromBuffer);
 }
 
 @$pb.GrpcServiceName('accumora_rpc.v1.ProjectAmor')
@@ -272,15 +272,14 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.GetUserRequest.fromBuffer(value),
         ($1.User value) => value.writeToBuffer()));
-    $addMethod(
-        $grpc.ServiceMethod<$0.SetAsLandLordRequest, $0.SetAsLandLordResponse>(
-            'SetAsLandLord',
-            setAsLandLord_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $0.SetAsLandLordRequest.fromBuffer(value),
-            ($0.SetAsLandLordResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.SetAsLandLordRequest, $1.User>(
+        'SetAsLandLord',
+        setAsLandLord_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.SetAsLandLordRequest.fromBuffer(value),
+        ($1.User value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.Accommodation> addAccommodation_Pre($grpc.ServiceCall $call,
@@ -375,12 +374,11 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
   $async.Future<$1.User> getUser(
       $grpc.ServiceCall call, $0.GetUserRequest request);
 
-  $async.Future<$0.SetAsLandLordResponse> setAsLandLord_Pre(
-      $grpc.ServiceCall $call,
+  $async.Future<$1.User> setAsLandLord_Pre($grpc.ServiceCall $call,
       $async.Future<$0.SetAsLandLordRequest> $request) async {
     return setAsLandLord($call, await $request);
   }
 
-  $async.Future<$0.SetAsLandLordResponse> setAsLandLord(
+  $async.Future<$1.User> setAsLandLord(
       $grpc.ServiceCall call, $0.SetAsLandLordRequest request);
 }

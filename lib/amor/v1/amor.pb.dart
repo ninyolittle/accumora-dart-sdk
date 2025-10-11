@@ -60,49 +60,6 @@ class SetAsLandLordRequest extends $pb.GeneratedMessage {
   static SetAsLandLordRequest? _defaultInstance;
 }
 
-class SetAsLandLordResponse extends $pb.GeneratedMessage {
-  factory SetAsLandLordResponse() => create();
-
-  SetAsLandLordResponse._();
-
-  factory SetAsLandLordResponse.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory SetAsLandLordResponse.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'SetAsLandLordResponse',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  SetAsLandLordResponse clone() =>
-      SetAsLandLordResponse()..mergeFromMessage(this);
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  SetAsLandLordResponse copyWith(
-          void Function(SetAsLandLordResponse) updates) =>
-      super.copyWith((message) => updates(message as SetAsLandLordResponse))
-          as SetAsLandLordResponse;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static SetAsLandLordResponse create() => SetAsLandLordResponse._();
-  @$core.override
-  SetAsLandLordResponse createEmptyInstance() => create();
-  static $pb.PbList<SetAsLandLordResponse> createRepeated() =>
-      $pb.PbList<SetAsLandLordResponse>();
-  @$core.pragma('dart2js:noInline')
-  static SetAsLandLordResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<SetAsLandLordResponse>(create);
-  static SetAsLandLordResponse? _defaultInstance;
-}
-
 class UpdateRoomRequest extends $pb.GeneratedMessage {
   factory UpdateRoomRequest({
     $core.String? id,
