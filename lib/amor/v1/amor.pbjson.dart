@@ -14,6 +14,27 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use setAsLandLordRequestDescriptor instead')
+const SetAsLandLordRequest$json = {
+  '1': 'SetAsLandLordRequest',
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+  ],
+};
+
+/// Descriptor for `SetAsLandLordRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List setAsLandLordRequestDescriptor = $convert
+    .base64Decode('ChRTZXRBc0xhbmRMb3JkUmVxdWVzdBIOCgJpZBgBIAEoCVICaWQ=');
+
+@$core.Deprecated('Use setAsLandLordResponseDescriptor instead')
+const SetAsLandLordResponse$json = {
+  '1': 'SetAsLandLordResponse',
+};
+
+/// Descriptor for `SetAsLandLordResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List setAsLandLordResponseDescriptor =
+    $convert.base64Decode('ChVTZXRBc0xhbmRMb3JkUmVzcG9uc2U=');
+
 @$core.Deprecated('Use updateRoomRequestDescriptor instead')
 const UpdateRoomRequest$json = {
   '1': 'UpdateRoomRequest',

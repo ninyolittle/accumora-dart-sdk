@@ -432,6 +432,7 @@ class User extends $pb.GeneratedMessage {
     $core.String? birthday,
     User_Gender? gender,
     $core.String? createdAt,
+    User_Role? role,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -445,6 +446,7 @@ class User extends $pb.GeneratedMessage {
     if (birthday != null) result.birthday = birthday;
     if (gender != null) result.gender = gender;
     if (createdAt != null) result.createdAt = createdAt;
+    if (role != null) result.role = role;
     return result;
   }
 
@@ -481,6 +483,10 @@ class User extends $pb.GeneratedMessage {
         valueOf: User_Gender.valueOf,
         enumValues: User_Gender.values)
     ..aOS(11, _omitFieldNames ? '' : 'createdAt')
+    ..e<User_Role>(12, _omitFieldNames ? '' : 'role', $pb.PbFieldType.OE,
+        defaultOrMaker: User_Role.unknown_role,
+        valueOf: User_Role.valueOf,
+        enumValues: User_Role.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -602,6 +608,15 @@ class User extends $pb.GeneratedMessage {
   $core.bool hasCreatedAt() => $_has(10);
   @$pb.TagNumber(11)
   void clearCreatedAt() => $_clearField(11);
+
+  @$pb.TagNumber(12)
+  User_Role get role => $_getN(11);
+  @$pb.TagNumber(12)
+  set role(User_Role value) => $_setField(12, value);
+  @$pb.TagNumber(12)
+  $core.bool hasRole() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearRole() => $_clearField(12);
 }
 
 class Accommodation extends $pb.GeneratedMessage {

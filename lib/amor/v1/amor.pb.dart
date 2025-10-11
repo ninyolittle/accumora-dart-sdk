@@ -18,6 +18,107 @@ import 'types.pb.dart' as $1;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
+class SetAsLandLordRequest extends $pb.GeneratedMessage {
+  factory SetAsLandLordRequest({
+    $core.String? id,
+  }) {
+    final result = create();
+    if (id != null) result.id = id;
+    return result;
+  }
+
+  SetAsLandLordRequest._();
+
+  factory SetAsLandLordRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SetAsLandLordRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SetAsLandLordRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SetAsLandLordRequest clone() =>
+      SetAsLandLordRequest()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SetAsLandLordRequest copyWith(void Function(SetAsLandLordRequest) updates) =>
+      super.copyWith((message) => updates(message as SetAsLandLordRequest))
+          as SetAsLandLordRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SetAsLandLordRequest create() => SetAsLandLordRequest._();
+  @$core.override
+  SetAsLandLordRequest createEmptyInstance() => create();
+  static $pb.PbList<SetAsLandLordRequest> createRepeated() =>
+      $pb.PbList<SetAsLandLordRequest>();
+  @$core.pragma('dart2js:noInline')
+  static SetAsLandLordRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SetAsLandLordRequest>(create);
+  static SetAsLandLordRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => $_clearField(1);
+}
+
+class SetAsLandLordResponse extends $pb.GeneratedMessage {
+  factory SetAsLandLordResponse() => create();
+
+  SetAsLandLordResponse._();
+
+  factory SetAsLandLordResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SetAsLandLordResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SetAsLandLordResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SetAsLandLordResponse clone() =>
+      SetAsLandLordResponse()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SetAsLandLordResponse copyWith(
+          void Function(SetAsLandLordResponse) updates) =>
+      super.copyWith((message) => updates(message as SetAsLandLordResponse))
+          as SetAsLandLordResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SetAsLandLordResponse create() => SetAsLandLordResponse._();
+  @$core.override
+  SetAsLandLordResponse createEmptyInstance() => create();
+  static $pb.PbList<SetAsLandLordResponse> createRepeated() =>
+      $pb.PbList<SetAsLandLordResponse>();
+  @$core.pragma('dart2js:noInline')
+  static SetAsLandLordResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SetAsLandLordResponse>(create);
+  static SetAsLandLordResponse? _defaultInstance;
+}
+
 class UpdateRoomRequest extends $pb.GeneratedMessage {
   factory UpdateRoomRequest({
     $core.String? id,

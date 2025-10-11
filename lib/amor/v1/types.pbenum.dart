@@ -58,5 +58,27 @@ class User_Gender extends $pb.ProtobufEnum {
   const User_Gender._(super.value, super.name);
 }
 
+class User_Role extends $pb.ProtobufEnum {
+  static const User_Role unknown_role =
+      User_Role._(0, _omitEnumNames ? '' : 'unknown_role');
+  static const User_Role tenant =
+      User_Role._(1, _omitEnumNames ? '' : 'tenant');
+  static const User_Role landlord =
+      User_Role._(2, _omitEnumNames ? '' : 'landlord');
+
+  static const $core.List<User_Role> values = <User_Role>[
+    unknown_role,
+    tenant,
+    landlord,
+  ];
+
+  static final $core.List<User_Role?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 2);
+  static User_Role? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const User_Role._(super.value, super.name);
+}
+
 const $core.bool _omitEnumNames =
     $core.bool.fromEnvironment('protobuf.omit_enum_names');

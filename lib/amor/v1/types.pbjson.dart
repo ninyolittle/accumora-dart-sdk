@@ -257,8 +257,16 @@ const User$json = {
       '10': 'createdAt',
       '17': true
     },
+    {
+      '1': 'role',
+      '3': 12,
+      '4': 1,
+      '5': 14,
+      '6': '.accumora_rpc.v1.User.Role',
+      '10': 'role'
+    },
   ],
-  '4': [User_AccountType$json, User_Gender$json],
+  '4': [User_AccountType$json, User_Gender$json, User_Role$json],
   '8': [
     {'1': '_last_name'},
     {'1': '_phone'},
@@ -289,6 +297,16 @@ const User_Gender$json = {
   ],
 };
 
+@$core.Deprecated('Use userDescriptor instead')
+const User_Role$json = {
+  '1': 'Role',
+  '2': [
+    {'1': 'unknown_role', '2': 0},
+    {'1': 'tenant', '2': 1},
+    {'1': 'landlord', '2': 2},
+  ],
+};
+
 /// Descriptor for `User`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List userDescriptor = $convert.base64Decode(
     'CgRVc2VyEg4KAmlkGAEgASgJUgJpZBIdCgpmaXJzdF9uYW1lGAIgASgJUglmaXJzdE5hbWUSIA'
@@ -298,11 +316,12 @@ final $typed_data.Uint8List userDescriptor = $convert.base64Decode(
     'ZBgHIAEoCUgDUghwYXNzd29yZIgBARJECgxhY2NvdW50X3R5cGUYCCABKA4yIS5hY2N1bW9yYV'
     '9ycGMudjEuVXNlci5BY2NvdW50VHlwZVILYWNjb3VudFR5cGUSHwoIYmlydGhkYXkYCSABKAlI'
     'BFIIYmlydGhkYXmIAQESNAoGZ2VuZGVyGAogASgOMhwuYWNjdW1vcmFfcnBjLnYxLlVzZXIuR2'
-    'VuZGVyUgZnZW5kZXISIgoKY3JlYXRlZF9hdBgLIAEoCUgFUgljcmVhdGVkQXSIAQEiMwoLQWNj'
-    'b3VudFR5cGUSCgoGbWFudWFsEAASCgoGZ29vZ2xlEAESDAoIZmFjZWJvb2sQAiIyCgZHZW5kZX'
-    'ISEgoOdW5rbm93bl9nZW5kZXIQABIICgRtYWxlEAESCgoGZmVtYWxlEAJCDAoKX2xhc3RfbmFt'
-    'ZUIICgZfcGhvbmVCCwoJX2xvY2F0aW9uQgsKCV9wYXNzd29yZEILCglfYmlydGhkYXlCDQoLX2'
-    'NyZWF0ZWRfYXQ=');
+    'VuZGVyUgZnZW5kZXISIgoKY3JlYXRlZF9hdBgLIAEoCUgFUgljcmVhdGVkQXSIAQESLgoEcm9s'
+    'ZRgMIAEoDjIaLmFjY3Vtb3JhX3JwYy52MS5Vc2VyLlJvbGVSBHJvbGUiMwoLQWNjb3VudFR5cG'
+    'USCgoGbWFudWFsEAASCgoGZ29vZ2xlEAESDAoIZmFjZWJvb2sQAiIyCgZHZW5kZXISEgoOdW5r'
+    'bm93bl9nZW5kZXIQABIICgRtYWxlEAESCgoGZmVtYWxlEAIiMgoEUm9sZRIQCgx1bmtub3duX3'
+    'JvbGUQABIKCgZ0ZW5hbnQQARIMCghsYW5kbG9yZBACQgwKCl9sYXN0X25hbWVCCAoGX3Bob25l'
+    'QgsKCV9sb2NhdGlvbkILCglfcGFzc3dvcmRCCwoJX2JpcnRoZGF5Qg0KC19jcmVhdGVkX2F0');
 
 @$core.Deprecated('Use accommodationDescriptor instead')
 const Accommodation$json = {
