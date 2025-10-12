@@ -1459,7 +1459,7 @@ enum AddAccommodationRequest_Geo { location, coordinates, notSet }
 class AddAccommodationRequest extends $pb.GeneratedMessage {
   factory AddAccommodationRequest({
     $core.String? name,
-    $core.String? type,
+    $1.Accommodation_AccommodationType? type,
     $core.Iterable<$core.String>? utilities,
     $core.String? description,
     $1.Location? location,
@@ -1497,7 +1497,11 @@ class AddAccommodationRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..oo(0, [6, 7])
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..aOS(2, _omitFieldNames ? '' : 'type')
+    ..e<$1.Accommodation_AccommodationType>(
+        2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: $1.Accommodation_AccommodationType.unknown_type,
+        valueOf: $1.Accommodation_AccommodationType.valueOf,
+        enumValues: $1.Accommodation_AccommodationType.values)
     ..pPS(4, _omitFieldNames ? '' : 'utilities')
     ..aOS(5, _omitFieldNames ? '' : 'description')
     ..aOM<$1.Location>(6, _omitFieldNames ? '' : 'location',
@@ -1543,9 +1547,9 @@ class AddAccommodationRequest extends $pb.GeneratedMessage {
   void clearName() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get type => $_getSZ(1);
+  $1.Accommodation_AccommodationType get type => $_getN(1);
   @$pb.TagNumber(2)
-  set type($core.String value) => $_setString(1, value);
+  set type($1.Accommodation_AccommodationType value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasType() => $_has(1);
   @$pb.TagNumber(2)

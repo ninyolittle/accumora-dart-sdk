@@ -520,7 +520,14 @@ const AddAccommodationRequest$json = {
   '1': 'AddAccommodationRequest',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'type', '3': 2, '4': 1, '5': 9, '10': 'type'},
+    {
+      '1': 'type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.accumora_rpc.v1.Accommodation.AccommodationType',
+      '10': 'type'
+    },
     {'1': 'utilities', '3': 4, '4': 3, '5': 9, '10': 'utilities'},
     {
       '1': 'description',
@@ -558,9 +565,9 @@ const AddAccommodationRequest$json = {
 
 /// Descriptor for `AddAccommodationRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List addAccommodationRequestDescriptor = $convert.base64Decode(
-    'ChdBZGRBY2NvbW1vZGF0aW9uUmVxdWVzdBISCgRuYW1lGAEgASgJUgRuYW1lEhIKBHR5cGUYAi'
-    'ABKAlSBHR5cGUSHAoJdXRpbGl0aWVzGAQgAygJUgl1dGlsaXRpZXMSJQoLZGVzY3JpcHRpb24Y'
-    'BSABKAlIAVILZGVzY3JpcHRpb26IAQESNwoIbG9jYXRpb24YBiABKAsyGS5hY2N1bW9yYV9ycG'
-    'MudjEuTG9jYXRpb25IAFIIbG9jYXRpb24SQAoLY29vcmRpbmF0ZXMYByABKAsyHC5hY2N1bW9y'
-    'YV9ycGMudjEuQ29vcmRpbmF0ZXNIAFILY29vcmRpbmF0ZXNCBQoDZ2VvQg4KDF9kZXNjcmlwdG'
-    'lvbg==');
+    'ChdBZGRBY2NvbW1vZGF0aW9uUmVxdWVzdBISCgRuYW1lGAEgASgJUgRuYW1lEkQKBHR5cGUYAi'
+    'ABKA4yMC5hY2N1bW9yYV9ycGMudjEuQWNjb21tb2RhdGlvbi5BY2NvbW1vZGF0aW9uVHlwZVIE'
+    'dHlwZRIcCgl1dGlsaXRpZXMYBCADKAlSCXV0aWxpdGllcxIlCgtkZXNjcmlwdGlvbhgFIAEoCU'
+    'gBUgtkZXNjcmlwdGlvbogBARI3Cghsb2NhdGlvbhgGIAEoCzIZLmFjY3Vtb3JhX3JwYy52MS5M'
+    'b2NhdGlvbkgAUghsb2NhdGlvbhJACgtjb29yZGluYXRlcxgHIAEoCzIcLmFjY3Vtb3JhX3JwYy'
+    '52MS5Db29yZGluYXRlc0gAUgtjb29yZGluYXRlc0IFCgNnZW9CDgoMX2Rlc2NyaXB0aW9u');
