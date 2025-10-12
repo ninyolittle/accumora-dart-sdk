@@ -349,7 +349,14 @@ const Accommodation$json = {
       '17': true
     },
     {'1': 'utilities', '3': 5, '4': 3, '5': 9, '10': 'utilities'},
-    {'1': 'type', '3': 6, '4': 1, '5': 9, '10': 'type'},
+    {
+      '1': 'type',
+      '3': 6,
+      '4': 1,
+      '5': 14,
+      '6': '.accumora_rpc.v1.Accommodation.AccommodationType',
+      '10': 'type'
+    },
     {
       '1': 'coordinates',
       '3': 7,
@@ -363,10 +370,21 @@ const Accommodation$json = {
     {'1': 'owner', '3': 9, '4': 1, '5': 9, '10': 'owner'},
     {'1': 'created_at', '3': 10, '4': 1, '5': 9, '10': 'createdAt'},
   ],
+  '4': [Accommodation_AccommodationType$json],
   '8': [
     {'1': '_location'},
     {'1': '_description'},
     {'1': '_coordinates'},
+  ],
+};
+
+@$core.Deprecated('Use accommodationDescriptor instead')
+const Accommodation_AccommodationType$json = {
+  '1': 'AccommodationType',
+  '2': [
+    {'1': 'unknown_type', '2': 0},
+    {'1': 'apartment', '2': 1},
+    {'1': 'boarding_house', '2': 2},
   ],
 };
 
@@ -375,7 +393,9 @@ final $typed_data.Uint8List accommodationDescriptor = $convert.base64Decode(
     'Cg1BY2NvbW1vZGF0aW9uEg4KAmlkGAEgASgJUgJpZBISCgRuYW1lGAIgASgJUgRuYW1lEjoKCG'
     'xvY2F0aW9uGAMgASgLMhkuYWNjdW1vcmFfcnBjLnYxLkxvY2F0aW9uSABSCGxvY2F0aW9uiAEB'
     'EiUKC2Rlc2NyaXB0aW9uGAQgASgJSAFSC2Rlc2NyaXB0aW9uiAEBEhwKCXV0aWxpdGllcxgFIA'
-    'MoCVIJdXRpbGl0aWVzEhIKBHR5cGUYBiABKAlSBHR5cGUSQwoLY29vcmRpbmF0ZXMYByABKAsy'
-    'HC5hY2N1bW9yYV9ycGMudjEuQ29vcmRpbmF0ZXNIAlILY29vcmRpbmF0ZXOIAQESFAoFb3duZX'
-    'IYCSABKAlSBW93bmVyEh0KCmNyZWF0ZWRfYXQYCiABKAlSCWNyZWF0ZWRBdEILCglfbG9jYXRp'
-    'b25CDgoMX2Rlc2NyaXB0aW9uQg4KDF9jb29yZGluYXRlcw==');
+    'MoCVIJdXRpbGl0aWVzEkQKBHR5cGUYBiABKA4yMC5hY2N1bW9yYV9ycGMudjEuQWNjb21tb2Rh'
+    'dGlvbi5BY2NvbW1vZGF0aW9uVHlwZVIEdHlwZRJDCgtjb29yZGluYXRlcxgHIAEoCzIcLmFjY3'
+    'Vtb3JhX3JwYy52MS5Db29yZGluYXRlc0gCUgtjb29yZGluYXRlc4gBARIUCgVvd25lchgJIAEo'
+    'CVIFb3duZXISHQoKY3JlYXRlZF9hdBgKIAEoCVIJY3JlYXRlZEF0IkgKEUFjY29tbW9kYXRpb2'
+    '5UeXBlEhAKDHVua25vd25fdHlwZRAAEg0KCWFwYXJ0bWVudBABEhIKDmJvYXJkaW5nX2hvdXNl'
+    'EAJCCwoJX2xvY2F0aW9uQg4KDF9kZXNjcmlwdGlvbkIOCgxfY29vcmRpbmF0ZXM=');

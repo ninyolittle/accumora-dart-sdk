@@ -626,7 +626,7 @@ class Accommodation extends $pb.GeneratedMessage {
     Location? location,
     $core.String? description,
     $core.Iterable<$core.String>? utilities,
-    $core.String? type,
+    Accommodation_AccommodationType? type,
     Coordinates? coordinates,
     $core.String? owner,
     $core.String? createdAt,
@@ -664,7 +664,11 @@ class Accommodation extends $pb.GeneratedMessage {
         subBuilder: Location.create)
     ..aOS(4, _omitFieldNames ? '' : 'description')
     ..pPS(5, _omitFieldNames ? '' : 'utilities')
-    ..aOS(6, _omitFieldNames ? '' : 'type')
+    ..e<Accommodation_AccommodationType>(
+        6, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: Accommodation_AccommodationType.unknown_type,
+        valueOf: Accommodation_AccommodationType.valueOf,
+        enumValues: Accommodation_AccommodationType.values)
     ..aOM<Coordinates>(7, _omitFieldNames ? '' : 'coordinates',
         subBuilder: Coordinates.create)
     ..aOS(9, _omitFieldNames ? '' : 'owner')
@@ -734,9 +738,9 @@ class Accommodation extends $pb.GeneratedMessage {
   $pb.PbList<$core.String> get utilities => $_getList(4);
 
   @$pb.TagNumber(6)
-  $core.String get type => $_getSZ(5);
+  Accommodation_AccommodationType get type => $_getN(5);
   @$pb.TagNumber(6)
-  set type($core.String value) => $_setString(5, value);
+  set type(Accommodation_AccommodationType value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasType() => $_has(5);
   @$pb.TagNumber(6)

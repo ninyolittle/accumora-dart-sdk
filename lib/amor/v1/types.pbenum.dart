@@ -80,5 +80,30 @@ class User_Role extends $pb.ProtobufEnum {
   const User_Role._(super.value, super.name);
 }
 
+class Accommodation_AccommodationType extends $pb.ProtobufEnum {
+  static const Accommodation_AccommodationType unknown_type =
+      Accommodation_AccommodationType._(
+          0, _omitEnumNames ? '' : 'unknown_type');
+  static const Accommodation_AccommodationType apartment =
+      Accommodation_AccommodationType._(1, _omitEnumNames ? '' : 'apartment');
+  static const Accommodation_AccommodationType boarding_house =
+      Accommodation_AccommodationType._(
+          2, _omitEnumNames ? '' : 'boarding_house');
+
+  static const $core.List<Accommodation_AccommodationType> values =
+      <Accommodation_AccommodationType>[
+    unknown_type,
+    apartment,
+    boarding_house,
+  ];
+
+  static final $core.List<Accommodation_AccommodationType?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 2);
+  static Accommodation_AccommodationType? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const Accommodation_AccommodationType._(super.value, super.name);
+}
+
 const $core.bool _omitEnumNames =
     $core.bool.fromEnvironment('protobuf.omit_enum_names');
