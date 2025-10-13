@@ -369,8 +369,16 @@ const Accommodation$json = {
     },
     {'1': 'owner', '3': 9, '4': 1, '5': 9, '10': 'owner'},
     {'1': 'created_at', '3': 10, '4': 1, '5': 9, '10': 'createdAt'},
+    {
+      '1': 'status',
+      '3': 11,
+      '4': 1,
+      '5': 14,
+      '6': '.accumora_rpc.v1.Accommodation.Status',
+      '10': 'status'
+    },
   ],
-  '4': [Accommodation_AccommodationType$json],
+  '4': [Accommodation_AccommodationType$json, Accommodation_Status$json],
   '8': [
     {'1': '_location'},
     {'1': '_description'},
@@ -388,6 +396,16 @@ const Accommodation_AccommodationType$json = {
   ],
 };
 
+@$core.Deprecated('Use accommodationDescriptor instead')
+const Accommodation_Status$json = {
+  '1': 'Status',
+  '2': [
+    {'1': 'unknown_status', '2': 0},
+    {'1': 'active', '2': 1},
+    {'1': 'inactive', '2': 2},
+  ],
+};
+
 /// Descriptor for `Accommodation`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List accommodationDescriptor = $convert.base64Decode(
     'Cg1BY2NvbW1vZGF0aW9uEg4KAmlkGAEgASgJUgJpZBISCgRuYW1lGAIgASgJUgRuYW1lEjoKCG'
@@ -396,6 +414,9 @@ final $typed_data.Uint8List accommodationDescriptor = $convert.base64Decode(
     'MoCVIJdXRpbGl0aWVzEkQKBHR5cGUYBiABKA4yMC5hY2N1bW9yYV9ycGMudjEuQWNjb21tb2Rh'
     'dGlvbi5BY2NvbW1vZGF0aW9uVHlwZVIEdHlwZRJDCgtjb29yZGluYXRlcxgHIAEoCzIcLmFjY3'
     'Vtb3JhX3JwYy52MS5Db29yZGluYXRlc0gCUgtjb29yZGluYXRlc4gBARIUCgVvd25lchgJIAEo'
-    'CVIFb3duZXISHQoKY3JlYXRlZF9hdBgKIAEoCVIJY3JlYXRlZEF0IkgKEUFjY29tbW9kYXRpb2'
-    '5UeXBlEhAKDHVua25vd25fdHlwZRAAEg0KCWFwYXJ0bWVudBABEhIKDmJvYXJkaW5nX2hvdXNl'
-    'EAJCCwoJX2xvY2F0aW9uQg4KDF9kZXNjcmlwdGlvbkIOCgxfY29vcmRpbmF0ZXM=');
+    'CVIFb3duZXISHQoKY3JlYXRlZF9hdBgKIAEoCVIJY3JlYXRlZEF0Ej0KBnN0YXR1cxgLIAEoDj'
+    'IlLmFjY3Vtb3JhX3JwYy52MS5BY2NvbW1vZGF0aW9uLlN0YXR1c1IGc3RhdHVzIkgKEUFjY29t'
+    'bW9kYXRpb25UeXBlEhAKDHVua25vd25fdHlwZRAAEg0KCWFwYXJ0bWVudBABEhIKDmJvYXJkaW'
+    '5nX2hvdXNlEAIiNgoGU3RhdHVzEhIKDnVua25vd25fc3RhdHVzEAASCgoGYWN0aXZlEAESDAoI'
+    'aW5hY3RpdmUQAkILCglfbG9jYXRpb25CDgoMX2Rlc2NyaXB0aW9uQg4KDF9jb29yZGluYXRlcw'
+    '==');

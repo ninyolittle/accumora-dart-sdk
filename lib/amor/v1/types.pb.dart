@@ -630,6 +630,7 @@ class Accommodation extends $pb.GeneratedMessage {
     Coordinates? coordinates,
     $core.String? owner,
     $core.String? createdAt,
+    Accommodation_Status? status,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -641,6 +642,7 @@ class Accommodation extends $pb.GeneratedMessage {
     if (coordinates != null) result.coordinates = coordinates;
     if (owner != null) result.owner = owner;
     if (createdAt != null) result.createdAt = createdAt;
+    if (status != null) result.status = status;
     return result;
   }
 
@@ -673,6 +675,11 @@ class Accommodation extends $pb.GeneratedMessage {
         subBuilder: Coordinates.create)
     ..aOS(9, _omitFieldNames ? '' : 'owner')
     ..aOS(10, _omitFieldNames ? '' : 'createdAt')
+    ..e<Accommodation_Status>(
+        11, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
+        defaultOrMaker: Accommodation_Status.unknown_status,
+        valueOf: Accommodation_Status.valueOf,
+        enumValues: Accommodation_Status.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -774,6 +781,15 @@ class Accommodation extends $pb.GeneratedMessage {
   $core.bool hasCreatedAt() => $_has(8);
   @$pb.TagNumber(10)
   void clearCreatedAt() => $_clearField(10);
+
+  @$pb.TagNumber(11)
+  Accommodation_Status get status => $_getN(9);
+  @$pb.TagNumber(11)
+  set status(Accommodation_Status value) => $_setField(11, value);
+  @$pb.TagNumber(11)
+  $core.bool hasStatus() => $_has(9);
+  @$pb.TagNumber(11)
+  void clearStatus() => $_clearField(11);
 }
 
 const $core.bool _omitFieldNames =

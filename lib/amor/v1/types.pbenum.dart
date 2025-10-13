@@ -105,5 +105,27 @@ class Accommodation_AccommodationType extends $pb.ProtobufEnum {
   const Accommodation_AccommodationType._(super.value, super.name);
 }
 
+class Accommodation_Status extends $pb.ProtobufEnum {
+  static const Accommodation_Status unknown_status =
+      Accommodation_Status._(0, _omitEnumNames ? '' : 'unknown_status');
+  static const Accommodation_Status active =
+      Accommodation_Status._(1, _omitEnumNames ? '' : 'active');
+  static const Accommodation_Status inactive =
+      Accommodation_Status._(2, _omitEnumNames ? '' : 'inactive');
+
+  static const $core.List<Accommodation_Status> values = <Accommodation_Status>[
+    unknown_status,
+    active,
+    inactive,
+  ];
+
+  static final $core.List<Accommodation_Status?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 2);
+  static Accommodation_Status? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const Accommodation_Status._(super.value, super.name);
+}
+
 const $core.bool _omitEnumNames =
     $core.bool.fromEnvironment('protobuf.omit_enum_names');
