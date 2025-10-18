@@ -18,6 +18,66 @@ import 'types.pb.dart' as $1;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
+class ConfirmEmailAddressRequest extends $pb.GeneratedMessage {
+  factory ConfirmEmailAddressRequest({
+    $core.String? confirmationCode,
+  }) {
+    final result = create();
+    if (confirmationCode != null) result.confirmationCode = confirmationCode;
+    return result;
+  }
+
+  ConfirmEmailAddressRequest._();
+
+  factory ConfirmEmailAddressRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ConfirmEmailAddressRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ConfirmEmailAddressRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'confirmationCode')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ConfirmEmailAddressRequest clone() =>
+      ConfirmEmailAddressRequest()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ConfirmEmailAddressRequest copyWith(
+          void Function(ConfirmEmailAddressRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as ConfirmEmailAddressRequest))
+          as ConfirmEmailAddressRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConfirmEmailAddressRequest create() => ConfirmEmailAddressRequest._();
+  @$core.override
+  ConfirmEmailAddressRequest createEmptyInstance() => create();
+  static $pb.PbList<ConfirmEmailAddressRequest> createRepeated() =>
+      $pb.PbList<ConfirmEmailAddressRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ConfirmEmailAddressRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ConfirmEmailAddressRequest>(create);
+  static ConfirmEmailAddressRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get confirmationCode => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set confirmationCode($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasConfirmationCode() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearConfirmationCode() => $_clearField(1);
+}
+
 class AddAmenitiesRequest_Input extends $pb.GeneratedMessage {
   factory AddAmenitiesRequest_Input({
     $core.String? name,

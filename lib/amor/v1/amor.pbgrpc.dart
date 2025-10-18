@@ -16,6 +16,7 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../../google/protobuf/empty.pb.dart' as $2;
 import 'amor.pb.dart' as $0;
 import 'types.pb.dart' as $1;
 
@@ -124,6 +125,20 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$addAmenities, request, options: options);
   }
 
+  $grpc.ResponseFuture<$2.Empty> sendVerificationEmail(
+    $2.Empty request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$sendVerificationEmail, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.Empty> confirmEmailAddress(
+    $0.ConfirmEmailAddressRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$confirmEmailAddress, request, options: options);
+  }
+
   // method descriptors
 
   static final _$addAccommodation =
@@ -190,6 +205,15 @@ class ProjectAmorClient extends $grpc.Client {
           '/accumora_rpc.v1.ProjectAmor/AddAmenities',
           ($0.AddAmenitiesRequest value) => value.writeToBuffer(),
           $0.AddAmenitiesResponse.fromBuffer);
+  static final _$sendVerificationEmail = $grpc.ClientMethod<$2.Empty, $2.Empty>(
+      '/accumora_rpc.v1.ProjectAmor/SendVerificationEmail',
+      ($2.Empty value) => value.writeToBuffer(),
+      $2.Empty.fromBuffer);
+  static final _$confirmEmailAddress =
+      $grpc.ClientMethod<$0.ConfirmEmailAddressRequest, $2.Empty>(
+          '/accumora_rpc.v1.ProjectAmor/ConfirmEmailAddress',
+          ($0.ConfirmEmailAddressRequest value) => value.writeToBuffer(),
+          $2.Empty.fromBuffer);
 }
 
 @$pb.GrpcServiceName('accumora_rpc.v1.ProjectAmor')
@@ -301,6 +325,21 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $0.AddAmenitiesRequest.fromBuffer(value),
             ($0.AddAmenitiesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.Empty, $2.Empty>(
+        'SendVerificationEmail',
+        sendVerificationEmail_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.Empty.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ConfirmEmailAddressRequest, $2.Empty>(
+        'ConfirmEmailAddress',
+        confirmEmailAddress_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ConfirmEmailAddressRequest.fromBuffer(value),
+        ($2.Empty value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.Accommodation> addAccommodation_Pre($grpc.ServiceCall $call,
@@ -411,4 +450,20 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
 
   $async.Future<$0.AddAmenitiesResponse> addAmenities(
       $grpc.ServiceCall call, $0.AddAmenitiesRequest request);
+
+  $async.Future<$2.Empty> sendVerificationEmail_Pre(
+      $grpc.ServiceCall $call, $async.Future<$2.Empty> $request) async {
+    return sendVerificationEmail($call, await $request);
+  }
+
+  $async.Future<$2.Empty> sendVerificationEmail(
+      $grpc.ServiceCall call, $2.Empty request);
+
+  $async.Future<$2.Empty> confirmEmailAddress_Pre($grpc.ServiceCall $call,
+      $async.Future<$0.ConfirmEmailAddressRequest> $request) async {
+    return confirmEmailAddress($call, await $request);
+  }
+
+  $async.Future<$2.Empty> confirmEmailAddress(
+      $grpc.ServiceCall call, $0.ConfirmEmailAddressRequest request);
 }

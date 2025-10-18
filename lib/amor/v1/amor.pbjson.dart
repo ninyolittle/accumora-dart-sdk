@@ -14,6 +14,26 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use confirmEmailAddressRequestDescriptor instead')
+const ConfirmEmailAddressRequest$json = {
+  '1': 'ConfirmEmailAddressRequest',
+  '2': [
+    {
+      '1': 'confirmation_code',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '10': 'confirmationCode'
+    },
+  ],
+};
+
+/// Descriptor for `ConfirmEmailAddressRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List confirmEmailAddressRequestDescriptor =
+    $convert.base64Decode(
+        'ChpDb25maXJtRW1haWxBZGRyZXNzUmVxdWVzdBIrChFjb25maXJtYXRpb25fY29kZRgBIAEoCV'
+        'IQY29uZmlybWF0aW9uQ29kZQ==');
+
 @$core.Deprecated('Use addAmenitiesRequestDescriptor instead')
 const AddAmenitiesRequest$json = {
   '1': 'AddAmenitiesRequest',
