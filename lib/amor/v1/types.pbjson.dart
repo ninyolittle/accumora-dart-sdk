@@ -343,6 +343,7 @@ const User_Role$json = {
     {'1': 'unknown_role', '2': 0},
     {'1': 'tenant', '2': 1},
     {'1': 'landlord', '2': 2},
+    {'1': 'admin', '2': 3},
   ],
 };
 
@@ -358,9 +359,10 @@ final $typed_data.Uint8List userDescriptor = $convert.base64Decode(
     'VuZGVyUgZnZW5kZXISIgoKY3JlYXRlZF9hdBgLIAEoCUgFUgljcmVhdGVkQXSIAQESLgoEcm9s'
     'ZRgMIAEoDjIaLmFjY3Vtb3JhX3JwYy52MS5Vc2VyLlJvbGVSBHJvbGUiMwoLQWNjb3VudFR5cG'
     'USCgoGbWFudWFsEAASCgoGZ29vZ2xlEAESDAoIZmFjZWJvb2sQAiIyCgZHZW5kZXISEgoOdW5r'
-    'bm93bl9nZW5kZXIQABIICgRtYWxlEAESCgoGZmVtYWxlEAIiMgoEUm9sZRIQCgx1bmtub3duX3'
-    'JvbGUQABIKCgZ0ZW5hbnQQARIMCghsYW5kbG9yZBACQgwKCl9sYXN0X25hbWVCCAoGX3Bob25l'
-    'QgsKCV9sb2NhdGlvbkILCglfcGFzc3dvcmRCCwoJX2JpcnRoZGF5Qg0KC19jcmVhdGVkX2F0');
+    'bm93bl9nZW5kZXIQABIICgRtYWxlEAESCgoGZmVtYWxlEAIiPQoEUm9sZRIQCgx1bmtub3duX3'
+    'JvbGUQABIKCgZ0ZW5hbnQQARIMCghsYW5kbG9yZBACEgkKBWFkbWluEANCDAoKX2xhc3RfbmFt'
+    'ZUIICgZfcGhvbmVCCwoJX2xvY2F0aW9uQgsKCV9wYXNzd29yZEILCglfYmlydGhkYXlCDQoLX2'
+    'NyZWF0ZWRfYXQ=');
 
 @$core.Deprecated('Use accommodationDescriptor instead')
 const Accommodation$json = {
