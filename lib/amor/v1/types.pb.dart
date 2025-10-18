@@ -552,6 +552,7 @@ class User extends $pb.GeneratedMessage {
     User_Gender? gender,
     $core.String? createdAt,
     User_Role? role,
+    $core.bool? isEmailVerified,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -566,6 +567,7 @@ class User extends $pb.GeneratedMessage {
     if (gender != null) result.gender = gender;
     if (createdAt != null) result.createdAt = createdAt;
     if (role != null) result.role = role;
+    if (isEmailVerified != null) result.isEmailVerified = isEmailVerified;
     return result;
   }
 
@@ -606,6 +608,7 @@ class User extends $pb.GeneratedMessage {
         defaultOrMaker: User_Role.unknown_role,
         valueOf: User_Role.valueOf,
         enumValues: User_Role.values)
+    ..aOB(13, _omitFieldNames ? '' : 'isEmailVerified')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -736,6 +739,15 @@ class User extends $pb.GeneratedMessage {
   $core.bool hasRole() => $_has(11);
   @$pb.TagNumber(12)
   void clearRole() => $_clearField(12);
+
+  @$pb.TagNumber(13)
+  $core.bool get isEmailVerified => $_getBF(12);
+  @$pb.TagNumber(13)
+  set isEmailVerified($core.bool value) => $_setBool(12, value);
+  @$pb.TagNumber(13)
+  $core.bool hasIsEmailVerified() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearIsEmailVerified() => $_clearField(13);
 }
 
 class Accommodation extends $pb.GeneratedMessage {

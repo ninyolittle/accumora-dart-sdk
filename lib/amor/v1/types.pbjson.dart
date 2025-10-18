@@ -304,6 +304,13 @@ const User$json = {
       '6': '.accumora_rpc.v1.User.Role',
       '10': 'role'
     },
+    {
+      '1': 'is_email_verified',
+      '3': 13,
+      '4': 1,
+      '5': 8,
+      '10': 'isEmailVerified'
+    },
   ],
   '4': [User_AccountType$json, User_Gender$json, User_Role$json],
   '8': [
@@ -357,12 +364,12 @@ final $typed_data.Uint8List userDescriptor = $convert.base64Decode(
     '9ycGMudjEuVXNlci5BY2NvdW50VHlwZVILYWNjb3VudFR5cGUSHwoIYmlydGhkYXkYCSABKAlI'
     'BFIIYmlydGhkYXmIAQESNAoGZ2VuZGVyGAogASgOMhwuYWNjdW1vcmFfcnBjLnYxLlVzZXIuR2'
     'VuZGVyUgZnZW5kZXISIgoKY3JlYXRlZF9hdBgLIAEoCUgFUgljcmVhdGVkQXSIAQESLgoEcm9s'
-    'ZRgMIAEoDjIaLmFjY3Vtb3JhX3JwYy52MS5Vc2VyLlJvbGVSBHJvbGUiMwoLQWNjb3VudFR5cG'
-    'USCgoGbWFudWFsEAASCgoGZ29vZ2xlEAESDAoIZmFjZWJvb2sQAiIyCgZHZW5kZXISEgoOdW5r'
-    'bm93bl9nZW5kZXIQABIICgRtYWxlEAESCgoGZmVtYWxlEAIiPQoEUm9sZRIQCgx1bmtub3duX3'
-    'JvbGUQABIKCgZ0ZW5hbnQQARIMCghsYW5kbG9yZBACEgkKBWFkbWluEANCDAoKX2xhc3RfbmFt'
-    'ZUIICgZfcGhvbmVCCwoJX2xvY2F0aW9uQgsKCV9wYXNzd29yZEILCglfYmlydGhkYXlCDQoLX2'
-    'NyZWF0ZWRfYXQ=');
+    'ZRgMIAEoDjIaLmFjY3Vtb3JhX3JwYy52MS5Vc2VyLlJvbGVSBHJvbGUSKgoRaXNfZW1haWxfdm'
+    'VyaWZpZWQYDSABKAhSD2lzRW1haWxWZXJpZmllZCIzCgtBY2NvdW50VHlwZRIKCgZtYW51YWwQ'
+    'ABIKCgZnb29nbGUQARIMCghmYWNlYm9vaxACIjIKBkdlbmRlchISCg51bmtub3duX2dlbmRlch'
+    'AAEggKBG1hbGUQARIKCgZmZW1hbGUQAiI9CgRSb2xlEhAKDHVua25vd25fcm9sZRAAEgoKBnRl'
+    'bmFudBABEgwKCGxhbmRsb3JkEAISCQoFYWRtaW4QA0IMCgpfbGFzdF9uYW1lQggKBl9waG9uZU'
+    'ILCglfbG9jYXRpb25CCwoJX3Bhc3N3b3JkQgsKCV9iaXJ0aGRheUINCgtfY3JlYXRlZF9hdA==');
 
 @$core.Deprecated('Use accommodationDescriptor instead')
 const Accommodation$json = {
