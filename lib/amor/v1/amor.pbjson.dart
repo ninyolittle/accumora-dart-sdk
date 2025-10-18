@@ -34,6 +34,33 @@ final $typed_data.Uint8List confirmEmailAddressRequestDescriptor =
         'ChpDb25maXJtRW1haWxBZGRyZXNzUmVxdWVzdBIrChFjb25maXJtYXRpb25fY29kZRgBIAEoCV'
         'IQY29uZmlybWF0aW9uQ29kZQ==');
 
+@$core.Deprecated('Use confirmEmailAddressResponseDescriptor instead')
+const ConfirmEmailAddressResponse$json = {
+  '1': 'ConfirmEmailAddressResponse',
+};
+
+/// Descriptor for `ConfirmEmailAddressResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List confirmEmailAddressResponseDescriptor =
+    $convert.base64Decode('ChtDb25maXJtRW1haWxBZGRyZXNzUmVzcG9uc2U=');
+
+@$core.Deprecated('Use sendVerificationEmailRequestDescriptor instead')
+const SendVerificationEmailRequest$json = {
+  '1': 'SendVerificationEmailRequest',
+};
+
+/// Descriptor for `SendVerificationEmailRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List sendVerificationEmailRequestDescriptor =
+    $convert.base64Decode('ChxTZW5kVmVyaWZpY2F0aW9uRW1haWxSZXF1ZXN0');
+
+@$core.Deprecated('Use sendVerificationEmailResponseDescriptor instead')
+const SendVerificationEmailResponse$json = {
+  '1': 'SendVerificationEmailResponse',
+};
+
+/// Descriptor for `SendVerificationEmailResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List sendVerificationEmailResponseDescriptor =
+    $convert.base64Decode('Ch1TZW5kVmVyaWZpY2F0aW9uRW1haWxSZXNwb25zZQ==');
+
 @$core.Deprecated('Use addAmenitiesRequestDescriptor instead')
 const AddAmenitiesRequest$json = {
   '1': 'AddAmenitiesRequest',

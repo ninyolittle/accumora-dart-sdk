@@ -78,6 +78,141 @@ class ConfirmEmailAddressRequest extends $pb.GeneratedMessage {
   void clearConfirmationCode() => $_clearField(1);
 }
 
+class ConfirmEmailAddressResponse extends $pb.GeneratedMessage {
+  factory ConfirmEmailAddressResponse() => create();
+
+  ConfirmEmailAddressResponse._();
+
+  factory ConfirmEmailAddressResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ConfirmEmailAddressResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ConfirmEmailAddressResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ConfirmEmailAddressResponse clone() =>
+      ConfirmEmailAddressResponse()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ConfirmEmailAddressResponse copyWith(
+          void Function(ConfirmEmailAddressResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as ConfirmEmailAddressResponse))
+          as ConfirmEmailAddressResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConfirmEmailAddressResponse create() =>
+      ConfirmEmailAddressResponse._();
+  @$core.override
+  ConfirmEmailAddressResponse createEmptyInstance() => create();
+  static $pb.PbList<ConfirmEmailAddressResponse> createRepeated() =>
+      $pb.PbList<ConfirmEmailAddressResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ConfirmEmailAddressResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ConfirmEmailAddressResponse>(create);
+  static ConfirmEmailAddressResponse? _defaultInstance;
+}
+
+class SendVerificationEmailRequest extends $pb.GeneratedMessage {
+  factory SendVerificationEmailRequest() => create();
+
+  SendVerificationEmailRequest._();
+
+  factory SendVerificationEmailRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SendVerificationEmailRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SendVerificationEmailRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SendVerificationEmailRequest clone() =>
+      SendVerificationEmailRequest()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SendVerificationEmailRequest copyWith(
+          void Function(SendVerificationEmailRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as SendVerificationEmailRequest))
+          as SendVerificationEmailRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SendVerificationEmailRequest create() =>
+      SendVerificationEmailRequest._();
+  @$core.override
+  SendVerificationEmailRequest createEmptyInstance() => create();
+  static $pb.PbList<SendVerificationEmailRequest> createRepeated() =>
+      $pb.PbList<SendVerificationEmailRequest>();
+  @$core.pragma('dart2js:noInline')
+  static SendVerificationEmailRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SendVerificationEmailRequest>(create);
+  static SendVerificationEmailRequest? _defaultInstance;
+}
+
+class SendVerificationEmailResponse extends $pb.GeneratedMessage {
+  factory SendVerificationEmailResponse() => create();
+
+  SendVerificationEmailResponse._();
+
+  factory SendVerificationEmailResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SendVerificationEmailResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SendVerificationEmailResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SendVerificationEmailResponse clone() =>
+      SendVerificationEmailResponse()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SendVerificationEmailResponse copyWith(
+          void Function(SendVerificationEmailResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as SendVerificationEmailResponse))
+          as SendVerificationEmailResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SendVerificationEmailResponse create() =>
+      SendVerificationEmailResponse._();
+  @$core.override
+  SendVerificationEmailResponse createEmptyInstance() => create();
+  static $pb.PbList<SendVerificationEmailResponse> createRepeated() =>
+      $pb.PbList<SendVerificationEmailResponse>();
+  @$core.pragma('dart2js:noInline')
+  static SendVerificationEmailResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SendVerificationEmailResponse>(create);
+  static SendVerificationEmailResponse? _defaultInstance;
+}
+
 class AddAmenitiesRequest_Input extends $pb.GeneratedMessage {
   factory AddAmenitiesRequest_Input({
     $core.String? name,
