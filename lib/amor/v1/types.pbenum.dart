@@ -14,6 +14,28 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+class Amenity_AmenityType extends $pb.ProtobufEnum {
+  static const Amenity_AmenityType unknown_amenity =
+      Amenity_AmenityType._(0, _omitEnumNames ? '' : 'unknown_amenity');
+  static const Amenity_AmenityType built_in =
+      Amenity_AmenityType._(1, _omitEnumNames ? '' : 'built_in');
+  static const Amenity_AmenityType custom =
+      Amenity_AmenityType._(2, _omitEnumNames ? '' : 'custom');
+
+  static const $core.List<Amenity_AmenityType> values = <Amenity_AmenityType>[
+    unknown_amenity,
+    built_in,
+    custom,
+  ];
+
+  static final $core.List<Amenity_AmenityType?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 2);
+  static Amenity_AmenityType? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const Amenity_AmenityType._(super.value, super.name);
+}
+
 class User_AccountType extends $pb.ProtobufEnum {
   static const User_AccountType manual =
       User_AccountType._(0, _omitEnumNames ? '' : 'manual');

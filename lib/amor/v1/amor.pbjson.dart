@@ -14,6 +14,59 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use addAmenitiesRequestDescriptor instead')
+const AddAmenitiesRequest$json = {
+  '1': 'AddAmenitiesRequest',
+  '2': [
+    {
+      '1': 'amenities',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.accumora_rpc.v1.AddAmenitiesRequest.Input',
+      '10': 'amenities'
+    },
+  ],
+  '3': [AddAmenitiesRequest_Input$json],
+};
+
+@$core.Deprecated('Use addAmenitiesRequestDescriptor instead')
+const AddAmenitiesRequest_Input$json = {
+  '1': 'Input',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'icon', '3': 2, '4': 1, '5': 9, '10': 'icon'},
+    {'1': 'iconColor', '3': 3, '4': 1, '5': 9, '10': 'iconColor'},
+  ],
+};
+
+/// Descriptor for `AddAmenitiesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addAmenitiesRequestDescriptor = $convert.base64Decode(
+    'ChNBZGRBbWVuaXRpZXNSZXF1ZXN0EkgKCWFtZW5pdGllcxgBIAMoCzIqLmFjY3Vtb3JhX3JwYy'
+    '52MS5BZGRBbWVuaXRpZXNSZXF1ZXN0LklucHV0UglhbWVuaXRpZXMaTQoFSW5wdXQSEgoEbmFt'
+    'ZRgBIAEoCVIEbmFtZRISCgRpY29uGAIgASgJUgRpY29uEhwKCWljb25Db2xvchgDIAEoCVIJaW'
+    'NvbkNvbG9y');
+
+@$core.Deprecated('Use addAmenitiesResponseDescriptor instead')
+const AddAmenitiesResponse$json = {
+  '1': 'AddAmenitiesResponse',
+  '2': [
+    {
+      '1': 'amenities',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.accumora_rpc.v1.Amenity',
+      '10': 'amenities'
+    },
+  ],
+};
+
+/// Descriptor for `AddAmenitiesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addAmenitiesResponseDescriptor = $convert.base64Decode(
+    'ChRBZGRBbWVuaXRpZXNSZXNwb25zZRI2CglhbWVuaXRpZXMYASADKAsyGC5hY2N1bW9yYV9ycG'
+    'MudjEuQW1lbml0eVIJYW1lbml0aWVz');
+
 @$core.Deprecated('Use setAsLandLordRequestDescriptor instead')
 const SetAsLandLordRequest$json = {
   '1': 'SetAsLandLordRequest',

@@ -117,6 +117,13 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$setAsLandLord, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.AddAmenitiesResponse> addAmenities(
+    $0.AddAmenitiesRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$addAmenities, request, options: options);
+  }
+
   // method descriptors
 
   static final _$addAccommodation =
@@ -178,6 +185,11 @@ class ProjectAmorClient extends $grpc.Client {
           '/accumora_rpc.v1.ProjectAmor/SetAsLandLord',
           ($0.SetAsLandLordRequest value) => value.writeToBuffer(),
           $1.User.fromBuffer);
+  static final _$addAmenities =
+      $grpc.ClientMethod<$0.AddAmenitiesRequest, $0.AddAmenitiesResponse>(
+          '/accumora_rpc.v1.ProjectAmor/AddAmenities',
+          ($0.AddAmenitiesRequest value) => value.writeToBuffer(),
+          $0.AddAmenitiesResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('accumora_rpc.v1.ProjectAmor')
@@ -280,6 +292,15 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.SetAsLandLordRequest.fromBuffer(value),
         ($1.User value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.AddAmenitiesRequest, $0.AddAmenitiesResponse>(
+            'AddAmenities',
+            addAmenities_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.AddAmenitiesRequest.fromBuffer(value),
+            ($0.AddAmenitiesResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.Accommodation> addAccommodation_Pre($grpc.ServiceCall $call,
@@ -381,4 +402,13 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
 
   $async.Future<$1.User> setAsLandLord(
       $grpc.ServiceCall call, $0.SetAsLandLordRequest request);
+
+  $async.Future<$0.AddAmenitiesResponse> addAmenities_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.AddAmenitiesRequest> $request) async {
+    return addAmenities($call, await $request);
+  }
+
+  $async.Future<$0.AddAmenitiesResponse> addAmenities(
+      $grpc.ServiceCall call, $0.AddAmenitiesRequest request);
 }

@@ -20,6 +20,125 @@ export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'types.pbenum.dart';
 
+class Amenity extends $pb.GeneratedMessage {
+  factory Amenity({
+    $core.String? id,
+    $core.String? name,
+    Amenity_AmenityType? type,
+    $core.String? owner,
+    $core.String? icon,
+    $core.String? iconColor,
+  }) {
+    final result = create();
+    if (id != null) result.id = id;
+    if (name != null) result.name = name;
+    if (type != null) result.type = type;
+    if (owner != null) result.owner = owner;
+    if (icon != null) result.icon = icon;
+    if (iconColor != null) result.iconColor = iconColor;
+    return result;
+  }
+
+  Amenity._();
+
+  factory Amenity.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Amenity.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Amenity',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'name')
+    ..e<Amenity_AmenityType>(
+        3, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: Amenity_AmenityType.unknown_amenity,
+        valueOf: Amenity_AmenityType.valueOf,
+        enumValues: Amenity_AmenityType.values)
+    ..aOS(4, _omitFieldNames ? '' : 'owner')
+    ..aOS(5, _omitFieldNames ? '' : 'icon')
+    ..aOS(6, _omitFieldNames ? '' : 'iconColor')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Amenity clone() => Amenity()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Amenity copyWith(void Function(Amenity) updates) =>
+      super.copyWith((message) => updates(message as Amenity)) as Amenity;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Amenity create() => Amenity._();
+  @$core.override
+  Amenity createEmptyInstance() => create();
+  static $pb.PbList<Amenity> createRepeated() => $pb.PbList<Amenity>();
+  @$core.pragma('dart2js:noInline')
+  static Amenity getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Amenity>(create);
+  static Amenity? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get name => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set name($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  Amenity_AmenityType get type => $_getN(2);
+  @$pb.TagNumber(3)
+  set type(Amenity_AmenityType value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasType() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearType() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get owner => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set owner($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasOwner() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearOwner() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get icon => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set icon($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasIcon() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearIcon() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get iconColor => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set iconColor($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasIconColor() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearIconColor() => $_clearField(6);
+}
+
 class Coordinates extends $pb.GeneratedMessage {
   factory Coordinates({
     $core.double? latitude,

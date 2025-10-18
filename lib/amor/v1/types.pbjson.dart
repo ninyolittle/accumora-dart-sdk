@@ -14,6 +14,45 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use amenityDescriptor instead')
+const Amenity$json = {
+  '1': 'Amenity',
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'type',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.accumora_rpc.v1.Amenity.AmenityType',
+      '10': 'type'
+    },
+    {'1': 'owner', '3': 4, '4': 1, '5': 9, '10': 'owner'},
+    {'1': 'icon', '3': 5, '4': 1, '5': 9, '10': 'icon'},
+    {'1': 'icon_color', '3': 6, '4': 1, '5': 9, '10': 'iconColor'},
+  ],
+  '4': [Amenity_AmenityType$json],
+};
+
+@$core.Deprecated('Use amenityDescriptor instead')
+const Amenity_AmenityType$json = {
+  '1': 'AmenityType',
+  '2': [
+    {'1': 'unknown_amenity', '2': 0},
+    {'1': 'built_in', '2': 1},
+    {'1': 'custom', '2': 2},
+  ],
+};
+
+/// Descriptor for `Amenity`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List amenityDescriptor = $convert.base64Decode(
+    'CgdBbWVuaXR5Eg4KAmlkGAEgASgJUgJpZBISCgRuYW1lGAIgASgJUgRuYW1lEjgKBHR5cGUYAy'
+    'ABKA4yJC5hY2N1bW9yYV9ycGMudjEuQW1lbml0eS5BbWVuaXR5VHlwZVIEdHlwZRIUCgVvd25l'
+    'chgEIAEoCVIFb3duZXISEgoEaWNvbhgFIAEoCVIEaWNvbhIdCgppY29uX2NvbG9yGAYgASgJUg'
+    'lpY29uQ29sb3IiPAoLQW1lbml0eVR5cGUSEwoPdW5rbm93bl9hbWVuaXR5EAASDAoIYnVpbHRf'
+    'aW4QARIKCgZjdXN0b20QAg==');
+
 @$core.Deprecated('Use coordinatesDescriptor instead')
 const Coordinates$json = {
   '1': 'Coordinates',

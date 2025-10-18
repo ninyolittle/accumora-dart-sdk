@@ -18,6 +18,195 @@ import 'types.pb.dart' as $1;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
+class AddAmenitiesRequest_Input extends $pb.GeneratedMessage {
+  factory AddAmenitiesRequest_Input({
+    $core.String? name,
+    $core.String? icon,
+    $core.String? iconColor,
+  }) {
+    final result = create();
+    if (name != null) result.name = name;
+    if (icon != null) result.icon = icon;
+    if (iconColor != null) result.iconColor = iconColor;
+    return result;
+  }
+
+  AddAmenitiesRequest_Input._();
+
+  factory AddAmenitiesRequest_Input.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AddAmenitiesRequest_Input.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AddAmenitiesRequest.Input',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'icon')
+    ..aOS(3, _omitFieldNames ? '' : 'iconColor', protoName: 'iconColor')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddAmenitiesRequest_Input clone() =>
+      AddAmenitiesRequest_Input()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddAmenitiesRequest_Input copyWith(
+          void Function(AddAmenitiesRequest_Input) updates) =>
+      super.copyWith((message) => updates(message as AddAmenitiesRequest_Input))
+          as AddAmenitiesRequest_Input;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AddAmenitiesRequest_Input create() => AddAmenitiesRequest_Input._();
+  @$core.override
+  AddAmenitiesRequest_Input createEmptyInstance() => create();
+  static $pb.PbList<AddAmenitiesRequest_Input> createRepeated() =>
+      $pb.PbList<AddAmenitiesRequest_Input>();
+  @$core.pragma('dart2js:noInline')
+  static AddAmenitiesRequest_Input getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddAmenitiesRequest_Input>(create);
+  static AddAmenitiesRequest_Input? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get icon => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set icon($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasIcon() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearIcon() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get iconColor => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set iconColor($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasIconColor() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearIconColor() => $_clearField(3);
+}
+
+class AddAmenitiesRequest extends $pb.GeneratedMessage {
+  factory AddAmenitiesRequest({
+    $core.Iterable<AddAmenitiesRequest_Input>? amenities,
+  }) {
+    final result = create();
+    if (amenities != null) result.amenities.addAll(amenities);
+    return result;
+  }
+
+  AddAmenitiesRequest._();
+
+  factory AddAmenitiesRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AddAmenitiesRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AddAmenitiesRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..pc<AddAmenitiesRequest_Input>(
+        1, _omitFieldNames ? '' : 'amenities', $pb.PbFieldType.PM,
+        subBuilder: AddAmenitiesRequest_Input.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddAmenitiesRequest clone() => AddAmenitiesRequest()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddAmenitiesRequest copyWith(void Function(AddAmenitiesRequest) updates) =>
+      super.copyWith((message) => updates(message as AddAmenitiesRequest))
+          as AddAmenitiesRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AddAmenitiesRequest create() => AddAmenitiesRequest._();
+  @$core.override
+  AddAmenitiesRequest createEmptyInstance() => create();
+  static $pb.PbList<AddAmenitiesRequest> createRepeated() =>
+      $pb.PbList<AddAmenitiesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static AddAmenitiesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddAmenitiesRequest>(create);
+  static AddAmenitiesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<AddAmenitiesRequest_Input> get amenities => $_getList(0);
+}
+
+class AddAmenitiesResponse extends $pb.GeneratedMessage {
+  factory AddAmenitiesResponse({
+    $core.Iterable<$1.Amenity>? amenities,
+  }) {
+    final result = create();
+    if (amenities != null) result.amenities.addAll(amenities);
+    return result;
+  }
+
+  AddAmenitiesResponse._();
+
+  factory AddAmenitiesResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AddAmenitiesResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AddAmenitiesResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..pc<$1.Amenity>(1, _omitFieldNames ? '' : 'amenities', $pb.PbFieldType.PM,
+        subBuilder: $1.Amenity.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddAmenitiesResponse clone() =>
+      AddAmenitiesResponse()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddAmenitiesResponse copyWith(void Function(AddAmenitiesResponse) updates) =>
+      super.copyWith((message) => updates(message as AddAmenitiesResponse))
+          as AddAmenitiesResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AddAmenitiesResponse create() => AddAmenitiesResponse._();
+  @$core.override
+  AddAmenitiesResponse createEmptyInstance() => create();
+  static $pb.PbList<AddAmenitiesResponse> createRepeated() =>
+      $pb.PbList<AddAmenitiesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static AddAmenitiesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddAmenitiesResponse>(create);
+  static AddAmenitiesResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$1.Amenity> get amenities => $_getList(0);
+}
+
 class SetAsLandLordRequest extends $pb.GeneratedMessage {
   factory SetAsLandLordRequest() => create();
 
