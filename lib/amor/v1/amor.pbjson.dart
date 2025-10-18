@@ -560,11 +560,15 @@ final $typed_data.Uint8List registerUserRequestDescriptor = $convert.base64Decod
 @$core.Deprecated('Use registerUserResponseDescriptor instead')
 const RegisterUserResponse$json = {
   '1': 'RegisterUserResponse',
+  '2': [
+    {'1': 'access_token', '3': 1, '4': 1, '5': 9, '10': 'accessToken'},
+  ],
 };
 
 /// Descriptor for `RegisterUserResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List registerUserResponseDescriptor =
-    $convert.base64Decode('ChRSZWdpc3RlclVzZXJSZXNwb25zZQ==');
+final $typed_data.Uint8List registerUserResponseDescriptor = $convert.base64Decode(
+    'ChRSZWdpc3RlclVzZXJSZXNwb25zZRIhCgxhY2Nlc3NfdG9rZW4YASABKAlSC2FjY2Vzc1Rva2'
+    'Vu');
 
 @$core.Deprecated('Use loginUserRequestDescriptor instead')
 const LoginUserRequest$json = {
@@ -607,13 +611,13 @@ final $typed_data.Uint8List loginUserRequestDescriptor = $convert.base64Decode(
 const LoginUserResponse$json = {
   '1': 'LoginUserResponse',
   '2': [
-    {'1': 'accessToken', '3': 1, '4': 1, '5': 9, '10': 'accessToken'},
+    {'1': 'access_token', '3': 1, '4': 1, '5': 9, '10': 'accessToken'},
   ],
 };
 
 /// Descriptor for `LoginUserResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List loginUserResponseDescriptor = $convert.base64Decode(
-    'ChFMb2dpblVzZXJSZXNwb25zZRIgCgthY2Nlc3NUb2tlbhgBIAEoCVILYWNjZXNzVG9rZW4=');
+    'ChFMb2dpblVzZXJSZXNwb25zZRIhCgxhY2Nlc3NfdG9rZW4YASABKAlSC2FjY2Vzc1Rva2Vu');
 
 @$core.Deprecated('Use addAccommodationRequestDescriptor instead')
 const AddAccommodationRequest$json = {

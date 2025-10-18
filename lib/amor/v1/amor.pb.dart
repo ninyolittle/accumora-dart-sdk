@@ -1584,7 +1584,13 @@ class RegisterUserRequest extends $pb.GeneratedMessage {
 }
 
 class RegisterUserResponse extends $pb.GeneratedMessage {
-  factory RegisterUserResponse() => create();
+  factory RegisterUserResponse({
+    $core.String? accessToken,
+  }) {
+    final result = create();
+    if (accessToken != null) result.accessToken = accessToken;
+    return result;
+  }
 
   RegisterUserResponse._();
 
@@ -1600,6 +1606,7 @@ class RegisterUserResponse extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'accessToken')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1623,6 +1630,15 @@ class RegisterUserResponse extends $pb.GeneratedMessage {
   static RegisterUserResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RegisterUserResponse>(create);
   static RegisterUserResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get accessToken => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set accessToken($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasAccessToken() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAccessToken() => $_clearField(1);
 }
 
 class LoginUserRequest_Manual extends $pb.GeneratedMessage {
@@ -1804,7 +1820,7 @@ class LoginUserResponse extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'accessToken', protoName: 'accessToken')
+    ..aOS(1, _omitFieldNames ? '' : 'accessToken')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
