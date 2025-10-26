@@ -54,6 +54,13 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$registerUser, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.DeleteUserResponse> deleteUser(
+    $0.DeleteUserRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$deleteUser, request, options: options);
+  }
+
   $grpc.ResponseFuture<$0.DeleteAccommodationResponse> deleteAccommodation(
     $0.DeleteAccommodationRequest request, {
     $grpc.CallOptions? options,
@@ -155,6 +162,11 @@ class ProjectAmorClient extends $grpc.Client {
           '/accumora_rpc.v1.ProjectAmor/RegisterUser',
           ($0.RegisterUserRequest value) => value.writeToBuffer(),
           $0.RegisterUserResponse.fromBuffer);
+  static final _$deleteUser =
+      $grpc.ClientMethod<$0.DeleteUserRequest, $0.DeleteUserResponse>(
+          '/accumora_rpc.v1.ProjectAmor/DeleteUser',
+          ($0.DeleteUserRequest value) => value.writeToBuffer(),
+          $0.DeleteUserResponse.fromBuffer);
   static final _$deleteAccommodation = $grpc.ClientMethod<
           $0.DeleteAccommodationRequest, $0.DeleteAccommodationResponse>(
       '/accumora_rpc.v1.ProjectAmor/DeleteAccommodation',
@@ -246,6 +258,13 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $0.RegisterUserRequest.fromBuffer(value),
             ($0.RegisterUserResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteUserRequest, $0.DeleteUserResponse>(
+        'DeleteUser',
+        deleteUser_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.DeleteUserRequest.fromBuffer(value),
+        ($0.DeleteUserResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.DeleteAccommodationRequest,
             $0.DeleteAccommodationResponse>(
         'DeleteAccommodation',
@@ -369,6 +388,14 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
 
   $async.Future<$0.RegisterUserResponse> registerUser(
       $grpc.ServiceCall call, $0.RegisterUserRequest request);
+
+  $async.Future<$0.DeleteUserResponse> deleteUser_Pre($grpc.ServiceCall $call,
+      $async.Future<$0.DeleteUserRequest> $request) async {
+    return deleteUser($call, await $request);
+  }
+
+  $async.Future<$0.DeleteUserResponse> deleteUser(
+      $grpc.ServiceCall call, $0.DeleteUserRequest request);
 
   $async.Future<$0.DeleteAccommodationResponse> deleteAccommodation_Pre(
       $grpc.ServiceCall $call,

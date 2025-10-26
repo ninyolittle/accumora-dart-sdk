@@ -18,6 +18,88 @@ import 'types.pb.dart' as $1;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
+class DeleteUserRequest extends $pb.GeneratedMessage {
+  factory DeleteUserRequest() => create();
+
+  DeleteUserRequest._();
+
+  factory DeleteUserRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteUserRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteUserRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteUserRequest clone() => DeleteUserRequest()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteUserRequest copyWith(void Function(DeleteUserRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteUserRequest))
+          as DeleteUserRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static DeleteUserRequest create() => DeleteUserRequest._();
+  @$core.override
+  DeleteUserRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteUserRequest> createRepeated() =>
+      $pb.PbList<DeleteUserRequest>();
+  @$core.pragma('dart2js:noInline')
+  static DeleteUserRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteUserRequest>(create);
+  static DeleteUserRequest? _defaultInstance;
+}
+
+class DeleteUserResponse extends $pb.GeneratedMessage {
+  factory DeleteUserResponse() => create();
+
+  DeleteUserResponse._();
+
+  factory DeleteUserResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteUserResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteUserResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteUserResponse clone() => DeleteUserResponse()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteUserResponse copyWith(void Function(DeleteUserResponse) updates) =>
+      super.copyWith((message) => updates(message as DeleteUserResponse))
+          as DeleteUserResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static DeleteUserResponse create() => DeleteUserResponse._();
+  @$core.override
+  DeleteUserResponse createEmptyInstance() => create();
+  static $pb.PbList<DeleteUserResponse> createRepeated() =>
+      $pb.PbList<DeleteUserResponse>();
+  @$core.pragma('dart2js:noInline')
+  static DeleteUserResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteUserResponse>(create);
+  static DeleteUserResponse? _defaultInstance;
+}
+
 class ConfirmEmailAddressRequest extends $pb.GeneratedMessage {
   factory ConfirmEmailAddressRequest({
     $core.String? confirmationCode,

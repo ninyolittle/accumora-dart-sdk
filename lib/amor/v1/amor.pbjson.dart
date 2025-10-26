@@ -14,6 +14,24 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use deleteUserRequestDescriptor instead')
+const DeleteUserRequest$json = {
+  '1': 'DeleteUserRequest',
+};
+
+/// Descriptor for `DeleteUserRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteUserRequestDescriptor =
+    $convert.base64Decode('ChFEZWxldGVVc2VyUmVxdWVzdA==');
+
+@$core.Deprecated('Use deleteUserResponseDescriptor instead')
+const DeleteUserResponse$json = {
+  '1': 'DeleteUserResponse',
+};
+
+/// Descriptor for `DeleteUserResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteUserResponseDescriptor =
+    $convert.base64Decode('ChJEZWxldGVVc2VyUmVzcG9uc2U=');
+
 @$core.Deprecated('Use confirmEmailAddressRequestDescriptor instead')
 const ConfirmEmailAddressRequest$json = {
   '1': 'ConfirmEmailAddressRequest',
