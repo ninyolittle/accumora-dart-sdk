@@ -408,7 +408,6 @@ const Accommodation$json = {
       '10': 'description',
       '17': true
     },
-    {'1': 'utilities', '3': 5, '4': 3, '5': 9, '10': 'utilities'},
     {
       '1': 'type',
       '3': 6,
@@ -470,13 +469,12 @@ const Accommodation_Status$json = {
 final $typed_data.Uint8List accommodationDescriptor = $convert.base64Decode(
     'Cg1BY2NvbW1vZGF0aW9uEg4KAmlkGAEgASgJUgJpZBISCgRuYW1lGAIgASgJUgRuYW1lEjoKCG'
     'xvY2F0aW9uGAMgASgLMhkuYWNjdW1vcmFfcnBjLnYxLkxvY2F0aW9uSABSCGxvY2F0aW9uiAEB'
-    'EiUKC2Rlc2NyaXB0aW9uGAQgASgJSAFSC2Rlc2NyaXB0aW9uiAEBEhwKCXV0aWxpdGllcxgFIA'
-    'MoCVIJdXRpbGl0aWVzEkQKBHR5cGUYBiABKA4yMC5hY2N1bW9yYV9ycGMudjEuQWNjb21tb2Rh'
-    'dGlvbi5BY2NvbW1vZGF0aW9uVHlwZVIEdHlwZRJDCgtjb29yZGluYXRlcxgHIAEoCzIcLmFjY3'
-    'Vtb3JhX3JwYy52MS5Db29yZGluYXRlc0gCUgtjb29yZGluYXRlc4gBARIUCgVvd25lchgJIAEo'
-    'CVIFb3duZXISHQoKY3JlYXRlZF9hdBgKIAEoCVIJY3JlYXRlZEF0Ej0KBnN0YXR1cxgLIAEoDj'
-    'IlLmFjY3Vtb3JhX3JwYy52MS5BY2NvbW1vZGF0aW9uLlN0YXR1c1IGc3RhdHVzIkgKEUFjY29t'
-    'bW9kYXRpb25UeXBlEhAKDHVua25vd25fdHlwZRAAEg0KCWFwYXJ0bWVudBABEhIKDmJvYXJkaW'
-    '5nX2hvdXNlEAIiNgoGU3RhdHVzEhIKDnVua25vd25fc3RhdHVzEAASCgoGYWN0aXZlEAESDAoI'
-    'aW5hY3RpdmUQAkILCglfbG9jYXRpb25CDgoMX2Rlc2NyaXB0aW9uQg4KDF9jb29yZGluYXRlcw'
-    '==');
+    'EiUKC2Rlc2NyaXB0aW9uGAQgASgJSAFSC2Rlc2NyaXB0aW9uiAEBEkQKBHR5cGUYBiABKA4yMC'
+    '5hY2N1bW9yYV9ycGMudjEuQWNjb21tb2RhdGlvbi5BY2NvbW1vZGF0aW9uVHlwZVIEdHlwZRJD'
+    'Cgtjb29yZGluYXRlcxgHIAEoCzIcLmFjY3Vtb3JhX3JwYy52MS5Db29yZGluYXRlc0gCUgtjb2'
+    '9yZGluYXRlc4gBARIUCgVvd25lchgJIAEoCVIFb3duZXISHQoKY3JlYXRlZF9hdBgKIAEoCVIJ'
+    'Y3JlYXRlZEF0Ej0KBnN0YXR1cxgLIAEoDjIlLmFjY3Vtb3JhX3JwYy52MS5BY2NvbW1vZGF0aW'
+    '9uLlN0YXR1c1IGc3RhdHVzIkgKEUFjY29tbW9kYXRpb25UeXBlEhAKDHVua25vd25fdHlwZRAA'
+    'Eg0KCWFwYXJ0bWVudBABEhIKDmJvYXJkaW5nX2hvdXNlEAIiNgoGU3RhdHVzEhIKDnVua25vd2'
+    '5fc3RhdHVzEAASCgoGYWN0aXZlEAESDAoIaW5hY3RpdmUQAkILCglfbG9jYXRpb25CDgoMX2Rl'
+    'c2NyaXB0aW9uQg4KDF9jb29yZGluYXRlcw==');

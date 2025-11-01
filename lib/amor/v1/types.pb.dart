@@ -756,7 +756,6 @@ class Accommodation extends $pb.GeneratedMessage {
     $core.String? name,
     Location? location,
     $core.String? description,
-    $core.Iterable<$core.String>? utilities,
     Accommodation_AccommodationType? type,
     Coordinates? coordinates,
     $core.String? owner,
@@ -768,7 +767,6 @@ class Accommodation extends $pb.GeneratedMessage {
     if (name != null) result.name = name;
     if (location != null) result.location = location;
     if (description != null) result.description = description;
-    if (utilities != null) result.utilities.addAll(utilities);
     if (type != null) result.type = type;
     if (coordinates != null) result.coordinates = coordinates;
     if (owner != null) result.owner = owner;
@@ -796,7 +794,6 @@ class Accommodation extends $pb.GeneratedMessage {
     ..aOM<Location>(3, _omitFieldNames ? '' : 'location',
         subBuilder: Location.create)
     ..aOS(4, _omitFieldNames ? '' : 'description')
-    ..pPS(5, _omitFieldNames ? '' : 'utilities')
     ..e<Accommodation_AccommodationType>(
         6, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
         defaultOrMaker: Accommodation_AccommodationType.unknown_type,
@@ -872,53 +869,50 @@ class Accommodation extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearDescription() => $_clearField(4);
 
-  @$pb.TagNumber(5)
-  $pb.PbList<$core.String> get utilities => $_getList(4);
-
   @$pb.TagNumber(6)
-  Accommodation_AccommodationType get type => $_getN(5);
+  Accommodation_AccommodationType get type => $_getN(4);
   @$pb.TagNumber(6)
   set type(Accommodation_AccommodationType value) => $_setField(6, value);
   @$pb.TagNumber(6)
-  $core.bool hasType() => $_has(5);
+  $core.bool hasType() => $_has(4);
   @$pb.TagNumber(6)
   void clearType() => $_clearField(6);
 
   @$pb.TagNumber(7)
-  Coordinates get coordinates => $_getN(6);
+  Coordinates get coordinates => $_getN(5);
   @$pb.TagNumber(7)
   set coordinates(Coordinates value) => $_setField(7, value);
   @$pb.TagNumber(7)
-  $core.bool hasCoordinates() => $_has(6);
+  $core.bool hasCoordinates() => $_has(5);
   @$pb.TagNumber(7)
   void clearCoordinates() => $_clearField(7);
   @$pb.TagNumber(7)
-  Coordinates ensureCoordinates() => $_ensure(6);
+  Coordinates ensureCoordinates() => $_ensure(5);
 
   @$pb.TagNumber(9)
-  $core.String get owner => $_getSZ(7);
+  $core.String get owner => $_getSZ(6);
   @$pb.TagNumber(9)
-  set owner($core.String value) => $_setString(7, value);
+  set owner($core.String value) => $_setString(6, value);
   @$pb.TagNumber(9)
-  $core.bool hasOwner() => $_has(7);
+  $core.bool hasOwner() => $_has(6);
   @$pb.TagNumber(9)
   void clearOwner() => $_clearField(9);
 
   @$pb.TagNumber(10)
-  $core.String get createdAt => $_getSZ(8);
+  $core.String get createdAt => $_getSZ(7);
   @$pb.TagNumber(10)
-  set createdAt($core.String value) => $_setString(8, value);
+  set createdAt($core.String value) => $_setString(7, value);
   @$pb.TagNumber(10)
-  $core.bool hasCreatedAt() => $_has(8);
+  $core.bool hasCreatedAt() => $_has(7);
   @$pb.TagNumber(10)
   void clearCreatedAt() => $_clearField(10);
 
   @$pb.TagNumber(11)
-  Accommodation_Status get status => $_getN(9);
+  Accommodation_Status get status => $_getN(8);
   @$pb.TagNumber(11)
   set status(Accommodation_Status value) => $_setField(11, value);
   @$pb.TagNumber(11)
-  $core.bool hasStatus() => $_has(9);
+  $core.bool hasStatus() => $_has(8);
   @$pb.TagNumber(11)
   void clearStatus() => $_clearField(11);
 }
