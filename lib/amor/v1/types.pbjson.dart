@@ -29,10 +29,22 @@ const Amenity$json = {
       '10': 'type'
     },
     {'1': 'owner', '3': 4, '4': 1, '5': 9, '10': 'owner'},
-    {'1': 'icon', '3': 5, '4': 1, '5': 9, '10': 'icon'},
-    {'1': 'icon_color', '3': 6, '4': 1, '5': 9, '10': 'iconColor'},
+    {'1': 'icon', '3': 5, '4': 1, '5': 9, '9': 0, '10': 'icon', '17': true},
+    {
+      '1': 'icon_color',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'iconColor',
+      '17': true
+    },
   ],
   '4': [Amenity_AmenityType$json],
+  '8': [
+    {'1': '_icon'},
+    {'1': '_icon_color'},
+  ],
 };
 
 @$core.Deprecated('Use amenityDescriptor instead')
@@ -49,9 +61,9 @@ const Amenity_AmenityType$json = {
 final $typed_data.Uint8List amenityDescriptor = $convert.base64Decode(
     'CgdBbWVuaXR5Eg4KAmlkGAEgASgJUgJpZBISCgRuYW1lGAIgASgJUgRuYW1lEjgKBHR5cGUYAy'
     'ABKA4yJC5hY2N1bW9yYV9ycGMudjEuQW1lbml0eS5BbWVuaXR5VHlwZVIEdHlwZRIUCgVvd25l'
-    'chgEIAEoCVIFb3duZXISEgoEaWNvbhgFIAEoCVIEaWNvbhIdCgppY29uX2NvbG9yGAYgASgJUg'
-    'lpY29uQ29sb3IiPAoLQW1lbml0eVR5cGUSEwoPdW5rbm93bl9hbWVuaXR5EAASDAoIYnVpbHRf'
-    'aW4QARIKCgZjdXN0b20QAg==');
+    'chgEIAEoCVIFb3duZXISFwoEaWNvbhgFIAEoCUgAUgRpY29uiAEBEiIKCmljb25fY29sb3IYBi'
+    'ABKAlIAVIJaWNvbkNvbG9yiAEBIjwKC0FtZW5pdHlUeXBlEhMKD3Vua25vd25fYW1lbml0eRAA'
+    'EgwKCGJ1aWx0X2luEAESCgoGY3VzdG9tEAJCBwoFX2ljb25CDQoLX2ljb25fY29sb3I=');
 
 @$core.Deprecated('Use coordinatesDescriptor instead')
 const Coordinates$json = {
