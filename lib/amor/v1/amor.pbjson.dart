@@ -167,17 +167,29 @@ const AddAmenitiesRequest_Input$json = {
   '1': 'Input',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'icon', '3': 2, '4': 1, '5': 9, '10': 'icon'},
-    {'1': 'iconColor', '3': 3, '4': 1, '5': 9, '10': 'iconColor'},
+    {'1': 'icon', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'icon', '17': true},
+    {
+      '1': 'iconColor',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'iconColor',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_icon'},
+    {'1': '_iconColor'},
   ],
 };
 
 /// Descriptor for `AddAmenitiesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List addAmenitiesRequestDescriptor = $convert.base64Decode(
     'ChNBZGRBbWVuaXRpZXNSZXF1ZXN0EkgKCWFtZW5pdGllcxgBIAMoCzIqLmFjY3Vtb3JhX3JwYy'
-    '52MS5BZGRBbWVuaXRpZXNSZXF1ZXN0LklucHV0UglhbWVuaXRpZXMaTQoFSW5wdXQSEgoEbmFt'
-    'ZRgBIAEoCVIEbmFtZRISCgRpY29uGAIgASgJUgRpY29uEhwKCWljb25Db2xvchgDIAEoCVIJaW'
-    'NvbkNvbG9y');
+    '52MS5BZGRBbWVuaXRpZXNSZXF1ZXN0LklucHV0UglhbWVuaXRpZXMabgoFSW5wdXQSEgoEbmFt'
+    'ZRgBIAEoCVIEbmFtZRIXCgRpY29uGAIgASgJSABSBGljb26IAQESIQoJaWNvbkNvbG9yGAMgAS'
+    'gJSAFSCWljb25Db2xvcogBAUIHCgVfaWNvbkIMCgpfaWNvbkNvbG9y');
 
 @$core.Deprecated('Use addAmenitiesResponseDescriptor instead')
 const AddAmenitiesResponse$json = {
