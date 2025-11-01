@@ -729,7 +729,7 @@ const AddAccommodationRequest$json = {
       '6': '.accumora_rpc.v1.Accommodation.AccommodationType',
       '10': 'type'
     },
-    {'1': 'utilities', '3': 4, '4': 3, '5': 9, '10': 'utilities'},
+    {'1': 'amenities', '3': 4, '4': 3, '5': 9, '10': 'amenities'},
     {
       '1': 'description',
       '3': 5,
@@ -757,6 +757,7 @@ const AddAccommodationRequest$json = {
       '9': 0,
       '10': 'coordinates'
     },
+    {'1': 'rules', '3': 9, '4': 3, '5': 9, '10': 'rules'},
   ],
   '8': [
     {'1': 'geo'},
@@ -768,7 +769,8 @@ const AddAccommodationRequest$json = {
 final $typed_data.Uint8List addAccommodationRequestDescriptor = $convert.base64Decode(
     'ChdBZGRBY2NvbW1vZGF0aW9uUmVxdWVzdBISCgRuYW1lGAEgASgJUgRuYW1lEkQKBHR5cGUYAi'
     'ABKA4yMC5hY2N1bW9yYV9ycGMudjEuQWNjb21tb2RhdGlvbi5BY2NvbW1vZGF0aW9uVHlwZVIE'
-    'dHlwZRIcCgl1dGlsaXRpZXMYBCADKAlSCXV0aWxpdGllcxIlCgtkZXNjcmlwdGlvbhgFIAEoCU'
+    'dHlwZRIcCglhbWVuaXRpZXMYBCADKAlSCWFtZW5pdGllcxIlCgtkZXNjcmlwdGlvbhgFIAEoCU'
     'gBUgtkZXNjcmlwdGlvbogBARI3Cghsb2NhdGlvbhgGIAEoCzIZLmFjY3Vtb3JhX3JwYy52MS5M'
     'b2NhdGlvbkgAUghsb2NhdGlvbhJACgtjb29yZGluYXRlcxgHIAEoCzIcLmFjY3Vtb3JhX3JwYy'
-    '52MS5Db29yZGluYXRlc0gAUgtjb29yZGluYXRlc0IFCgNnZW9CDgoMX2Rlc2NyaXB0aW9u');
+    '52MS5Db29yZGluYXRlc0gAUgtjb29yZGluYXRlcxIUCgVydWxlcxgJIAMoCVIFcnVsZXNCBQoD'
+    'Z2VvQg4KDF9kZXNjcmlwdGlvbg==');

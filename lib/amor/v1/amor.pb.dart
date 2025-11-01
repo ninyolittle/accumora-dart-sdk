@@ -2151,18 +2151,20 @@ class AddAccommodationRequest extends $pb.GeneratedMessage {
   factory AddAccommodationRequest({
     $core.String? name,
     $1.Accommodation_AccommodationType? type,
-    $core.Iterable<$core.String>? utilities,
+    $core.Iterable<$core.String>? amenities,
     $core.String? description,
     $1.Location? location,
     $1.Coordinates? coordinates,
+    $core.Iterable<$core.String>? rules,
   }) {
     final result = create();
     if (name != null) result.name = name;
     if (type != null) result.type = type;
-    if (utilities != null) result.utilities.addAll(utilities);
+    if (amenities != null) result.amenities.addAll(amenities);
     if (description != null) result.description = description;
     if (location != null) result.location = location;
     if (coordinates != null) result.coordinates = coordinates;
+    if (rules != null) result.rules.addAll(rules);
     return result;
   }
 
@@ -2193,12 +2195,13 @@ class AddAccommodationRequest extends $pb.GeneratedMessage {
         defaultOrMaker: $1.Accommodation_AccommodationType.unknown_type,
         valueOf: $1.Accommodation_AccommodationType.valueOf,
         enumValues: $1.Accommodation_AccommodationType.values)
-    ..pPS(4, _omitFieldNames ? '' : 'utilities')
+    ..pPS(4, _omitFieldNames ? '' : 'amenities')
     ..aOS(5, _omitFieldNames ? '' : 'description')
     ..aOM<$1.Location>(6, _omitFieldNames ? '' : 'location',
         subBuilder: $1.Location.create)
     ..aOM<$1.Coordinates>(7, _omitFieldNames ? '' : 'coordinates',
         subBuilder: $1.Coordinates.create)
+    ..pPS(9, _omitFieldNames ? '' : 'rules')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -2247,7 +2250,7 @@ class AddAccommodationRequest extends $pb.GeneratedMessage {
   void clearType() => $_clearField(2);
 
   @$pb.TagNumber(4)
-  $pb.PbList<$core.String> get utilities => $_getList(2);
+  $pb.PbList<$core.String> get amenities => $_getList(2);
 
   @$pb.TagNumber(5)
   $core.String get description => $_getSZ(3);
@@ -2279,6 +2282,9 @@ class AddAccommodationRequest extends $pb.GeneratedMessage {
   void clearCoordinates() => $_clearField(7);
   @$pb.TagNumber(7)
   $1.Coordinates ensureCoordinates() => $_ensure(5);
+
+  @$pb.TagNumber(9)
+  $pb.PbList<$core.String> get rules => $_getList(6);
 }
 
 const $core.bool _omitFieldNames =
