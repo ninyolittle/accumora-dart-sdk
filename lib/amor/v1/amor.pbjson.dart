@@ -14,6 +14,73 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use deleteAmenitiesRequestDescriptor instead')
+const DeleteAmenitiesRequest$json = {
+  '1': 'DeleteAmenitiesRequest',
+  '2': [
+    {'1': 'amenityIds', '3': 1, '4': 3, '5': 9, '10': 'amenityIds'},
+  ],
+};
+
+/// Descriptor for `DeleteAmenitiesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteAmenitiesRequestDescriptor =
+    $convert.base64Decode(
+        'ChZEZWxldGVBbWVuaXRpZXNSZXF1ZXN0Eh4KCmFtZW5pdHlJZHMYASADKAlSCmFtZW5pdHlJZH'
+        'M=');
+
+@$core.Deprecated('Use deleteAmenitiesResponseDescriptor instead')
+const DeleteAmenitiesResponse$json = {
+  '1': 'DeleteAmenitiesResponse',
+};
+
+/// Descriptor for `DeleteAmenitiesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteAmenitiesResponseDescriptor =
+    $convert.base64Decode('ChdEZWxldGVBbWVuaXRpZXNSZXNwb25zZQ==');
+
+@$core.Deprecated('Use listAmenitiesRequestDescriptor instead')
+const ListAmenitiesRequest$json = {
+  '1': 'ListAmenitiesRequest',
+  '2': [
+    {
+      '1': 'accommodationId',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'accommodationId',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_accommodationId'},
+  ],
+};
+
+/// Descriptor for `ListAmenitiesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAmenitiesRequestDescriptor = $convert.base64Decode(
+    'ChRMaXN0QW1lbml0aWVzUmVxdWVzdBItCg9hY2NvbW1vZGF0aW9uSWQYASABKAlIAFIPYWNjb2'
+    '1tb2RhdGlvbklkiAEBQhIKEF9hY2NvbW1vZGF0aW9uSWQ=');
+
+@$core.Deprecated('Use listAmenitiesResponseDescriptor instead')
+const ListAmenitiesResponse$json = {
+  '1': 'ListAmenitiesResponse',
+  '2': [
+    {
+      '1': 'amenities',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.accumora_rpc.v1.Amenity',
+      '10': 'amenities'
+    },
+  ],
+};
+
+/// Descriptor for `ListAmenitiesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAmenitiesResponseDescriptor = $convert.base64Decode(
+    'ChVMaXN0QW1lbml0aWVzUmVzcG9uc2USNgoJYW1lbml0aWVzGAEgAygLMhguYWNjdW1vcmFfcn'
+    'BjLnYxLkFtZW5pdHlSCWFtZW5pdGllcw==');
+
 @$core.Deprecated('Use deleteUserRequestDescriptor instead')
 const DeleteUserRequest$json = {
   '1': 'DeleteUserRequest',

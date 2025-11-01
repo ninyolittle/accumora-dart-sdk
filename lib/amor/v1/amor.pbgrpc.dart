@@ -131,6 +131,20 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$addAmenities, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.ListAmenitiesResponse> listAmenities(
+    $0.ListAmenitiesRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listAmenities, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.DeleteAmenitiesResponse> deleteAmenities(
+    $0.DeleteAmenitiesRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$deleteAmenities, request, options: options);
+  }
+
   $grpc.ResponseFuture<$0.SendVerificationEmailResponse> sendVerificationEmail(
     $0.SendVerificationEmailRequest request, {
     $grpc.CallOptions? options,
@@ -216,6 +230,16 @@ class ProjectAmorClient extends $grpc.Client {
           '/accumora_rpc.v1.ProjectAmor/AddAmenities',
           ($0.AddAmenitiesRequest value) => value.writeToBuffer(),
           $0.AddAmenitiesResponse.fromBuffer);
+  static final _$listAmenities =
+      $grpc.ClientMethod<$0.ListAmenitiesRequest, $0.ListAmenitiesResponse>(
+          '/accumora_rpc.v1.ProjectAmor/ListAmenities',
+          ($0.ListAmenitiesRequest value) => value.writeToBuffer(),
+          $0.ListAmenitiesResponse.fromBuffer);
+  static final _$deleteAmenities =
+      $grpc.ClientMethod<$0.DeleteAmenitiesRequest, $0.DeleteAmenitiesResponse>(
+          '/accumora_rpc.v1.ProjectAmor/DeleteAmenities',
+          ($0.DeleteAmenitiesRequest value) => value.writeToBuffer(),
+          $0.DeleteAmenitiesResponse.fromBuffer);
   static final _$sendVerificationEmail = $grpc.ClientMethod<
           $0.SendVerificationEmailRequest, $0.SendVerificationEmailResponse>(
       '/accumora_rpc.v1.ProjectAmor/SendVerificationEmail',
@@ -344,6 +368,24 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $0.AddAmenitiesRequest.fromBuffer(value),
             ($0.AddAmenitiesResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.ListAmenitiesRequest, $0.ListAmenitiesResponse>(
+            'ListAmenities',
+            listAmenities_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.ListAmenitiesRequest.fromBuffer(value),
+            ($0.ListAmenitiesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteAmenitiesRequest,
+            $0.DeleteAmenitiesResponse>(
+        'DeleteAmenities',
+        deleteAmenities_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.DeleteAmenitiesRequest.fromBuffer(value),
+        ($0.DeleteAmenitiesResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.SendVerificationEmailRequest,
             $0.SendVerificationEmailResponse>(
         'SendVerificationEmail',
@@ -480,6 +522,24 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
 
   $async.Future<$0.AddAmenitiesResponse> addAmenities(
       $grpc.ServiceCall call, $0.AddAmenitiesRequest request);
+
+  $async.Future<$0.ListAmenitiesResponse> listAmenities_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.ListAmenitiesRequest> $request) async {
+    return listAmenities($call, await $request);
+  }
+
+  $async.Future<$0.ListAmenitiesResponse> listAmenities(
+      $grpc.ServiceCall call, $0.ListAmenitiesRequest request);
+
+  $async.Future<$0.DeleteAmenitiesResponse> deleteAmenities_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.DeleteAmenitiesRequest> $request) async {
+    return deleteAmenities($call, await $request);
+  }
+
+  $async.Future<$0.DeleteAmenitiesResponse> deleteAmenities(
+      $grpc.ServiceCall call, $0.DeleteAmenitiesRequest request);
 
   $async.Future<$0.SendVerificationEmailResponse> sendVerificationEmail_Pre(
       $grpc.ServiceCall $call,

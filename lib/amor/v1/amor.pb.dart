@@ -18,6 +18,215 @@ import 'types.pb.dart' as $1;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
+class DeleteAmenitiesRequest extends $pb.GeneratedMessage {
+  factory DeleteAmenitiesRequest({
+    $core.Iterable<$core.String>? amenityIds,
+  }) {
+    final result = create();
+    if (amenityIds != null) result.amenityIds.addAll(amenityIds);
+    return result;
+  }
+
+  DeleteAmenitiesRequest._();
+
+  factory DeleteAmenitiesRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteAmenitiesRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteAmenitiesRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'amenityIds', protoName: 'amenityIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteAmenitiesRequest clone() =>
+      DeleteAmenitiesRequest()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteAmenitiesRequest copyWith(
+          void Function(DeleteAmenitiesRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteAmenitiesRequest))
+          as DeleteAmenitiesRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static DeleteAmenitiesRequest create() => DeleteAmenitiesRequest._();
+  @$core.override
+  DeleteAmenitiesRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteAmenitiesRequest> createRepeated() =>
+      $pb.PbList<DeleteAmenitiesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static DeleteAmenitiesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteAmenitiesRequest>(create);
+  static DeleteAmenitiesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get amenityIds => $_getList(0);
+}
+
+class DeleteAmenitiesResponse extends $pb.GeneratedMessage {
+  factory DeleteAmenitiesResponse() => create();
+
+  DeleteAmenitiesResponse._();
+
+  factory DeleteAmenitiesResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DeleteAmenitiesResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteAmenitiesResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteAmenitiesResponse clone() =>
+      DeleteAmenitiesResponse()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DeleteAmenitiesResponse copyWith(
+          void Function(DeleteAmenitiesResponse) updates) =>
+      super.copyWith((message) => updates(message as DeleteAmenitiesResponse))
+          as DeleteAmenitiesResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static DeleteAmenitiesResponse create() => DeleteAmenitiesResponse._();
+  @$core.override
+  DeleteAmenitiesResponse createEmptyInstance() => create();
+  static $pb.PbList<DeleteAmenitiesResponse> createRepeated() =>
+      $pb.PbList<DeleteAmenitiesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static DeleteAmenitiesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteAmenitiesResponse>(create);
+  static DeleteAmenitiesResponse? _defaultInstance;
+}
+
+class ListAmenitiesRequest extends $pb.GeneratedMessage {
+  factory ListAmenitiesRequest({
+    $core.String? accommodationId,
+  }) {
+    final result = create();
+    if (accommodationId != null) result.accommodationId = accommodationId;
+    return result;
+  }
+
+  ListAmenitiesRequest._();
+
+  factory ListAmenitiesRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListAmenitiesRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAmenitiesRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'accommodationId',
+        protoName: 'accommodationId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListAmenitiesRequest clone() =>
+      ListAmenitiesRequest()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListAmenitiesRequest copyWith(void Function(ListAmenitiesRequest) updates) =>
+      super.copyWith((message) => updates(message as ListAmenitiesRequest))
+          as ListAmenitiesRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListAmenitiesRequest create() => ListAmenitiesRequest._();
+  @$core.override
+  ListAmenitiesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListAmenitiesRequest> createRepeated() =>
+      $pb.PbList<ListAmenitiesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListAmenitiesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListAmenitiesRequest>(create);
+  static ListAmenitiesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get accommodationId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set accommodationId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasAccommodationId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAccommodationId() => $_clearField(1);
+}
+
+class ListAmenitiesResponse extends $pb.GeneratedMessage {
+  factory ListAmenitiesResponse({
+    $core.Iterable<$1.Amenity>? amenities,
+  }) {
+    final result = create();
+    if (amenities != null) result.amenities.addAll(amenities);
+    return result;
+  }
+
+  ListAmenitiesResponse._();
+
+  factory ListAmenitiesResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListAmenitiesResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAmenitiesResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..pc<$1.Amenity>(1, _omitFieldNames ? '' : 'amenities', $pb.PbFieldType.PM,
+        subBuilder: $1.Amenity.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListAmenitiesResponse clone() =>
+      ListAmenitiesResponse()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListAmenitiesResponse copyWith(
+          void Function(ListAmenitiesResponse) updates) =>
+      super.copyWith((message) => updates(message as ListAmenitiesResponse))
+          as ListAmenitiesResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListAmenitiesResponse create() => ListAmenitiesResponse._();
+  @$core.override
+  ListAmenitiesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListAmenitiesResponse> createRepeated() =>
+      $pb.PbList<ListAmenitiesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListAmenitiesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListAmenitiesResponse>(create);
+  static ListAmenitiesResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$1.Amenity> get amenities => $_getList(0);
+}
+
 class DeleteUserRequest extends $pb.GeneratedMessage {
   factory DeleteUserRequest() => create();
 
