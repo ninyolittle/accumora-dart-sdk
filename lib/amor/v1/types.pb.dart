@@ -758,6 +758,7 @@ class Accommodation extends $pb.GeneratedMessage {
     $core.String? description,
     Accommodation_AccommodationType? type,
     Coordinates? coordinates,
+    $core.Iterable<Amenity>? amenities,
     $core.String? owner,
     $core.String? createdAt,
     Accommodation_Status? status,
@@ -769,6 +770,7 @@ class Accommodation extends $pb.GeneratedMessage {
     if (description != null) result.description = description;
     if (type != null) result.type = type;
     if (coordinates != null) result.coordinates = coordinates;
+    if (amenities != null) result.amenities.addAll(amenities);
     if (owner != null) result.owner = owner;
     if (createdAt != null) result.createdAt = createdAt;
     if (status != null) result.status = status;
@@ -801,6 +803,8 @@ class Accommodation extends $pb.GeneratedMessage {
         enumValues: Accommodation_AccommodationType.values)
     ..aOM<Coordinates>(7, _omitFieldNames ? '' : 'coordinates',
         subBuilder: Coordinates.create)
+    ..pc<Amenity>(8, _omitFieldNames ? '' : 'amenities', $pb.PbFieldType.PM,
+        subBuilder: Amenity.create)
     ..aOS(9, _omitFieldNames ? '' : 'owner')
     ..aOS(10, _omitFieldNames ? '' : 'createdAt')
     ..e<Accommodation_Status>(
@@ -889,30 +893,33 @@ class Accommodation extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   Coordinates ensureCoordinates() => $_ensure(5);
 
+  @$pb.TagNumber(8)
+  $pb.PbList<Amenity> get amenities => $_getList(6);
+
   @$pb.TagNumber(9)
-  $core.String get owner => $_getSZ(6);
+  $core.String get owner => $_getSZ(7);
   @$pb.TagNumber(9)
-  set owner($core.String value) => $_setString(6, value);
+  set owner($core.String value) => $_setString(7, value);
   @$pb.TagNumber(9)
-  $core.bool hasOwner() => $_has(6);
+  $core.bool hasOwner() => $_has(7);
   @$pb.TagNumber(9)
   void clearOwner() => $_clearField(9);
 
   @$pb.TagNumber(10)
-  $core.String get createdAt => $_getSZ(7);
+  $core.String get createdAt => $_getSZ(8);
   @$pb.TagNumber(10)
-  set createdAt($core.String value) => $_setString(7, value);
+  set createdAt($core.String value) => $_setString(8, value);
   @$pb.TagNumber(10)
-  $core.bool hasCreatedAt() => $_has(7);
+  $core.bool hasCreatedAt() => $_has(8);
   @$pb.TagNumber(10)
   void clearCreatedAt() => $_clearField(10);
 
   @$pb.TagNumber(11)
-  Accommodation_Status get status => $_getN(8);
+  Accommodation_Status get status => $_getN(9);
   @$pb.TagNumber(11)
   set status(Accommodation_Status value) => $_setField(11, value);
   @$pb.TagNumber(11)
-  $core.bool hasStatus() => $_has(8);
+  $core.bool hasStatus() => $_has(9);
   @$pb.TagNumber(11)
   void clearStatus() => $_clearField(11);
 }

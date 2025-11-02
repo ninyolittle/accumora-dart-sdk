@@ -426,6 +426,14 @@ const Accommodation$json = {
       '10': 'coordinates',
       '17': true
     },
+    {
+      '1': 'amenities',
+      '3': 8,
+      '4': 3,
+      '5': 11,
+      '6': '.accumora_rpc.v1.Amenity',
+      '10': 'amenities'
+    },
     {'1': 'owner', '3': 9, '4': 1, '5': 9, '10': 'owner'},
     {'1': 'created_at', '3': 10, '4': 1, '5': 9, '10': 'createdAt'},
     {
@@ -472,9 +480,10 @@ final $typed_data.Uint8List accommodationDescriptor = $convert.base64Decode(
     'EiUKC2Rlc2NyaXB0aW9uGAQgASgJSAFSC2Rlc2NyaXB0aW9uiAEBEkQKBHR5cGUYBiABKA4yMC'
     '5hY2N1bW9yYV9ycGMudjEuQWNjb21tb2RhdGlvbi5BY2NvbW1vZGF0aW9uVHlwZVIEdHlwZRJD'
     'Cgtjb29yZGluYXRlcxgHIAEoCzIcLmFjY3Vtb3JhX3JwYy52MS5Db29yZGluYXRlc0gCUgtjb2'
-    '9yZGluYXRlc4gBARIUCgVvd25lchgJIAEoCVIFb3duZXISHQoKY3JlYXRlZF9hdBgKIAEoCVIJ'
-    'Y3JlYXRlZEF0Ej0KBnN0YXR1cxgLIAEoDjIlLmFjY3Vtb3JhX3JwYy52MS5BY2NvbW1vZGF0aW'
-    '9uLlN0YXR1c1IGc3RhdHVzIkgKEUFjY29tbW9kYXRpb25UeXBlEhAKDHVua25vd25fdHlwZRAA'
-    'Eg0KCWFwYXJ0bWVudBABEhIKDmJvYXJkaW5nX2hvdXNlEAIiNgoGU3RhdHVzEhIKDnVua25vd2'
-    '5fc3RhdHVzEAASCgoGYWN0aXZlEAESDAoIaW5hY3RpdmUQAkILCglfbG9jYXRpb25CDgoMX2Rl'
-    'c2NyaXB0aW9uQg4KDF9jb29yZGluYXRlcw==');
+    '9yZGluYXRlc4gBARI2CglhbWVuaXRpZXMYCCADKAsyGC5hY2N1bW9yYV9ycGMudjEuQW1lbml0'
+    'eVIJYW1lbml0aWVzEhQKBW93bmVyGAkgASgJUgVvd25lchIdCgpjcmVhdGVkX2F0GAogASgJUg'
+    'ljcmVhdGVkQXQSPQoGc3RhdHVzGAsgASgOMiUuYWNjdW1vcmFfcnBjLnYxLkFjY29tbW9kYXRp'
+    'b24uU3RhdHVzUgZzdGF0dXMiSAoRQWNjb21tb2RhdGlvblR5cGUSEAoMdW5rbm93bl90eXBlEA'
+    'ASDQoJYXBhcnRtZW50EAESEgoOYm9hcmRpbmdfaG91c2UQAiI2CgZTdGF0dXMSEgoOdW5rbm93'
+    'bl9zdGF0dXMQABIKCgZhY3RpdmUQARIMCghpbmFjdGl2ZRACQgsKCV9sb2NhdGlvbkIOCgxfZG'
+    'VzY3JpcHRpb25CDgoMX2Nvb3JkaW5hdGVz');
