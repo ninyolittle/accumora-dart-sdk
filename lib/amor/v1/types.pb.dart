@@ -760,8 +760,9 @@ class Accommodation extends $pb.GeneratedMessage {
     Coordinates? coordinates,
     $core.Iterable<Amenity>? amenities,
     $core.String? owner,
-    $core.String? createdAt,
+    $core.String? createdTime,
     Accommodation_Status? status,
+    $core.String? lastUpdate,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -772,8 +773,9 @@ class Accommodation extends $pb.GeneratedMessage {
     if (coordinates != null) result.coordinates = coordinates;
     if (amenities != null) result.amenities.addAll(amenities);
     if (owner != null) result.owner = owner;
-    if (createdAt != null) result.createdAt = createdAt;
+    if (createdTime != null) result.createdTime = createdTime;
     if (status != null) result.status = status;
+    if (lastUpdate != null) result.lastUpdate = lastUpdate;
     return result;
   }
 
@@ -806,12 +808,13 @@ class Accommodation extends $pb.GeneratedMessage {
     ..pc<Amenity>(8, _omitFieldNames ? '' : 'amenities', $pb.PbFieldType.PM,
         subBuilder: Amenity.create)
     ..aOS(9, _omitFieldNames ? '' : 'owner')
-    ..aOS(10, _omitFieldNames ? '' : 'createdAt')
+    ..aOS(10, _omitFieldNames ? '' : 'createdTime')
     ..e<Accommodation_Status>(
         11, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
         defaultOrMaker: Accommodation_Status.unknown_status,
         valueOf: Accommodation_Status.valueOf,
         enumValues: Accommodation_Status.values)
+    ..aOS(12, _omitFieldNames ? '' : 'lastUpdate')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -906,13 +909,13 @@ class Accommodation extends $pb.GeneratedMessage {
   void clearOwner() => $_clearField(9);
 
   @$pb.TagNumber(10)
-  $core.String get createdAt => $_getSZ(8);
+  $core.String get createdTime => $_getSZ(8);
   @$pb.TagNumber(10)
-  set createdAt($core.String value) => $_setString(8, value);
+  set createdTime($core.String value) => $_setString(8, value);
   @$pb.TagNumber(10)
-  $core.bool hasCreatedAt() => $_has(8);
+  $core.bool hasCreatedTime() => $_has(8);
   @$pb.TagNumber(10)
-  void clearCreatedAt() => $_clearField(10);
+  void clearCreatedTime() => $_clearField(10);
 
   @$pb.TagNumber(11)
   Accommodation_Status get status => $_getN(9);
@@ -922,6 +925,15 @@ class Accommodation extends $pb.GeneratedMessage {
   $core.bool hasStatus() => $_has(9);
   @$pb.TagNumber(11)
   void clearStatus() => $_clearField(11);
+
+  @$pb.TagNumber(12)
+  $core.String get lastUpdate => $_getSZ(10);
+  @$pb.TagNumber(12)
+  set lastUpdate($core.String value) => $_setString(10, value);
+  @$pb.TagNumber(12)
+  $core.bool hasLastUpdate() => $_has(10);
+  @$pb.TagNumber(12)
+  void clearLastUpdate() => $_clearField(12);
 }
 
 const $core.bool _omitFieldNames =
