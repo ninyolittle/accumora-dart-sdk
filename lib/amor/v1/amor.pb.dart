@@ -1086,6 +1086,7 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
     $1.Location? location,
     $1.Coordinates? coordinates,
     $core.Iterable<$core.String>? rules,
+    $core.String? id,
   }) {
     final result = create();
     if (name != null) result.name = name;
@@ -1095,6 +1096,7 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
     if (location != null) result.location = location;
     if (coordinates != null) result.coordinates = coordinates;
     if (rules != null) result.rules.addAll(rules);
+    if (id != null) result.id = id;
     return result;
   }
 
@@ -1132,6 +1134,7 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
     ..aOM<$1.Coordinates>(7, _omitFieldNames ? '' : 'coordinates',
         subBuilder: $1.Coordinates.create)
     ..pPS(9, _omitFieldNames ? '' : 'rules')
+    ..aOS(10, _omitFieldNames ? '' : 'id')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1216,6 +1219,15 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(9)
   $pb.PbList<$core.String> get rules => $_getList(6);
+
+  @$pb.TagNumber(10)
+  $core.String get id => $_getSZ(7);
+  @$pb.TagNumber(10)
+  set id($core.String value) => $_setString(7, value);
+  @$pb.TagNumber(10)
+  $core.bool hasId() => $_has(7);
+  @$pb.TagNumber(10)
+  void clearId() => $_clearField(10);
 }
 
 class GetUserRequest extends $pb.GeneratedMessage {

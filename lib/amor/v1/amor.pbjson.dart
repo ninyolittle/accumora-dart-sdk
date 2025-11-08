@@ -351,6 +351,7 @@ final $typed_data.Uint8List updateRoomResponseDescriptor = $convert.base64Decode
 const UpdateAccommodationRequest$json = {
   '1': 'UpdateAccommodationRequest',
   '2': [
+    {'1': 'id', '3': 10, '4': 1, '5': 9, '10': 'id'},
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     {
       '1': 'type',
@@ -398,13 +399,13 @@ const UpdateAccommodationRequest$json = {
 
 /// Descriptor for `UpdateAccommodationRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List updateAccommodationRequestDescriptor = $convert.base64Decode(
-    'ChpVcGRhdGVBY2NvbW1vZGF0aW9uUmVxdWVzdBISCgRuYW1lGAEgASgJUgRuYW1lEkQKBHR5cG'
-    'UYAiABKA4yMC5hY2N1bW9yYV9ycGMudjEuQWNjb21tb2RhdGlvbi5BY2NvbW1vZGF0aW9uVHlw'
-    'ZVIEdHlwZRIcCglhbWVuaXRpZXMYBCADKAlSCWFtZW5pdGllcxIlCgtkZXNjcmlwdGlvbhgFIA'
-    'EoCUgBUgtkZXNjcmlwdGlvbogBARI3Cghsb2NhdGlvbhgGIAEoCzIZLmFjY3Vtb3JhX3JwYy52'
-    'MS5Mb2NhdGlvbkgAUghsb2NhdGlvbhJACgtjb29yZGluYXRlcxgHIAEoCzIcLmFjY3Vtb3JhX3'
-    'JwYy52MS5Db29yZGluYXRlc0gAUgtjb29yZGluYXRlcxIUCgVydWxlcxgJIAMoCVIFcnVsZXNC'
-    'BQoDZ2VvQg4KDF9kZXNjcmlwdGlvbg==');
+    'ChpVcGRhdGVBY2NvbW1vZGF0aW9uUmVxdWVzdBIOCgJpZBgKIAEoCVICaWQSEgoEbmFtZRgBIA'
+    'EoCVIEbmFtZRJECgR0eXBlGAIgASgOMjAuYWNjdW1vcmFfcnBjLnYxLkFjY29tbW9kYXRpb24u'
+    'QWNjb21tb2RhdGlvblR5cGVSBHR5cGUSHAoJYW1lbml0aWVzGAQgAygJUglhbWVuaXRpZXMSJQ'
+    'oLZGVzY3JpcHRpb24YBSABKAlIAVILZGVzY3JpcHRpb26IAQESNwoIbG9jYXRpb24YBiABKAsy'
+    'GS5hY2N1bW9yYV9ycGMudjEuTG9jYXRpb25IAFIIbG9jYXRpb24SQAoLY29vcmRpbmF0ZXMYBy'
+    'ABKAsyHC5hY2N1bW9yYV9ycGMudjEuQ29vcmRpbmF0ZXNIAFILY29vcmRpbmF0ZXMSFAoFcnVs'
+    'ZXMYCSADKAlSBXJ1bGVzQgUKA2dlb0IOCgxfZGVzY3JpcHRpb24=');
 
 @$core.Deprecated('Use getUserRequestDescriptor instead')
 const GetUserRequest$json = {
