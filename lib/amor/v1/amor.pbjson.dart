@@ -14,6 +14,28 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use setAccommodationStatusRequestDescriptor instead')
+const SetAccommodationStatusRequest$json = {
+  '1': 'SetAccommodationStatusRequest',
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    {
+      '1': 'status',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.accumora_rpc.v1.Accommodation.Status',
+      '10': 'status'
+    },
+  ],
+};
+
+/// Descriptor for `SetAccommodationStatusRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List setAccommodationStatusRequestDescriptor =
+    $convert.base64Decode(
+        'Ch1TZXRBY2NvbW1vZGF0aW9uU3RhdHVzUmVxdWVzdBIOCgJpZBgBIAEoCVICaWQSPQoGc3RhdH'
+        'VzGAIgASgOMiUuYWNjdW1vcmFfcnBjLnYxLkFjY29tbW9kYXRpb24uU3RhdHVzUgZzdGF0dXM=');
+
 @$core.Deprecated('Use deleteAmenitiesRequestDescriptor instead')
 const DeleteAmenitiesRequest$json = {
   '1': 'DeleteAmenitiesRequest',

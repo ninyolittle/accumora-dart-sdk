@@ -18,6 +18,83 @@ import 'types.pb.dart' as $1;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
+class SetAccommodationStatusRequest extends $pb.GeneratedMessage {
+  factory SetAccommodationStatusRequest({
+    $core.String? id,
+    $1.Accommodation_Status? status,
+  }) {
+    final result = create();
+    if (id != null) result.id = id;
+    if (status != null) result.status = status;
+    return result;
+  }
+
+  SetAccommodationStatusRequest._();
+
+  factory SetAccommodationStatusRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory SetAccommodationStatusRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SetAccommodationStatusRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..e<$1.Accommodation_Status>(
+        2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
+        defaultOrMaker: $1.Accommodation_Status.unknown_status,
+        valueOf: $1.Accommodation_Status.valueOf,
+        enumValues: $1.Accommodation_Status.values)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SetAccommodationStatusRequest clone() =>
+      SetAccommodationStatusRequest()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SetAccommodationStatusRequest copyWith(
+          void Function(SetAccommodationStatusRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as SetAccommodationStatusRequest))
+          as SetAccommodationStatusRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SetAccommodationStatusRequest create() =>
+      SetAccommodationStatusRequest._();
+  @$core.override
+  SetAccommodationStatusRequest createEmptyInstance() => create();
+  static $pb.PbList<SetAccommodationStatusRequest> createRepeated() =>
+      $pb.PbList<SetAccommodationStatusRequest>();
+  @$core.pragma('dart2js:noInline')
+  static SetAccommodationStatusRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SetAccommodationStatusRequest>(create);
+  static SetAccommodationStatusRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $1.Accommodation_Status get status => $_getN(1);
+  @$pb.TagNumber(2)
+  set status($1.Accommodation_Status value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasStatus() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStatus() => $_clearField(2);
+}
+
 class DeleteAmenitiesRequest extends $pb.GeneratedMessage {
   factory DeleteAmenitiesRequest({
     $core.Iterable<$core.String>? amenityIds,

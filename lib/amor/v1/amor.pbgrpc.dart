@@ -159,6 +159,14 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$confirmEmailAddress, request, options: options);
   }
 
+  $grpc.ResponseFuture<$1.Accommodation> setAccommodationStatus(
+    $0.SetAccommodationStatusRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$setAccommodationStatus, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$addAccommodation =
@@ -250,6 +258,11 @@ class ProjectAmorClient extends $grpc.Client {
       '/accumora_rpc.v1.ProjectAmor/ConfirmEmailAddress',
       ($0.ConfirmEmailAddressRequest value) => value.writeToBuffer(),
       $0.ConfirmEmailAddressResponse.fromBuffer);
+  static final _$setAccommodationStatus =
+      $grpc.ClientMethod<$0.SetAccommodationStatusRequest, $1.Accommodation>(
+          '/accumora_rpc.v1.ProjectAmor/SetAccommodationStatus',
+          ($0.SetAccommodationStatusRequest value) => value.writeToBuffer(),
+          $1.Accommodation.fromBuffer);
 }
 
 @$pb.GrpcServiceName('accumora_rpc.v1.ProjectAmor')
@@ -404,6 +417,15 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.ConfirmEmailAddressRequest.fromBuffer(value),
         ($0.ConfirmEmailAddressResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.SetAccommodationStatusRequest, $1.Accommodation>(
+            'SetAccommodationStatus',
+            setAccommodationStatus_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.SetAccommodationStatusRequest.fromBuffer(value),
+            ($1.Accommodation value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.Accommodation> addAccommodation_Pre($grpc.ServiceCall $call,
@@ -558,4 +580,13 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
 
   $async.Future<$0.ConfirmEmailAddressResponse> confirmEmailAddress(
       $grpc.ServiceCall call, $0.ConfirmEmailAddressRequest request);
+
+  $async.Future<$1.Accommodation> setAccommodationStatus_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.SetAccommodationStatusRequest> $request) async {
+    return setAccommodationStatus($call, await $request);
+  }
+
+  $async.Future<$1.Accommodation> setAccommodationStatus(
+      $grpc.ServiceCall call, $0.SetAccommodationStatusRequest request);
 }
