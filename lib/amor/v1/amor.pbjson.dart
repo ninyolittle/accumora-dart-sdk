@@ -367,32 +367,13 @@ const UpdateAccommodationRequest$json = {
       '3': 5,
       '4': 1,
       '5': 9,
-      '9': 1,
+      '9': 0,
       '10': 'description',
       '17': true
-    },
-    {
-      '1': 'location',
-      '3': 6,
-      '4': 1,
-      '5': 11,
-      '6': '.accumora_rpc.v1.Location',
-      '9': 0,
-      '10': 'location'
-    },
-    {
-      '1': 'coordinates',
-      '3': 7,
-      '4': 1,
-      '5': 11,
-      '6': '.accumora_rpc.v1.Coordinates',
-      '9': 0,
-      '10': 'coordinates'
     },
     {'1': 'rules', '3': 9, '4': 3, '5': 9, '10': 'rules'},
   ],
   '8': [
-    {'1': 'geo'},
     {'1': '_description'},
   ],
 };
@@ -402,10 +383,8 @@ final $typed_data.Uint8List updateAccommodationRequestDescriptor = $convert.base
     'ChpVcGRhdGVBY2NvbW1vZGF0aW9uUmVxdWVzdBIOCgJpZBgKIAEoCVICaWQSEgoEbmFtZRgBIA'
     'EoCVIEbmFtZRJECgR0eXBlGAIgASgOMjAuYWNjdW1vcmFfcnBjLnYxLkFjY29tbW9kYXRpb24u'
     'QWNjb21tb2RhdGlvblR5cGVSBHR5cGUSHAoJYW1lbml0aWVzGAQgAygJUglhbWVuaXRpZXMSJQ'
-    'oLZGVzY3JpcHRpb24YBSABKAlIAVILZGVzY3JpcHRpb26IAQESNwoIbG9jYXRpb24YBiABKAsy'
-    'GS5hY2N1bW9yYV9ycGMudjEuTG9jYXRpb25IAFIIbG9jYXRpb24SQAoLY29vcmRpbmF0ZXMYBy'
-    'ABKAsyHC5hY2N1bW9yYV9ycGMudjEuQ29vcmRpbmF0ZXNIAFILY29vcmRpbmF0ZXMSFAoFcnVs'
-    'ZXMYCSADKAlSBXJ1bGVzQgUKA2dlb0IOCgxfZGVzY3JpcHRpb24=');
+    'oLZGVzY3JpcHRpb24YBSABKAlIAFILZGVzY3JpcHRpb26IAQESFAoFcnVsZXMYCSADKAlSBXJ1'
+    'bGVzQg4KDF9kZXNjcmlwdGlvbg==');
 
 @$core.Deprecated('Use getUserRequestDescriptor instead')
 const GetUserRequest$json = {

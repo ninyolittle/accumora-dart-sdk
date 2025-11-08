@@ -1075,16 +1075,12 @@ class UpdateRoomResponse extends $pb.GeneratedMessage {
   $1.Room ensureRoom() => $_ensure(0);
 }
 
-enum UpdateAccommodationRequest_Geo { location, coordinates, notSet }
-
 class UpdateAccommodationRequest extends $pb.GeneratedMessage {
   factory UpdateAccommodationRequest({
     $core.String? name,
     $1.Accommodation_AccommodationType? type,
     $core.Iterable<$core.String>? amenities,
     $core.String? description,
-    $1.Location? location,
-    $1.Coordinates? coordinates,
     $core.Iterable<$core.String>? rules,
     $core.String? id,
   }) {
@@ -1093,8 +1089,6 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
     if (type != null) result.type = type;
     if (amenities != null) result.amenities.addAll(amenities);
     if (description != null) result.description = description;
-    if (location != null) result.location = location;
-    if (coordinates != null) result.coordinates = coordinates;
     if (rules != null) result.rules.addAll(rules);
     if (id != null) result.id = id;
     return result;
@@ -1109,18 +1103,11 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
-  static const $core.Map<$core.int, UpdateAccommodationRequest_Geo>
-      _UpdateAccommodationRequest_GeoByTag = {
-    6: UpdateAccommodationRequest_Geo.location,
-    7: UpdateAccommodationRequest_Geo.coordinates,
-    0: UpdateAccommodationRequest_Geo.notSet
-  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpdateAccommodationRequest',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
-    ..oo(0, [6, 7])
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..e<$1.Accommodation_AccommodationType>(
         2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
@@ -1129,10 +1116,6 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
         enumValues: $1.Accommodation_AccommodationType.values)
     ..pPS(4, _omitFieldNames ? '' : 'amenities')
     ..aOS(5, _omitFieldNames ? '' : 'description')
-    ..aOM<$1.Location>(6, _omitFieldNames ? '' : 'location',
-        subBuilder: $1.Location.create)
-    ..aOM<$1.Coordinates>(7, _omitFieldNames ? '' : 'coordinates',
-        subBuilder: $1.Coordinates.create)
     ..pPS(9, _omitFieldNames ? '' : 'rules')
     ..aOS(10, _omitFieldNames ? '' : 'id')
     ..hasRequiredFields = false;
@@ -1160,10 +1143,6 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
   static UpdateAccommodationRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateAccommodationRequest>(create);
   static UpdateAccommodationRequest? _defaultInstance;
-
-  UpdateAccommodationRequest_Geo whichGeo() =>
-      _UpdateAccommodationRequest_GeoByTag[$_whichOneof(0)]!;
-  void clearGeo() => $_clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
@@ -1195,37 +1174,15 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearDescription() => $_clearField(5);
 
-  @$pb.TagNumber(6)
-  $1.Location get location => $_getN(4);
-  @$pb.TagNumber(6)
-  set location($1.Location value) => $_setField(6, value);
-  @$pb.TagNumber(6)
-  $core.bool hasLocation() => $_has(4);
-  @$pb.TagNumber(6)
-  void clearLocation() => $_clearField(6);
-  @$pb.TagNumber(6)
-  $1.Location ensureLocation() => $_ensure(4);
-
-  @$pb.TagNumber(7)
-  $1.Coordinates get coordinates => $_getN(5);
-  @$pb.TagNumber(7)
-  set coordinates($1.Coordinates value) => $_setField(7, value);
-  @$pb.TagNumber(7)
-  $core.bool hasCoordinates() => $_has(5);
-  @$pb.TagNumber(7)
-  void clearCoordinates() => $_clearField(7);
-  @$pb.TagNumber(7)
-  $1.Coordinates ensureCoordinates() => $_ensure(5);
-
   @$pb.TagNumber(9)
-  $pb.PbList<$core.String> get rules => $_getList(6);
+  $pb.PbList<$core.String> get rules => $_getList(4);
 
   @$pb.TagNumber(10)
-  $core.String get id => $_getSZ(7);
+  $core.String get id => $_getSZ(5);
   @$pb.TagNumber(10)
-  set id($core.String value) => $_setString(7, value);
+  set id($core.String value) => $_setString(5, value);
   @$pb.TagNumber(10)
-  $core.bool hasId() => $_has(7);
+  $core.bool hasId() => $_has(5);
   @$pb.TagNumber(10)
   void clearId() => $_clearField(10);
 }
