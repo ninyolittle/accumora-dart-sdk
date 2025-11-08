@@ -1075,26 +1075,26 @@ class UpdateRoomResponse extends $pb.GeneratedMessage {
   $1.Room ensureRoom() => $_ensure(0);
 }
 
+enum UpdateAccommodationRequest_Geo { location, coordinates, notSet }
+
 class UpdateAccommodationRequest extends $pb.GeneratedMessage {
   factory UpdateAccommodationRequest({
-    $core.String? id,
     $core.String? name,
-    $1.Location? location,
+    $1.Accommodation_AccommodationType? type,
+    $core.Iterable<$core.String>? amenities,
     $core.String? description,
-    $core.Iterable<$core.String>? utilities,
-    $core.String? type,
-    $core.double? latitude,
-    $core.double? longitude,
+    $1.Location? location,
+    $1.Coordinates? coordinates,
+    $core.Iterable<$core.String>? rules,
   }) {
     final result = create();
-    if (id != null) result.id = id;
     if (name != null) result.name = name;
-    if (location != null) result.location = location;
-    if (description != null) result.description = description;
-    if (utilities != null) result.utilities.addAll(utilities);
     if (type != null) result.type = type;
-    if (latitude != null) result.latitude = latitude;
-    if (longitude != null) result.longitude = longitude;
+    if (amenities != null) result.amenities.addAll(amenities);
+    if (description != null) result.description = description;
+    if (location != null) result.location = location;
+    if (coordinates != null) result.coordinates = coordinates;
+    if (rules != null) result.rules.addAll(rules);
     return result;
   }
 
@@ -1107,20 +1107,31 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
+  static const $core.Map<$core.int, UpdateAccommodationRequest_Geo>
+      _UpdateAccommodationRequest_GeoByTag = {
+    6: UpdateAccommodationRequest_Geo.location,
+    7: UpdateAccommodationRequest_Geo.coordinates,
+    0: UpdateAccommodationRequest_Geo.notSet
+  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpdateAccommodationRequest',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..aOS(2, _omitFieldNames ? '' : 'name')
-    ..aOM<$1.Location>(3, _omitFieldNames ? '' : 'location',
+    ..oo(0, [6, 7])
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..e<$1.Accommodation_AccommodationType>(
+        2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: $1.Accommodation_AccommodationType.unknown_type,
+        valueOf: $1.Accommodation_AccommodationType.valueOf,
+        enumValues: $1.Accommodation_AccommodationType.values)
+    ..pPS(4, _omitFieldNames ? '' : 'amenities')
+    ..aOS(5, _omitFieldNames ? '' : 'description')
+    ..aOM<$1.Location>(6, _omitFieldNames ? '' : 'location',
         subBuilder: $1.Location.create)
-    ..aOS(4, _omitFieldNames ? '' : 'description')
-    ..pPS(5, _omitFieldNames ? '' : 'utilities')
-    ..aOS(6, _omitFieldNames ? '' : 'type')
-    ..a<$core.double>(7, _omitFieldNames ? '' : 'latitude', $pb.PbFieldType.OD)
-    ..a<$core.double>(8, _omitFieldNames ? '' : 'longitude', $pb.PbFieldType.OD)
+    ..aOM<$1.Coordinates>(7, _omitFieldNames ? '' : 'coordinates',
+        subBuilder: $1.Coordinates.create)
+    ..pPS(9, _omitFieldNames ? '' : 'rules')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1147,73 +1158,64 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateAccommodationRequest>(create);
   static UpdateAccommodationRequest? _defaultInstance;
 
+  UpdateAccommodationRequest_Geo whichGeo() =>
+      _UpdateAccommodationRequest_GeoByTag[$_whichOneof(0)]!;
+  void clearGeo() => $_clearField($_whichOneof(0));
+
   @$pb.TagNumber(1)
-  $core.String get id => $_getSZ(0);
+  $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set id($core.String value) => $_setString(0, value);
+  set name($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
-  $core.bool hasId() => $_has(0);
+  $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => $_clearField(1);
+  void clearName() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get name => $_getSZ(1);
+  $1.Accommodation_AccommodationType get type => $_getN(1);
   @$pb.TagNumber(2)
-  set name($core.String value) => $_setString(1, value);
+  set type($1.Accommodation_AccommodationType value) => $_setField(2, value);
   @$pb.TagNumber(2)
-  $core.bool hasName() => $_has(1);
+  $core.bool hasType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearName() => $_clearField(2);
-
-  @$pb.TagNumber(3)
-  $1.Location get location => $_getN(2);
-  @$pb.TagNumber(3)
-  set location($1.Location value) => $_setField(3, value);
-  @$pb.TagNumber(3)
-  $core.bool hasLocation() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearLocation() => $_clearField(3);
-  @$pb.TagNumber(3)
-  $1.Location ensureLocation() => $_ensure(2);
+  void clearType() => $_clearField(2);
 
   @$pb.TagNumber(4)
-  $core.String get description => $_getSZ(3);
-  @$pb.TagNumber(4)
-  set description($core.String value) => $_setString(3, value);
-  @$pb.TagNumber(4)
-  $core.bool hasDescription() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearDescription() => $_clearField(4);
+  $pb.PbList<$core.String> get amenities => $_getList(2);
 
   @$pb.TagNumber(5)
-  $pb.PbList<$core.String> get utilities => $_getList(4);
+  $core.String get description => $_getSZ(3);
+  @$pb.TagNumber(5)
+  set description($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(5)
+  $core.bool hasDescription() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearDescription() => $_clearField(5);
 
   @$pb.TagNumber(6)
-  $core.String get type => $_getSZ(5);
+  $1.Location get location => $_getN(4);
   @$pb.TagNumber(6)
-  set type($core.String value) => $_setString(5, value);
+  set location($1.Location value) => $_setField(6, value);
   @$pb.TagNumber(6)
-  $core.bool hasType() => $_has(5);
+  $core.bool hasLocation() => $_has(4);
   @$pb.TagNumber(6)
-  void clearType() => $_clearField(6);
+  void clearLocation() => $_clearField(6);
+  @$pb.TagNumber(6)
+  $1.Location ensureLocation() => $_ensure(4);
 
   @$pb.TagNumber(7)
-  $core.double get latitude => $_getN(6);
+  $1.Coordinates get coordinates => $_getN(5);
   @$pb.TagNumber(7)
-  set latitude($core.double value) => $_setDouble(6, value);
+  set coordinates($1.Coordinates value) => $_setField(7, value);
   @$pb.TagNumber(7)
-  $core.bool hasLatitude() => $_has(6);
+  $core.bool hasCoordinates() => $_has(5);
   @$pb.TagNumber(7)
-  void clearLatitude() => $_clearField(7);
+  void clearCoordinates() => $_clearField(7);
+  @$pb.TagNumber(7)
+  $1.Coordinates ensureCoordinates() => $_ensure(5);
 
-  @$pb.TagNumber(8)
-  $core.double get longitude => $_getN(7);
-  @$pb.TagNumber(8)
-  set longitude($core.double value) => $_setDouble(7, value);
-  @$pb.TagNumber(8)
-  $core.bool hasLongitude() => $_has(7);
-  @$pb.TagNumber(8)
-  void clearLongitude() => $_clearField(8);
+  @$pb.TagNumber(9)
+  $pb.PbList<$core.String> get rules => $_getList(6);
 }
 
 class GetUserRequest extends $pb.GeneratedMessage {

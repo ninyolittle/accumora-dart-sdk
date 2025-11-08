@@ -351,67 +351,60 @@ final $typed_data.Uint8List updateRoomResponseDescriptor = $convert.base64Decode
 const UpdateAccommodationRequest$json = {
   '1': 'UpdateAccommodationRequest',
   '2': [
-    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    {'1': 'name', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'name', '17': true},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     {
-      '1': 'location',
-      '3': 3,
+      '1': 'type',
+      '3': 2,
       '4': 1,
-      '5': 11,
-      '6': '.accumora_rpc.v1.Location',
-      '9': 1,
-      '10': 'location',
-      '17': true
+      '5': 14,
+      '6': '.accumora_rpc.v1.Accommodation.AccommodationType',
+      '10': 'type'
     },
+    {'1': 'amenities', '3': 4, '4': 3, '5': 9, '10': 'amenities'},
     {
       '1': 'description',
-      '3': 4,
+      '3': 5,
       '4': 1,
       '5': 9,
-      '9': 2,
+      '9': 1,
       '10': 'description',
       '17': true
     },
-    {'1': 'utilities', '3': 5, '4': 3, '5': 9, '10': 'utilities'},
-    {'1': 'type', '3': 6, '4': 1, '5': 9, '9': 3, '10': 'type', '17': true},
     {
-      '1': 'latitude',
+      '1': 'location',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.accumora_rpc.v1.Location',
+      '9': 0,
+      '10': 'location'
+    },
+    {
+      '1': 'coordinates',
       '3': 7,
       '4': 1,
-      '5': 1,
-      '9': 4,
-      '10': 'latitude',
-      '17': true
+      '5': 11,
+      '6': '.accumora_rpc.v1.Coordinates',
+      '9': 0,
+      '10': 'coordinates'
     },
-    {
-      '1': 'longitude',
-      '3': 8,
-      '4': 1,
-      '5': 1,
-      '9': 5,
-      '10': 'longitude',
-      '17': true
-    },
+    {'1': 'rules', '3': 9, '4': 3, '5': 9, '10': 'rules'},
   ],
   '8': [
-    {'1': '_name'},
-    {'1': '_location'},
+    {'1': 'geo'},
     {'1': '_description'},
-    {'1': '_type'},
-    {'1': '_latitude'},
-    {'1': '_longitude'},
   ],
 };
 
 /// Descriptor for `UpdateAccommodationRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List updateAccommodationRequestDescriptor = $convert.base64Decode(
-    'ChpVcGRhdGVBY2NvbW1vZGF0aW9uUmVxdWVzdBIOCgJpZBgBIAEoCVICaWQSFwoEbmFtZRgCIA'
-    'EoCUgAUgRuYW1liAEBEjoKCGxvY2F0aW9uGAMgASgLMhkuYWNjdW1vcmFfcnBjLnYxLkxvY2F0'
-    'aW9uSAFSCGxvY2F0aW9uiAEBEiUKC2Rlc2NyaXB0aW9uGAQgASgJSAJSC2Rlc2NyaXB0aW9uiA'
-    'EBEhwKCXV0aWxpdGllcxgFIAMoCVIJdXRpbGl0aWVzEhcKBHR5cGUYBiABKAlIA1IEdHlwZYgB'
-    'ARIfCghsYXRpdHVkZRgHIAEoAUgEUghsYXRpdHVkZYgBARIhCglsb25naXR1ZGUYCCABKAFIBV'
-    'IJbG9uZ2l0dWRliAEBQgcKBV9uYW1lQgsKCV9sb2NhdGlvbkIOCgxfZGVzY3JpcHRpb25CBwoF'
-    'X3R5cGVCCwoJX2xhdGl0dWRlQgwKCl9sb25naXR1ZGU=');
+    'ChpVcGRhdGVBY2NvbW1vZGF0aW9uUmVxdWVzdBISCgRuYW1lGAEgASgJUgRuYW1lEkQKBHR5cG'
+    'UYAiABKA4yMC5hY2N1bW9yYV9ycGMudjEuQWNjb21tb2RhdGlvbi5BY2NvbW1vZGF0aW9uVHlw'
+    'ZVIEdHlwZRIcCglhbWVuaXRpZXMYBCADKAlSCWFtZW5pdGllcxIlCgtkZXNjcmlwdGlvbhgFIA'
+    'EoCUgBUgtkZXNjcmlwdGlvbogBARI3Cghsb2NhdGlvbhgGIAEoCzIZLmFjY3Vtb3JhX3JwYy52'
+    'MS5Mb2NhdGlvbkgAUghsb2NhdGlvbhJACgtjb29yZGluYXRlcxgHIAEoCzIcLmFjY3Vtb3JhX3'
+    'JwYy52MS5Db29yZGluYXRlc0gAUgtjb29yZGluYXRlcxIUCgVydWxlcxgJIAMoCVIFcnVsZXNC'
+    'BQoDZ2VvQg4KDF9kZXNjcmlwdGlvbg==');
 
 @$core.Deprecated('Use getUserRequestDescriptor instead')
 const GetUserRequest$json = {
