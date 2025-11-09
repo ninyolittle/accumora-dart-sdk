@@ -14,6 +14,46 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use getAccommodationsBySectionRequestDescriptor instead')
+const GetAccommodationsBySectionRequest$json = {
+  '1': 'GetAccommodationsBySectionRequest',
+  '2': [
+    {
+      '1': 'sections',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.accumora_rpc.v1.GetAccommodationsBySectionRequest.Section',
+      '10': 'sections'
+    },
+  ],
+  '3': [GetAccommodationsBySectionRequest_Section$json],
+};
+
+@$core.Deprecated('Use getAccommodationsBySectionRequestDescriptor instead')
+const GetAccommodationsBySectionRequest_Section$json = {
+  '1': 'Section',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'accommodations',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.accumora_rpc.v1.Accommodation',
+      '10': 'accommodations'
+    },
+  ],
+};
+
+/// Descriptor for `GetAccommodationsBySectionRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getAccommodationsBySectionRequestDescriptor = $convert.base64Decode(
+    'CiFHZXRBY2NvbW1vZGF0aW9uc0J5U2VjdGlvblJlcXVlc3QSVgoIc2VjdGlvbnMYASADKAsyOi'
+    '5hY2N1bW9yYV9ycGMudjEuR2V0QWNjb21tb2RhdGlvbnNCeVNlY3Rpb25SZXF1ZXN0LlNlY3Rp'
+    'b25SCHNlY3Rpb25zGmUKB1NlY3Rpb24SEgoEbmFtZRgBIAEoCVIEbmFtZRJGCg5hY2NvbW1vZG'
+    'F0aW9ucxgCIAMoCzIeLmFjY3Vtb3JhX3JwYy52MS5BY2NvbW1vZGF0aW9uUg5hY2NvbW1vZGF0'
+    'aW9ucw==');
+
 @$core.Deprecated('Use setAccommodationStatusResponseDescriptor instead')
 const SetAccommodationStatusResponse$json = {
   '1': 'SetAccommodationStatusResponse',
