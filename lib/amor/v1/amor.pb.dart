@@ -18,86 +18,8 @@ import 'types.pb.dart' as $1;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
-class GetAccommodationsBySectionRequest_Section extends $pb.GeneratedMessage {
-  factory GetAccommodationsBySectionRequest_Section({
-    $core.String? name,
-    $core.Iterable<$1.Accommodation>? accommodations,
-  }) {
-    final result = create();
-    if (name != null) result.name = name;
-    if (accommodations != null) result.accommodations.addAll(accommodations);
-    return result;
-  }
-
-  GetAccommodationsBySectionRequest_Section._();
-
-  factory GetAccommodationsBySectionRequest_Section.fromBuffer(
-          $core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory GetAccommodationsBySectionRequest_Section.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'GetAccommodationsBySectionRequest.Section',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
-      createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..pc<$1.Accommodation>(
-        2, _omitFieldNames ? '' : 'accommodations', $pb.PbFieldType.PM,
-        subBuilder: $1.Accommodation.create)
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetAccommodationsBySectionRequest_Section clone() =>
-      GetAccommodationsBySectionRequest_Section()..mergeFromMessage(this);
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetAccommodationsBySectionRequest_Section copyWith(
-          void Function(GetAccommodationsBySectionRequest_Section) updates) =>
-      super.copyWith((message) =>
-              updates(message as GetAccommodationsBySectionRequest_Section))
-          as GetAccommodationsBySectionRequest_Section;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static GetAccommodationsBySectionRequest_Section create() =>
-      GetAccommodationsBySectionRequest_Section._();
-  @$core.override
-  GetAccommodationsBySectionRequest_Section createEmptyInstance() => create();
-  static $pb.PbList<GetAccommodationsBySectionRequest_Section>
-      createRepeated() =>
-          $pb.PbList<GetAccommodationsBySectionRequest_Section>();
-  @$core.pragma('dart2js:noInline')
-  static GetAccommodationsBySectionRequest_Section getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
-          GetAccommodationsBySectionRequest_Section>(create);
-  static GetAccommodationsBySectionRequest_Section? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get name => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set name($core.String value) => $_setString(0, value);
-  @$pb.TagNumber(1)
-  $core.bool hasName() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearName() => $_clearField(1);
-
-  @$pb.TagNumber(2)
-  $pb.PbList<$1.Accommodation> get accommodations => $_getList(1);
-}
-
 class GetAccommodationsBySectionRequest extends $pb.GeneratedMessage {
-  factory GetAccommodationsBySectionRequest({
-    $core.Iterable<GetAccommodationsBySectionRequest_Section>? sections,
-  }) {
-    final result = create();
-    if (sections != null) result.sections.addAll(sections);
-    return result;
-  }
+  factory GetAccommodationsBySectionRequest() => create();
 
   GetAccommodationsBySectionRequest._();
 
@@ -114,9 +36,6 @@ class GetAccommodationsBySectionRequest extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
-    ..pc<GetAccommodationsBySectionRequest_Section>(
-        1, _omitFieldNames ? '' : 'sections', $pb.PbFieldType.PM,
-        subBuilder: GetAccommodationsBySectionRequest_Section.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -144,9 +63,137 @@ class GetAccommodationsBySectionRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetAccommodationsBySectionRequest>(
           create);
   static GetAccommodationsBySectionRequest? _defaultInstance;
+}
+
+class GetAccommodationsBySectionResponse_Section extends $pb.GeneratedMessage {
+  factory GetAccommodationsBySectionResponse_Section({
+    $core.String? name,
+    $core.Iterable<$1.Accommodation>? accommodations,
+  }) {
+    final result = create();
+    if (name != null) result.name = name;
+    if (accommodations != null) result.accommodations.addAll(accommodations);
+    return result;
+  }
+
+  GetAccommodationsBySectionResponse_Section._();
+
+  factory GetAccommodationsBySectionResponse_Section.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetAccommodationsBySectionResponse_Section.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetAccommodationsBySectionResponse.Section',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..pc<$1.Accommodation>(
+        2, _omitFieldNames ? '' : 'accommodations', $pb.PbFieldType.PM,
+        subBuilder: $1.Accommodation.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetAccommodationsBySectionResponse_Section clone() =>
+      GetAccommodationsBySectionResponse_Section()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetAccommodationsBySectionResponse_Section copyWith(
+          void Function(GetAccommodationsBySectionResponse_Section) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetAccommodationsBySectionResponse_Section))
+          as GetAccommodationsBySectionResponse_Section;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetAccommodationsBySectionResponse_Section create() =>
+      GetAccommodationsBySectionResponse_Section._();
+  @$core.override
+  GetAccommodationsBySectionResponse_Section createEmptyInstance() => create();
+  static $pb.PbList<GetAccommodationsBySectionResponse_Section>
+      createRepeated() =>
+          $pb.PbList<GetAccommodationsBySectionResponse_Section>();
+  @$core.pragma('dart2js:noInline')
+  static GetAccommodationsBySectionResponse_Section getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          GetAccommodationsBySectionResponse_Section>(create);
+  static GetAccommodationsBySectionResponse_Section? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $pb.PbList<GetAccommodationsBySectionRequest_Section> get sections =>
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $pb.PbList<$1.Accommodation> get accommodations => $_getList(1);
+}
+
+class GetAccommodationsBySectionResponse extends $pb.GeneratedMessage {
+  factory GetAccommodationsBySectionResponse({
+    $core.Iterable<GetAccommodationsBySectionResponse_Section>? sections,
+  }) {
+    final result = create();
+    if (sections != null) result.sections.addAll(sections);
+    return result;
+  }
+
+  GetAccommodationsBySectionResponse._();
+
+  factory GetAccommodationsBySectionResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetAccommodationsBySectionResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetAccommodationsBySectionResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..pc<GetAccommodationsBySectionResponse_Section>(
+        1, _omitFieldNames ? '' : 'sections', $pb.PbFieldType.PM,
+        subBuilder: GetAccommodationsBySectionResponse_Section.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetAccommodationsBySectionResponse clone() =>
+      GetAccommodationsBySectionResponse()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetAccommodationsBySectionResponse copyWith(
+          void Function(GetAccommodationsBySectionResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as GetAccommodationsBySectionResponse))
+          as GetAccommodationsBySectionResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetAccommodationsBySectionResponse create() =>
+      GetAccommodationsBySectionResponse._();
+  @$core.override
+  GetAccommodationsBySectionResponse createEmptyInstance() => create();
+  static $pb.PbList<GetAccommodationsBySectionResponse> createRepeated() =>
+      $pb.PbList<GetAccommodationsBySectionResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetAccommodationsBySectionResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetAccommodationsBySectionResponse>(
+          create);
+  static GetAccommodationsBySectionResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<GetAccommodationsBySectionResponse_Section> get sections =>
       $_getList(0);
 }
 

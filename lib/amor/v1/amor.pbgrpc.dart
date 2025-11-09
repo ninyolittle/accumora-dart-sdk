@@ -75,7 +75,8 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$getAccommodations, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.GetAccommodationsResponse> getAccommodationsBySection(
+  $grpc.ResponseFuture<$0.GetAccommodationsBySectionResponse>
+      getAccommodationsBySection(
     $0.GetAccommodationsBySectionRequest request, {
     $grpc.CallOptions? options,
   }) {
@@ -209,10 +210,11 @@ class ProjectAmorClient extends $grpc.Client {
       ($0.GetAccommodationsRequest value) => value.writeToBuffer(),
       $0.GetAccommodationsResponse.fromBuffer);
   static final _$getAccommodationsBySection = $grpc.ClientMethod<
-          $0.GetAccommodationsBySectionRequest, $0.GetAccommodationsResponse>(
+          $0.GetAccommodationsBySectionRequest,
+          $0.GetAccommodationsBySectionResponse>(
       '/accumora_rpc.v1.ProjectAmor/GetAccommodationsBySection',
       ($0.GetAccommodationsBySectionRequest value) => value.writeToBuffer(),
-      $0.GetAccommodationsResponse.fromBuffer);
+      $0.GetAccommodationsBySectionResponse.fromBuffer);
   static final _$updateAccommodation =
       $grpc.ClientMethod<$0.UpdateAccommodationRequest, $1.Accommodation>(
           '/accumora_rpc.v1.ProjectAmor/UpdateAccommodation',
@@ -335,14 +337,15 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
             $0.GetAccommodationsRequest.fromBuffer(value),
         ($0.GetAccommodationsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetAccommodationsBySectionRequest,
-            $0.GetAccommodationsResponse>(
+            $0.GetAccommodationsBySectionResponse>(
         'GetAccommodationsBySection',
         getAccommodationsBySection_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
             $0.GetAccommodationsBySectionRequest.fromBuffer(value),
-        ($0.GetAccommodationsResponse value) => value.writeToBuffer()));
+        ($0.GetAccommodationsBySectionResponse value) =>
+            value.writeToBuffer()));
     $addMethod(
         $grpc.ServiceMethod<$0.UpdateAccommodationRequest, $1.Accommodation>(
             'UpdateAccommodation',
@@ -502,14 +505,15 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
   $async.Future<$0.GetAccommodationsResponse> getAccommodations(
       $grpc.ServiceCall call, $0.GetAccommodationsRequest request);
 
-  $async.Future<$0.GetAccommodationsResponse> getAccommodationsBySection_Pre(
-      $grpc.ServiceCall $call,
-      $async.Future<$0.GetAccommodationsBySectionRequest> $request) async {
+  $async.Future<$0.GetAccommodationsBySectionResponse>
+      getAccommodationsBySection_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.GetAccommodationsBySectionRequest> $request) async {
     return getAccommodationsBySection($call, await $request);
   }
 
-  $async.Future<$0.GetAccommodationsResponse> getAccommodationsBySection(
-      $grpc.ServiceCall call, $0.GetAccommodationsBySectionRequest request);
+  $async.Future<$0.GetAccommodationsBySectionResponse>
+      getAccommodationsBySection(
+          $grpc.ServiceCall call, $0.GetAccommodationsBySectionRequest request);
 
   $async.Future<$1.Accommodation> updateAccommodation_Pre(
       $grpc.ServiceCall $call,
