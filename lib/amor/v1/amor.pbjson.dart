@@ -37,14 +37,14 @@ const GetAccommodationsBySectionResponse$json = {
     },
   ],
   '3': [
-    GetAccommodationsBySectionResponse_SummarizedAccommdation$json,
+    GetAccommodationsBySectionResponse_SummarizedAccommodation$json,
     GetAccommodationsBySectionResponse_Section$json
   ],
 };
 
 @$core.Deprecated('Use getAccommodationsBySectionResponseDescriptor instead')
-const GetAccommodationsBySectionResponse_SummarizedAccommdation$json = {
-  '1': 'SummarizedAccommdation',
+const GetAccommodationsBySectionResponse_SummarizedAccommodation$json = {
+  '1': 'SummarizedAccommodation',
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
@@ -70,7 +70,7 @@ const GetAccommodationsBySectionResponse_Section$json = {
       '4': 3,
       '5': 11,
       '6':
-          '.accumora_rpc.v1.GetAccommodationsBySectionResponse.SummarizedAccommdation',
+          '.accumora_rpc.v1.GetAccommodationsBySectionResponse.SummarizedAccommodation',
       '10': 'accommodations'
     },
   ],
@@ -80,12 +80,12 @@ const GetAccommodationsBySectionResponse_Section$json = {
 final $typed_data.Uint8List getAccommodationsBySectionResponseDescriptor = $convert.base64Decode(
     'CiJHZXRBY2NvbW1vZGF0aW9uc0J5U2VjdGlvblJlc3BvbnNlElcKCHNlY3Rpb25zGAEgAygLMj'
     'suYWNjdW1vcmFfcnBjLnYxLkdldEFjY29tbW9kYXRpb25zQnlTZWN0aW9uUmVzcG9uc2UuU2Vj'
-    'dGlvblIIc2VjdGlvbnMacwoWU3VtbWFyaXplZEFjY29tbWRhdGlvbhIOCgJpZBgBIAEoCVICaW'
-    'QSEgoEbmFtZRgCIAEoCVIEbmFtZRI1Cghsb2NhdGlvbhgDIAEoCzIZLmFjY3Vtb3JhX3JwYy52'
-    'MS5Mb2NhdGlvblIIbG9jYXRpb24akQEKB1NlY3Rpb24SEgoEbmFtZRgBIAEoCVIEbmFtZRJyCg'
-    '5hY2NvbW1vZGF0aW9ucxgCIAMoCzJKLmFjY3Vtb3JhX3JwYy52MS5HZXRBY2NvbW1vZGF0aW9u'
-    'c0J5U2VjdGlvblJlc3BvbnNlLlN1bW1hcml6ZWRBY2NvbW1kYXRpb25SDmFjY29tbW9kYXRpb2'
-    '5z');
+    'dGlvblIIc2VjdGlvbnMadAoXU3VtbWFyaXplZEFjY29tbW9kYXRpb24SDgoCaWQYASABKAlSAm'
+    'lkEhIKBG5hbWUYAiABKAlSBG5hbWUSNQoIbG9jYXRpb24YAyABKAsyGS5hY2N1bW9yYV9ycGMu'
+    'djEuTG9jYXRpb25SCGxvY2F0aW9uGpIBCgdTZWN0aW9uEhIKBG5hbWUYASABKAlSBG5hbWUScw'
+    'oOYWNjb21tb2RhdGlvbnMYAiADKAsySy5hY2N1bW9yYV9ycGMudjEuR2V0QWNjb21tb2RhdGlv'
+    'bnNCeVNlY3Rpb25SZXNwb25zZS5TdW1tYXJpemVkQWNjb21tb2RhdGlvblIOYWNjb21tb2RhdG'
+    'lvbnM=');
 
 @$core.Deprecated('Use setAccommodationStatusResponseDescriptor instead')
 const SetAccommodationStatusResponse$json = {
