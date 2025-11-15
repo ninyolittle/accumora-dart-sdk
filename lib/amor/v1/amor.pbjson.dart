@@ -873,10 +873,20 @@ const AddAccommodationRequest$json = {
       '10': 'coordinates'
     },
     {'1': 'rules', '3': 9, '4': 3, '5': 9, '10': 'rules'},
+    {
+      '1': 'profile_photo',
+      '3': 10,
+      '4': 1,
+      '5': 12,
+      '9': 2,
+      '10': 'profilePhoto',
+      '17': true
+    },
   ],
   '8': [
     {'1': 'geo'},
     {'1': '_description'},
+    {'1': '_profile_photo'},
   ],
 };
 
@@ -887,5 +897,6 @@ final $typed_data.Uint8List addAccommodationRequestDescriptor = $convert.base64D
     'dHlwZRIcCglhbWVuaXRpZXMYBCADKAlSCWFtZW5pdGllcxIlCgtkZXNjcmlwdGlvbhgFIAEoCU'
     'gBUgtkZXNjcmlwdGlvbogBARI3Cghsb2NhdGlvbhgGIAEoCzIZLmFjY3Vtb3JhX3JwYy52MS5M'
     'b2NhdGlvbkgAUghsb2NhdGlvbhJACgtjb29yZGluYXRlcxgHIAEoCzIcLmFjY3Vtb3JhX3JwYy'
-    '52MS5Db29yZGluYXRlc0gAUgtjb29yZGluYXRlcxIUCgVydWxlcxgJIAMoCVIFcnVsZXNCBQoD'
-    'Z2VvQg4KDF9kZXNjcmlwdGlvbg==');
+    '52MS5Db29yZGluYXRlc0gAUgtjb29yZGluYXRlcxIUCgVydWxlcxgJIAMoCVIFcnVsZXMSKAoN'
+    'cHJvZmlsZV9waG90bxgKIAEoDEgCUgxwcm9maWxlUGhvdG+IAQFCBQoDZ2VvQg4KDF9kZXNjcm'
+    'lwdGlvbkIQCg5fcHJvZmlsZV9waG90bw==');

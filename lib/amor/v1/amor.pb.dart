@@ -2577,6 +2577,7 @@ class AddAccommodationRequest extends $pb.GeneratedMessage {
     $1.Location? location,
     $1.Coordinates? coordinates,
     $core.Iterable<$core.String>? rules,
+    $core.List<$core.int>? profilePhoto,
   }) {
     final result = create();
     if (name != null) result.name = name;
@@ -2586,6 +2587,7 @@ class AddAccommodationRequest extends $pb.GeneratedMessage {
     if (location != null) result.location = location;
     if (coordinates != null) result.coordinates = coordinates;
     if (rules != null) result.rules.addAll(rules);
+    if (profilePhoto != null) result.profilePhoto = profilePhoto;
     return result;
   }
 
@@ -2623,6 +2625,8 @@ class AddAccommodationRequest extends $pb.GeneratedMessage {
     ..aOM<$1.Coordinates>(7, _omitFieldNames ? '' : 'coordinates',
         subBuilder: $1.Coordinates.create)
     ..pPS(9, _omitFieldNames ? '' : 'rules')
+    ..a<$core.List<$core.int>>(
+        10, _omitFieldNames ? '' : 'profilePhoto', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -2706,6 +2710,15 @@ class AddAccommodationRequest extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(9)
   $pb.PbList<$core.String> get rules => $_getList(6);
+
+  @$pb.TagNumber(10)
+  $core.List<$core.int> get profilePhoto => $_getN(7);
+  @$pb.TagNumber(10)
+  set profilePhoto($core.List<$core.int> value) => $_setBytes(7, value);
+  @$pb.TagNumber(10)
+  $core.bool hasProfilePhoto() => $_has(7);
+  @$pb.TagNumber(10)
+  void clearProfilePhoto() => $_clearField(10);
 }
 
 const $core.bool _omitFieldNames =
