@@ -36,7 +36,27 @@ const GetAccommodationsBySectionResponse$json = {
       '10': 'sections'
     },
   ],
-  '3': [GetAccommodationsBySectionResponse_Section$json],
+  '3': [
+    GetAccommodationsBySectionResponse_SummarizedAccommdation$json,
+    GetAccommodationsBySectionResponse_Section$json
+  ],
+};
+
+@$core.Deprecated('Use getAccommodationsBySectionResponseDescriptor instead')
+const GetAccommodationsBySectionResponse_SummarizedAccommdation$json = {
+  '1': 'SummarizedAccommdation',
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'location',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.accumora_rpc.v1.Location',
+      '10': 'location'
+    },
+  ],
 };
 
 @$core.Deprecated('Use getAccommodationsBySectionResponseDescriptor instead')
@@ -49,20 +69,23 @@ const GetAccommodationsBySectionResponse_Section$json = {
       '3': 2,
       '4': 3,
       '5': 11,
-      '6': '.accumora_rpc.v1.Accommodation',
+      '6':
+          '.accumora_rpc.v1.GetAccommodationsBySectionResponse.SummarizedAccommdation',
       '10': 'accommodations'
     },
   ],
 };
 
 /// Descriptor for `GetAccommodationsBySectionResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getAccommodationsBySectionResponseDescriptor =
-    $convert.base64Decode(
-        'CiJHZXRBY2NvbW1vZGF0aW9uc0J5U2VjdGlvblJlc3BvbnNlElcKCHNlY3Rpb25zGAEgAygLMj'
-        'suYWNjdW1vcmFfcnBjLnYxLkdldEFjY29tbW9kYXRpb25zQnlTZWN0aW9uUmVzcG9uc2UuU2Vj'
-        'dGlvblIIc2VjdGlvbnMaZQoHU2VjdGlvbhISCgRuYW1lGAEgASgJUgRuYW1lEkYKDmFjY29tbW'
-        '9kYXRpb25zGAIgAygLMh4uYWNjdW1vcmFfcnBjLnYxLkFjY29tbW9kYXRpb25SDmFjY29tbW9k'
-        'YXRpb25z');
+final $typed_data.Uint8List getAccommodationsBySectionResponseDescriptor = $convert.base64Decode(
+    'CiJHZXRBY2NvbW1vZGF0aW9uc0J5U2VjdGlvblJlc3BvbnNlElcKCHNlY3Rpb25zGAEgAygLMj'
+    'suYWNjdW1vcmFfcnBjLnYxLkdldEFjY29tbW9kYXRpb25zQnlTZWN0aW9uUmVzcG9uc2UuU2Vj'
+    'dGlvblIIc2VjdGlvbnMacwoWU3VtbWFyaXplZEFjY29tbWRhdGlvbhIOCgJpZBgBIAEoCVICaW'
+    'QSEgoEbmFtZRgCIAEoCVIEbmFtZRI1Cghsb2NhdGlvbhgDIAEoCzIZLmFjY3Vtb3JhX3JwYy52'
+    'MS5Mb2NhdGlvblIIbG9jYXRpb24akQEKB1NlY3Rpb24SEgoEbmFtZRgBIAEoCVIEbmFtZRJyCg'
+    '5hY2NvbW1vZGF0aW9ucxgCIAMoCzJKLmFjY3Vtb3JhX3JwYy52MS5HZXRBY2NvbW1vZGF0aW9u'
+    'c0J5U2VjdGlvblJlc3BvbnNlLlN1bW1hcml6ZWRBY2NvbW1kYXRpb25SDmFjY29tbW9kYXRpb2'
+    '5z');
 
 @$core.Deprecated('Use setAccommodationStatusResponseDescriptor instead')
 const SetAccommodationStatusResponse$json = {
