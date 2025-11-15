@@ -19,7 +19,13 @@ import 'types.pb.dart' as $1;
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 class GetAccommodationsBySectionRequest extends $pb.GeneratedMessage {
-  factory GetAccommodationsBySectionRequest() => create();
+  factory GetAccommodationsBySectionRequest({
+    $core.Iterable<$core.MapEntry<$core.String, $core.String>>? inputs,
+  }) {
+    final result = create();
+    if (inputs != null) result.inputs.addEntries(inputs);
+    return result;
+  }
 
   GetAccommodationsBySectionRequest._();
 
@@ -36,6 +42,11 @@ class GetAccommodationsBySectionRequest extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
+    ..m<$core.String, $core.String>(1, _omitFieldNames ? '' : 'inputs',
+        entryClassName: 'GetAccommodationsBySectionRequest.InputsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('accumora_rpc.v1'))
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -63,6 +74,9 @@ class GetAccommodationsBySectionRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetAccommodationsBySectionRequest>(
           create);
   static GetAccommodationsBySectionRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbMap<$core.String, $core.String> get inputs => $_getMap(0);
 }
 
 class GetAccommodationsBySectionResponse_SummarizedAccommodation
