@@ -85,7 +85,7 @@ class GetAccommodationsBySectionResponse_SummarizedAccommodation
     $core.String? id,
     $core.String? name,
     $1.Location? location,
-    $core.List<$core.int>? profilePhoto,
+    $core.String? profilePhoto,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -117,8 +117,7 @@ class GetAccommodationsBySectionResponse_SummarizedAccommodation
     ..aOS(2, _omitFieldNames ? '' : 'name')
     ..aOM<$1.Location>(3, _omitFieldNames ? '' : 'location',
         subBuilder: $1.Location.create)
-    ..a<$core.List<$core.int>>(
-        4, _omitFieldNames ? '' : 'profilePhoto', $pb.PbFieldType.OY)
+    ..aOS(4, _omitFieldNames ? '' : 'profilePhoto')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -183,9 +182,9 @@ class GetAccommodationsBySectionResponse_SummarizedAccommodation
   $1.Location ensureLocation() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $core.List<$core.int> get profilePhoto => $_getN(3);
+  $core.String get profilePhoto => $_getSZ(3);
   @$pb.TagNumber(4)
-  set profilePhoto($core.List<$core.int> value) => $_setBytes(3, value);
+  set profilePhoto($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasProfilePhoto() => $_has(3);
   @$pb.TagNumber(4)
