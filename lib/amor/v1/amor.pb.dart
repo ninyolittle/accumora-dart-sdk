@@ -1940,11 +1940,9 @@ class GetRoomsResponse extends $pb.GeneratedMessage {
 
 class GetAccommodationsRequest extends $pb.GeneratedMessage {
   factory GetAccommodationsRequest({
-    $core.String? ownerId,
     $core.Iterable<$core.String>? id,
   }) {
     final result = create();
-    if (ownerId != null) result.ownerId = ownerId;
     if (id != null) result.id.addAll(id);
     return result;
   }
@@ -1963,8 +1961,7 @@ class GetAccommodationsRequest extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'ownerId', protoName: 'ownerId')
-    ..pPS(2, _omitFieldNames ? '' : 'id')
+    ..pPS(1, _omitFieldNames ? '' : 'id')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1991,16 +1988,7 @@ class GetAccommodationsRequest extends $pb.GeneratedMessage {
   static GetAccommodationsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get ownerId => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set ownerId($core.String value) => $_setString(0, value);
-  @$pb.TagNumber(1)
-  $core.bool hasOwnerId() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearOwnerId() => $_clearField(1);
-
-  @$pb.TagNumber(2)
-  $pb.PbList<$core.String> get id => $_getList(1);
+  $pb.PbList<$core.String> get id => $_getList(0);
 }
 
 class GetAccommodationsResponse extends $pb.GeneratedMessage {

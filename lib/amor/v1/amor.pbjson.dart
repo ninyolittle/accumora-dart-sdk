@@ -655,27 +655,13 @@ final $typed_data.Uint8List getRoomsResponseDescriptor = $convert.base64Decode(
 const GetAccommodationsRequest$json = {
   '1': 'GetAccommodationsRequest',
   '2': [
-    {
-      '1': 'ownerId',
-      '3': 1,
-      '4': 1,
-      '5': 9,
-      '9': 0,
-      '10': 'ownerId',
-      '17': true
-    },
-    {'1': 'id', '3': 2, '4': 3, '5': 9, '10': 'id'},
-  ],
-  '8': [
-    {'1': '_ownerId'},
+    {'1': 'id', '3': 1, '4': 3, '5': 9, '10': 'id'},
   ],
 };
 
 /// Descriptor for `GetAccommodationsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getAccommodationsRequestDescriptor =
-    $convert.base64Decode(
-        'ChhHZXRBY2NvbW1vZGF0aW9uc1JlcXVlc3QSHQoHb3duZXJJZBgBIAEoCUgAUgdvd25lcklkiA'
-        'EBEg4KAmlkGAIgAygJUgJpZEIKCghfb3duZXJJZA==');
+final $typed_data.Uint8List getAccommodationsRequestDescriptor = $convert
+    .base64Decode('ChhHZXRBY2NvbW1vZGF0aW9uc1JlcXVlc3QSDgoCaWQYASADKAlSAmlk');
 
 @$core.Deprecated('Use getAccommodationsResponseDescriptor instead')
 const GetAccommodationsResponse$json = {
