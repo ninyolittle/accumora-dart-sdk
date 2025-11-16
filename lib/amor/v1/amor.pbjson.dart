@@ -81,6 +81,18 @@ const GetAccommodationsBySectionResponse_SummarizedAccommodation$json = {
       '6': '.accumora_rpc.v1.Location',
       '10': 'location'
     },
+    {
+      '1': 'profile_photo',
+      '3': 4,
+      '4': 1,
+      '5': 12,
+      '9': 0,
+      '10': 'profilePhoto',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_profile_photo'},
   ],
 };
 
@@ -105,12 +117,13 @@ const GetAccommodationsBySectionResponse_Section$json = {
 final $typed_data.Uint8List getAccommodationsBySectionResponseDescriptor = $convert.base64Decode(
     'CiJHZXRBY2NvbW1vZGF0aW9uc0J5U2VjdGlvblJlc3BvbnNlElcKCHNlY3Rpb25zGAEgAygLMj'
     'suYWNjdW1vcmFfcnBjLnYxLkdldEFjY29tbW9kYXRpb25zQnlTZWN0aW9uUmVzcG9uc2UuU2Vj'
-    'dGlvblIIc2VjdGlvbnMadAoXU3VtbWFyaXplZEFjY29tbW9kYXRpb24SDgoCaWQYASABKAlSAm'
-    'lkEhIKBG5hbWUYAiABKAlSBG5hbWUSNQoIbG9jYXRpb24YAyABKAsyGS5hY2N1bW9yYV9ycGMu'
-    'djEuTG9jYXRpb25SCGxvY2F0aW9uGpIBCgdTZWN0aW9uEhIKBG5hbWUYASABKAlSBG5hbWUScw'
-    'oOYWNjb21tb2RhdGlvbnMYAiADKAsySy5hY2N1bW9yYV9ycGMudjEuR2V0QWNjb21tb2RhdGlv'
-    'bnNCeVNlY3Rpb25SZXNwb25zZS5TdW1tYXJpemVkQWNjb21tb2RhdGlvblIOYWNjb21tb2RhdG'
-    'lvbnM=');
+    'dGlvblIIc2VjdGlvbnMasAEKF1N1bW1hcml6ZWRBY2NvbW1vZGF0aW9uEg4KAmlkGAEgASgJUg'
+    'JpZBISCgRuYW1lGAIgASgJUgRuYW1lEjUKCGxvY2F0aW9uGAMgASgLMhkuYWNjdW1vcmFfcnBj'
+    'LnYxLkxvY2F0aW9uUghsb2NhdGlvbhIoCg1wcm9maWxlX3Bob3RvGAQgASgMSABSDHByb2ZpbG'
+    'VQaG90b4gBAUIQCg5fcHJvZmlsZV9waG90bxqSAQoHU2VjdGlvbhISCgRuYW1lGAEgASgJUgRu'
+    'YW1lEnMKDmFjY29tbW9kYXRpb25zGAIgAygLMksuYWNjdW1vcmFfcnBjLnYxLkdldEFjY29tbW'
+    '9kYXRpb25zQnlTZWN0aW9uUmVzcG9uc2UuU3VtbWFyaXplZEFjY29tbW9kYXRpb25SDmFjY29t'
+    'bW9kYXRpb25z');
 
 @$core.Deprecated('Use setAccommodationStatusResponseDescriptor instead')
 const SetAccommodationStatusResponse$json = {

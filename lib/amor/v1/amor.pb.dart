@@ -85,11 +85,13 @@ class GetAccommodationsBySectionResponse_SummarizedAccommodation
     $core.String? id,
     $core.String? name,
     $1.Location? location,
+    $core.List<$core.int>? profilePhoto,
   }) {
     final result = create();
     if (id != null) result.id = id;
     if (name != null) result.name = name;
     if (location != null) result.location = location;
+    if (profilePhoto != null) result.profilePhoto = profilePhoto;
     return result;
   }
 
@@ -115,6 +117,8 @@ class GetAccommodationsBySectionResponse_SummarizedAccommodation
     ..aOS(2, _omitFieldNames ? '' : 'name')
     ..aOM<$1.Location>(3, _omitFieldNames ? '' : 'location',
         subBuilder: $1.Location.create)
+    ..a<$core.List<$core.int>>(
+        4, _omitFieldNames ? '' : 'profilePhoto', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -177,6 +181,15 @@ class GetAccommodationsBySectionResponse_SummarizedAccommodation
   void clearLocation() => $_clearField(3);
   @$pb.TagNumber(3)
   $1.Location ensureLocation() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $core.List<$core.int> get profilePhoto => $_getN(3);
+  @$pb.TagNumber(4)
+  set profilePhoto($core.List<$core.int> value) => $_setBytes(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasProfilePhoto() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearProfilePhoto() => $_clearField(4);
 }
 
 class GetAccommodationsBySectionResponse_Section extends $pb.GeneratedMessage {
