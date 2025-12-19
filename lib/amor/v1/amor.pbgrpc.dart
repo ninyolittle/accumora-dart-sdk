@@ -21,6 +21,7 @@ import 'types.pb.dart' as $1;
 
 export 'amor.pb.dart';
 
+/// ProjectAmor provides RPC methods for managing accommodations, rooms, users, and amenities in the Accumora platform
 @$pb.GrpcServiceName('accumora_rpc.v1.ProjectAmor')
 class ProjectAmorClient extends $grpc.Client {
   /// The hostname for this service.
@@ -33,6 +34,7 @@ class ProjectAmorClient extends $grpc.Client {
 
   ProjectAmorClient(super.channel, {super.options, super.interceptors});
 
+  /// AddAccommodation creates a new accommodation with the provided details
   $grpc.ResponseFuture<$1.Accommodation> addAccommodation(
     $0.AddAccommodationRequest request, {
     $grpc.CallOptions? options,
@@ -40,6 +42,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$addAccommodation, request, options: options);
   }
 
+  /// LoginUser authenticates a user and returns an access token
   $grpc.ResponseFuture<$0.LoginUserResponse> loginUser(
     $0.LoginUserRequest request, {
     $grpc.CallOptions? options,
@@ -47,6 +50,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$loginUser, request, options: options);
   }
 
+  /// RegisterUser creates a new user account and returns an access token
   $grpc.ResponseFuture<$0.RegisterUserResponse> registerUser(
     $0.RegisterUserRequest request, {
     $grpc.CallOptions? options,
@@ -54,6 +58,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$registerUser, request, options: options);
   }
 
+  /// DeleteUser removes the current user's account
   $grpc.ResponseFuture<$0.DeleteUserResponse> deleteUser(
     $0.DeleteUserRequest request, {
     $grpc.CallOptions? options,
@@ -61,6 +66,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$deleteUser, request, options: options);
   }
 
+  /// DeleteAccommodation removes an accommodation by ID
   $grpc.ResponseFuture<$0.DeleteAccommodationResponse> deleteAccommodation(
     $0.DeleteAccommodationRequest request, {
     $grpc.CallOptions? options,
@@ -68,6 +74,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$deleteAccommodation, request, options: options);
   }
 
+  /// GetAccommodations retrieves accommodations by their IDs
   $grpc.ResponseFuture<$0.GetAccommodationsResponse> getAccommodations(
     $0.GetAccommodationsRequest request, {
     $grpc.CallOptions? options,
@@ -75,6 +82,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$getAccommodations, request, options: options);
   }
 
+  /// GetAccommodationsBySection retrieves accommodations grouped by sections
   $grpc.ResponseFuture<$0.GetAccommodationsBySectionResponse>
       getAccommodationsBySection(
     $0.GetAccommodationsBySectionRequest request, {
@@ -84,6 +92,7 @@ class ProjectAmorClient extends $grpc.Client {
         options: options);
   }
 
+  /// UpdateAccommodation modifies an existing accommodation's details
   $grpc.ResponseFuture<$1.Accommodation> updateAccommodation(
     $0.UpdateAccommodationRequest request, {
     $grpc.CallOptions? options,
@@ -91,6 +100,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$updateAccommodation, request, options: options);
   }
 
+  /// AddRoom creates a new room for an accommodation
   $grpc.ResponseFuture<$0.AddRoomResponse> addRoom(
     $0.AddRoomRequest request, {
     $grpc.CallOptions? options,
@@ -98,6 +108,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$addRoom, request, options: options);
   }
 
+  /// GetRooms retrieves rooms by accommodation ID or specific room IDs
   $grpc.ResponseFuture<$0.GetRoomsResponse> getRooms(
     $0.GetRoomsRequest request, {
     $grpc.CallOptions? options,
@@ -105,6 +116,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$getRooms, request, options: options);
   }
 
+  /// DeleteRoom removes a room by ID
   $grpc.ResponseFuture<$0.DeleteRoomResponse> deleteRoom(
     $0.DeleteRoomRequest request, {
     $grpc.CallOptions? options,
@@ -112,6 +124,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$deleteRoom, request, options: options);
   }
 
+  /// UpdateRoom modifies an existing room's details
   $grpc.ResponseFuture<$0.UpdateRoomResponse> updateRoom(
     $0.UpdateRoomRequest request, {
     $grpc.CallOptions? options,
@@ -119,6 +132,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$updateRoom, request, options: options);
   }
 
+  /// GetUser retrieves the current user's information
   $grpc.ResponseFuture<$1.User> getUser(
     $0.GetUserRequest request, {
     $grpc.CallOptions? options,
@@ -126,6 +140,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$getUser, request, options: options);
   }
 
+  /// SetAsLandLord upgrades the current user to landlord status
   $grpc.ResponseFuture<$1.User> setAsLandLord(
     $0.SetAsLandLordRequest request, {
     $grpc.CallOptions? options,
@@ -133,6 +148,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$setAsLandLord, request, options: options);
   }
 
+  /// AddAmenities creates new amenities
   $grpc.ResponseFuture<$0.AddAmenitiesResponse> addAmenities(
     $0.AddAmenitiesRequest request, {
     $grpc.CallOptions? options,
@@ -140,6 +156,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$addAmenities, request, options: options);
   }
 
+  /// ListAmenities retrieves all amenities or amenities for a specific accommodation
   $grpc.ResponseFuture<$0.ListAmenitiesResponse> listAmenities(
     $0.ListAmenitiesRequest request, {
     $grpc.CallOptions? options,
@@ -147,6 +164,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$listAmenities, request, options: options);
   }
 
+  /// DeleteAmenities removes amenities by their IDs
   $grpc.ResponseFuture<$0.DeleteAmenitiesResponse> deleteAmenities(
     $0.DeleteAmenitiesRequest request, {
     $grpc.CallOptions? options,
@@ -154,6 +172,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$deleteAmenities, request, options: options);
   }
 
+  /// SendVerificationEmail sends an email verification link to the user
   $grpc.ResponseFuture<$0.SendVerificationEmailResponse> sendVerificationEmail(
     $0.SendVerificationEmailRequest request, {
     $grpc.CallOptions? options,
@@ -161,6 +180,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$sendVerificationEmail, request, options: options);
   }
 
+  /// ConfirmEmailAddress verifies a user's email address using a confirmation code
   $grpc.ResponseFuture<$0.ConfirmEmailAddressResponse> confirmEmailAddress(
     $0.ConfirmEmailAddressRequest request, {
     $grpc.CallOptions? options,
@@ -168,6 +188,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$confirmEmailAddress, request, options: options);
   }
 
+  /// SetAccommodationStatus updates the status of an accommodation
   $grpc.ResponseFuture<$0.SetAccommodationStatusResponse>
       setAccommodationStatus(
     $0.SetAccommodationStatusRequest request, {
