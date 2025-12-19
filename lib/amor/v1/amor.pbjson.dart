@@ -483,19 +483,10 @@ const UpdateAccommodationRequest$json = {
       '17': true
     },
     {'1': 'rules', '3': 6, '4': 3, '5': 9, '10': 'rules'},
-    {
-      '1': 'profile_pic',
-      '3': 7,
-      '4': 1,
-      '5': 12,
-      '9': 1,
-      '10': 'profilePic',
-      '17': true
-    },
+    {'1': 'profile_pic', '3': 7, '4': 1, '5': 12, '10': 'profilePic'},
   ],
   '8': [
     {'1': '_description'},
-    {'1': '_profile_pic'},
   ],
 };
 
@@ -505,8 +496,7 @@ final $typed_data.Uint8List updateAccommodationRequestDescriptor = $convert.base
     'EoCVIEbmFtZRJECgR0eXBlGAMgASgOMjAuYWNjdW1vcmFfcnBjLnYxLkFjY29tbW9kYXRpb24u'
     'QWNjb21tb2RhdGlvblR5cGVSBHR5cGUSHAoJYW1lbml0aWVzGAQgAygJUglhbWVuaXRpZXMSJQ'
     'oLZGVzY3JpcHRpb24YBSABKAlIAFILZGVzY3JpcHRpb26IAQESFAoFcnVsZXMYBiADKAlSBXJ1'
-    'bGVzEiQKC3Byb2ZpbGVfcGljGAcgASgMSAFSCnByb2ZpbGVQaWOIAQFCDgoMX2Rlc2NyaXB0aW'
-    '9uQg4KDF9wcm9maWxlX3BpYw==');
+    'bGVzEh8KC3Byb2ZpbGVfcGljGAcgASgMUgpwcm9maWxlUGljQg4KDF9kZXNjcmlwdGlvbg==');
 
 @$core.Deprecated('Use getUserRequestDescriptor instead')
 const GetUserRequest$json = {
