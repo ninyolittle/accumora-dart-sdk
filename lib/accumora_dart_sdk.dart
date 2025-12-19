@@ -1,5 +1,3 @@
-library accumora_dart_sdk;
-
 // GENERATED EXPORTS
 export 'amor/v1/amor.pb.dart';
 export 'amor/v1/amor.pbenum.dart';
