@@ -445,13 +445,22 @@ const Accommodation$json = {
       '10': 'status'
     },
     {'1': 'last_update', '3': 12, '4': 1, '5': 9, '10': 'lastUpdate'},
-    {'1': 'image_url', '3': 13, '4': 1, '5': 9, '10': 'imageUrl'},
+    {
+      '1': 'image_url',
+      '3': 13,
+      '4': 1,
+      '5': 9,
+      '9': 3,
+      '10': 'imageUrl',
+      '17': true
+    },
   ],
   '4': [Accommodation_AccommodationType$json, Accommodation_Status$json],
   '8': [
     {'1': '_location'},
     {'1': '_description'},
     {'1': '_coordinates'},
+    {'1': '_image_url'},
   ],
 };
 
@@ -485,8 +494,9 @@ final $typed_data.Uint8List accommodationDescriptor = $convert.base64Decode(
     '9yZGluYXRlc4gBARI2CglhbWVuaXRpZXMYCCADKAsyGC5hY2N1bW9yYV9ycGMudjEuQW1lbml0'
     'eVIJYW1lbml0aWVzEhQKBW93bmVyGAkgASgJUgVvd25lchIhCgxjcmVhdGVkX3RpbWUYCiABKA'
     'lSC2NyZWF0ZWRUaW1lEj0KBnN0YXR1cxgLIAEoDjIlLmFjY3Vtb3JhX3JwYy52MS5BY2NvbW1v'
-    'ZGF0aW9uLlN0YXR1c1IGc3RhdHVzEh8KC2xhc3RfdXBkYXRlGAwgASgJUgpsYXN0VXBkYXRlEh'
-    'sKCWltYWdlX3VybBgNIAEoCVIIaW1hZ2VVcmwiSAoRQWNjb21tb2RhdGlvblR5cGUSEAoMVU5L'
-    'Tk9XTl9UWVBFEAASDQoJQVBBUlRNRU5UEAESEgoOQk9BUkRJTkdfSE9VU0UQAiI2CgZTdGF0dX'
-    'MSEgoOVU5LTk9XTl9TVEFUVVMQABIKCgZBQ1RJVkUQARIMCghJTkFDVElWRRACQgsKCV9sb2Nh'
-    'dGlvbkIOCgxfZGVzY3JpcHRpb25CDgoMX2Nvb3JkaW5hdGVz');
+    'ZGF0aW9uLlN0YXR1c1IGc3RhdHVzEh8KC2xhc3RfdXBkYXRlGAwgASgJUgpsYXN0VXBkYXRlEi'
+    'AKCWltYWdlX3VybBgNIAEoCUgDUghpbWFnZVVybIgBASJIChFBY2NvbW1vZGF0aW9uVHlwZRIQ'
+    'CgxVTktOT1dOX1RZUEUQABINCglBUEFSVE1FTlQQARISCg5CT0FSRElOR19IT1VTRRACIjYKBl'
+    'N0YXR1cxISCg5VTktOT1dOX1NUQVRVUxAAEgoKBkFDVElWRRABEgwKCElOQUNUSVZFEAJCCwoJ'
+    'X2xvY2F0aW9uQg4KDF9kZXNjcmlwdGlvbkIOCgxfY29vcmRpbmF0ZXNCDAoKX2ltYWdlX3VybA'
+    '==');
