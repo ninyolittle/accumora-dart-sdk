@@ -410,7 +410,7 @@ const Accommodation$json = {
     },
     {
       '1': 'type',
-      '3': 6,
+      '3': 5,
       '4': 1,
       '5': 14,
       '6': '.accumora_rpc.v1.Accommodation.AccommodationType',
@@ -418,7 +418,7 @@ const Accommodation$json = {
     },
     {
       '1': 'coordinates',
-      '3': 7,
+      '3': 6,
       '4': 1,
       '5': 11,
       '6': '.accumora_rpc.v1.Coordinates',
@@ -428,26 +428,26 @@ const Accommodation$json = {
     },
     {
       '1': 'amenities',
-      '3': 8,
+      '3': 7,
       '4': 3,
       '5': 11,
       '6': '.accumora_rpc.v1.Amenity',
       '10': 'amenities'
     },
-    {'1': 'owner', '3': 9, '4': 1, '5': 9, '10': 'owner'},
-    {'1': 'created_time', '3': 10, '4': 1, '5': 9, '10': 'createdTime'},
+    {'1': 'owner', '3': 8, '4': 1, '5': 9, '10': 'owner'},
+    {'1': 'created_time', '3': 9, '4': 1, '5': 9, '10': 'createdTime'},
     {
       '1': 'status',
-      '3': 11,
+      '3': 10,
       '4': 1,
       '5': 14,
       '6': '.accumora_rpc.v1.Accommodation.Status',
       '10': 'status'
     },
-    {'1': 'last_update', '3': 12, '4': 1, '5': 9, '10': 'lastUpdate'},
+    {'1': 'last_update', '3': 11, '4': 1, '5': 9, '10': 'lastUpdate'},
     {
       '1': 'image_url',
-      '3': 13,
+      '3': 12,
       '4': 1,
       '5': 9,
       '9': 3,
@@ -488,14 +488,14 @@ const Accommodation_Status$json = {
 final $typed_data.Uint8List accommodationDescriptor = $convert.base64Decode(
     'Cg1BY2NvbW1vZGF0aW9uEg4KAmlkGAEgASgJUgJpZBISCgRuYW1lGAIgASgJUgRuYW1lEjoKCG'
     'xvY2F0aW9uGAMgASgLMhkuYWNjdW1vcmFfcnBjLnYxLkxvY2F0aW9uSABSCGxvY2F0aW9uiAEB'
-    'EiUKC2Rlc2NyaXB0aW9uGAQgASgJSAFSC2Rlc2NyaXB0aW9uiAEBEkQKBHR5cGUYBiABKA4yMC'
+    'EiUKC2Rlc2NyaXB0aW9uGAQgASgJSAFSC2Rlc2NyaXB0aW9uiAEBEkQKBHR5cGUYBSABKA4yMC'
     '5hY2N1bW9yYV9ycGMudjEuQWNjb21tb2RhdGlvbi5BY2NvbW1vZGF0aW9uVHlwZVIEdHlwZRJD'
-    'Cgtjb29yZGluYXRlcxgHIAEoCzIcLmFjY3Vtb3JhX3JwYy52MS5Db29yZGluYXRlc0gCUgtjb2'
-    '9yZGluYXRlc4gBARI2CglhbWVuaXRpZXMYCCADKAsyGC5hY2N1bW9yYV9ycGMudjEuQW1lbml0'
-    'eVIJYW1lbml0aWVzEhQKBW93bmVyGAkgASgJUgVvd25lchIhCgxjcmVhdGVkX3RpbWUYCiABKA'
-    'lSC2NyZWF0ZWRUaW1lEj0KBnN0YXR1cxgLIAEoDjIlLmFjY3Vtb3JhX3JwYy52MS5BY2NvbW1v'
-    'ZGF0aW9uLlN0YXR1c1IGc3RhdHVzEh8KC2xhc3RfdXBkYXRlGAwgASgJUgpsYXN0VXBkYXRlEi'
-    'AKCWltYWdlX3VybBgNIAEoCUgDUghpbWFnZVVybIgBASJIChFBY2NvbW1vZGF0aW9uVHlwZRIQ'
+    'Cgtjb29yZGluYXRlcxgGIAEoCzIcLmFjY3Vtb3JhX3JwYy52MS5Db29yZGluYXRlc0gCUgtjb2'
+    '9yZGluYXRlc4gBARI2CglhbWVuaXRpZXMYByADKAsyGC5hY2N1bW9yYV9ycGMudjEuQW1lbml0'
+    'eVIJYW1lbml0aWVzEhQKBW93bmVyGAggASgJUgVvd25lchIhCgxjcmVhdGVkX3RpbWUYCSABKA'
+    'lSC2NyZWF0ZWRUaW1lEj0KBnN0YXR1cxgKIAEoDjIlLmFjY3Vtb3JhX3JwYy52MS5BY2NvbW1v'
+    'ZGF0aW9uLlN0YXR1c1IGc3RhdHVzEh8KC2xhc3RfdXBkYXRlGAsgASgJUgpsYXN0VXBkYXRlEi'
+    'AKCWltYWdlX3VybBgMIAEoCUgDUghpbWFnZVVybIgBASJIChFBY2NvbW1vZGF0aW9uVHlwZRIQ'
     'CgxVTktOT1dOX1RZUEUQABINCglBUEFSVE1FTlQQARISCg5CT0FSRElOR19IT1VTRRACIjYKBl'
     'N0YXR1cxISCg5VTktOT1dOX1NUQVRVUxAAEgoKBkFDVElWRRABEgwKCElOQUNUSVZFEAJCCwoJ'
     'X2xvY2F0aW9uQg4KDF9kZXNjcmlwdGlvbkIOCgxfY29vcmRpbmF0ZXNCDAoKX2ltYWdlX3VybA'

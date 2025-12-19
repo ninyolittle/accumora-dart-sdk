@@ -801,23 +801,23 @@ class Accommodation extends $pb.GeneratedMessage {
         subBuilder: Location.create)
     ..aOS(4, _omitFieldNames ? '' : 'description')
     ..e<Accommodation_AccommodationType>(
-        6, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
+        5, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
         defaultOrMaker: Accommodation_AccommodationType.UNKNOWN_TYPE,
         valueOf: Accommodation_AccommodationType.valueOf,
         enumValues: Accommodation_AccommodationType.values)
-    ..aOM<Coordinates>(7, _omitFieldNames ? '' : 'coordinates',
+    ..aOM<Coordinates>(6, _omitFieldNames ? '' : 'coordinates',
         subBuilder: Coordinates.create)
-    ..pc<Amenity>(8, _omitFieldNames ? '' : 'amenities', $pb.PbFieldType.PM,
+    ..pc<Amenity>(7, _omitFieldNames ? '' : 'amenities', $pb.PbFieldType.PM,
         subBuilder: Amenity.create)
-    ..aOS(9, _omitFieldNames ? '' : 'owner')
-    ..aOS(10, _omitFieldNames ? '' : 'createdTime')
+    ..aOS(8, _omitFieldNames ? '' : 'owner')
+    ..aOS(9, _omitFieldNames ? '' : 'createdTime')
     ..e<Accommodation_Status>(
-        11, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
+        10, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
         defaultOrMaker: Accommodation_Status.UNKNOWN_STATUS,
         valueOf: Accommodation_Status.valueOf,
         enumValues: Accommodation_Status.values)
-    ..aOS(12, _omitFieldNames ? '' : 'lastUpdate')
-    ..aOS(13, _omitFieldNames ? '' : 'imageUrl')
+    ..aOS(11, _omitFieldNames ? '' : 'lastUpdate')
+    ..aOS(12, _omitFieldNames ? '' : 'imageUrl')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -879,73 +879,73 @@ class Accommodation extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearDescription() => $_clearField(4);
 
-  @$pb.TagNumber(6)
+  @$pb.TagNumber(5)
   Accommodation_AccommodationType get type => $_getN(4);
-  @$pb.TagNumber(6)
-  set type(Accommodation_AccommodationType value) => $_setField(6, value);
-  @$pb.TagNumber(6)
+  @$pb.TagNumber(5)
+  set type(Accommodation_AccommodationType value) => $_setField(5, value);
+  @$pb.TagNumber(5)
   $core.bool hasType() => $_has(4);
-  @$pb.TagNumber(6)
-  void clearType() => $_clearField(6);
+  @$pb.TagNumber(5)
+  void clearType() => $_clearField(5);
 
-  @$pb.TagNumber(7)
+  @$pb.TagNumber(6)
   Coordinates get coordinates => $_getN(5);
-  @$pb.TagNumber(7)
-  set coordinates(Coordinates value) => $_setField(7, value);
-  @$pb.TagNumber(7)
+  @$pb.TagNumber(6)
+  set coordinates(Coordinates value) => $_setField(6, value);
+  @$pb.TagNumber(6)
   $core.bool hasCoordinates() => $_has(5);
-  @$pb.TagNumber(7)
-  void clearCoordinates() => $_clearField(7);
-  @$pb.TagNumber(7)
+  @$pb.TagNumber(6)
+  void clearCoordinates() => $_clearField(6);
+  @$pb.TagNumber(6)
   Coordinates ensureCoordinates() => $_ensure(5);
 
-  @$pb.TagNumber(8)
+  @$pb.TagNumber(7)
   $pb.PbList<Amenity> get amenities => $_getList(6);
 
-  @$pb.TagNumber(9)
+  @$pb.TagNumber(8)
   $core.String get owner => $_getSZ(7);
-  @$pb.TagNumber(9)
+  @$pb.TagNumber(8)
   set owner($core.String value) => $_setString(7, value);
-  @$pb.TagNumber(9)
+  @$pb.TagNumber(8)
   $core.bool hasOwner() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearOwner() => $_clearField(8);
+
   @$pb.TagNumber(9)
-  void clearOwner() => $_clearField(9);
-
-  @$pb.TagNumber(10)
   $core.String get createdTime => $_getSZ(8);
-  @$pb.TagNumber(10)
+  @$pb.TagNumber(9)
   set createdTime($core.String value) => $_setString(8, value);
-  @$pb.TagNumber(10)
+  @$pb.TagNumber(9)
   $core.bool hasCreatedTime() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearCreatedTime() => $_clearField(9);
+
   @$pb.TagNumber(10)
-  void clearCreatedTime() => $_clearField(10);
-
-  @$pb.TagNumber(11)
   Accommodation_Status get status => $_getN(9);
-  @$pb.TagNumber(11)
-  set status(Accommodation_Status value) => $_setField(11, value);
-  @$pb.TagNumber(11)
+  @$pb.TagNumber(10)
+  set status(Accommodation_Status value) => $_setField(10, value);
+  @$pb.TagNumber(10)
   $core.bool hasStatus() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearStatus() => $_clearField(10);
+
   @$pb.TagNumber(11)
-  void clearStatus() => $_clearField(11);
-
-  @$pb.TagNumber(12)
   $core.String get lastUpdate => $_getSZ(10);
-  @$pb.TagNumber(12)
+  @$pb.TagNumber(11)
   set lastUpdate($core.String value) => $_setString(10, value);
-  @$pb.TagNumber(12)
+  @$pb.TagNumber(11)
   $core.bool hasLastUpdate() => $_has(10);
-  @$pb.TagNumber(12)
-  void clearLastUpdate() => $_clearField(12);
+  @$pb.TagNumber(11)
+  void clearLastUpdate() => $_clearField(11);
 
-  @$pb.TagNumber(13)
+  @$pb.TagNumber(12)
   $core.String get imageUrl => $_getSZ(11);
-  @$pb.TagNumber(13)
+  @$pb.TagNumber(12)
   set imageUrl($core.String value) => $_setString(11, value);
-  @$pb.TagNumber(13)
+  @$pb.TagNumber(12)
   $core.bool hasImageUrl() => $_has(11);
-  @$pb.TagNumber(13)
-  void clearImageUrl() => $_clearField(13);
+  @$pb.TagNumber(12)
+  void clearImageUrl() => $_clearField(12);
 }
 
 const $core.bool _omitFieldNames =
