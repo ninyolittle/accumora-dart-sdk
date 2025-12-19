@@ -1390,7 +1390,7 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? amenities,
     $core.String? description,
     $core.Iterable<$core.String>? rules,
-    $core.List<$core.int>? profilePhoto,
+    $core.List<$core.int>? profilePic,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -1399,7 +1399,7 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
     if (amenities != null) result.amenities.addAll(amenities);
     if (description != null) result.description = description;
     if (rules != null) result.rules.addAll(rules);
-    if (profilePhoto != null) result.profilePhoto = profilePhoto;
+    if (profilePic != null) result.profilePic = profilePic;
     return result;
   }
 
@@ -1428,7 +1428,7 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'description')
     ..pPS(6, _omitFieldNames ? '' : 'rules')
     ..a<$core.List<$core.int>>(
-        7, _omitFieldNames ? '' : 'profilePhoto', $pb.PbFieldType.OY)
+        7, _omitFieldNames ? '' : 'profilePic', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1498,13 +1498,13 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
   $pb.PbList<$core.String> get rules => $_getList(5);
 
   @$pb.TagNumber(7)
-  $core.List<$core.int> get profilePhoto => $_getN(6);
+  $core.List<$core.int> get profilePic => $_getN(6);
   @$pb.TagNumber(7)
-  set profilePhoto($core.List<$core.int> value) => $_setBytes(6, value);
+  set profilePic($core.List<$core.int> value) => $_setBytes(6, value);
   @$pb.TagNumber(7)
-  $core.bool hasProfilePhoto() => $_has(6);
+  $core.bool hasProfilePic() => $_has(6);
   @$pb.TagNumber(7)
-  void clearProfilePhoto() => $_clearField(7);
+  void clearProfilePic() => $_clearField(7);
 }
 
 class GetUserRequest extends $pb.GeneratedMessage {
