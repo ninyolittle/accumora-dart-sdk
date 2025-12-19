@@ -503,7 +503,7 @@ class DeleteAmenitiesRequest extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
-    ..pPS(1, _omitFieldNames ? '' : 'amenityIds', protoName: 'amenityIds')
+    ..pPS(1, _omitFieldNames ? '' : 'amenityIds')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -599,8 +599,7 @@ class ListAmenitiesRequest extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'accommodationId',
-        protoName: 'accommodationId')
+    ..aOS(1, _omitFieldNames ? '' : 'accommodationId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -995,7 +994,7 @@ class AddAmenitiesRequest_Input extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aOS(2, _omitFieldNames ? '' : 'icon')
-    ..aOS(3, _omitFieldNames ? '' : 'iconColor', protoName: 'iconColor')
+    ..aOS(3, _omitFieldNames ? '' : 'iconColor')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1385,20 +1384,22 @@ class UpdateRoomResponse extends $pb.GeneratedMessage {
 
 class UpdateAccommodationRequest extends $pb.GeneratedMessage {
   factory UpdateAccommodationRequest({
+    $core.String? id,
     $core.String? name,
     $1.Accommodation_AccommodationType? type,
     $core.Iterable<$core.String>? amenities,
     $core.String? description,
     $core.Iterable<$core.String>? rules,
-    $core.String? id,
+    $core.List<$core.int>? profilePhoto,
   }) {
     final result = create();
+    if (id != null) result.id = id;
     if (name != null) result.name = name;
     if (type != null) result.type = type;
     if (amenities != null) result.amenities.addAll(amenities);
     if (description != null) result.description = description;
     if (rules != null) result.rules.addAll(rules);
-    if (id != null) result.id = id;
+    if (profilePhoto != null) result.profilePhoto = profilePhoto;
     return result;
   }
 
@@ -1416,16 +1417,18 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'name')
     ..e<$1.Accommodation_AccommodationType>(
-        2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
+        3, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
         defaultOrMaker: $1.Accommodation_AccommodationType.UNKNOWN_TYPE,
         valueOf: $1.Accommodation_AccommodationType.valueOf,
         enumValues: $1.Accommodation_AccommodationType.values)
     ..pPS(4, _omitFieldNames ? '' : 'amenities')
     ..aOS(5, _omitFieldNames ? '' : 'description')
-    ..pPS(9, _omitFieldNames ? '' : 'rules')
-    ..aOS(10, _omitFieldNames ? '' : 'id')
+    ..pPS(6, _omitFieldNames ? '' : 'rules')
+    ..a<$core.List<$core.int>>(
+        7, _omitFieldNames ? '' : 'profilePhoto', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1453,46 +1456,55 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
   static UpdateAccommodationRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get name => $_getSZ(0);
+  $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String value) => $_setString(0, value);
+  set id($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
-  $core.bool hasName() => $_has(0);
+  $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => $_clearField(1);
+  void clearId() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $1.Accommodation_AccommodationType get type => $_getN(1);
+  $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
-  set type($1.Accommodation_AccommodationType value) => $_setField(2, value);
+  set name($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
-  $core.bool hasType() => $_has(1);
+  $core.bool hasName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearType() => $_clearField(2);
+  void clearName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $1.Accommodation_AccommodationType get type => $_getN(2);
+  @$pb.TagNumber(3)
+  set type($1.Accommodation_AccommodationType value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasType() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearType() => $_clearField(3);
 
   @$pb.TagNumber(4)
-  $pb.PbList<$core.String> get amenities => $_getList(2);
+  $pb.PbList<$core.String> get amenities => $_getList(3);
 
   @$pb.TagNumber(5)
-  $core.String get description => $_getSZ(3);
+  $core.String get description => $_getSZ(4);
   @$pb.TagNumber(5)
-  set description($core.String value) => $_setString(3, value);
+  set description($core.String value) => $_setString(4, value);
   @$pb.TagNumber(5)
-  $core.bool hasDescription() => $_has(3);
+  $core.bool hasDescription() => $_has(4);
   @$pb.TagNumber(5)
   void clearDescription() => $_clearField(5);
 
-  @$pb.TagNumber(9)
-  $pb.PbList<$core.String> get rules => $_getList(4);
+  @$pb.TagNumber(6)
+  $pb.PbList<$core.String> get rules => $_getList(5);
 
-  @$pb.TagNumber(10)
-  $core.String get id => $_getSZ(5);
-  @$pb.TagNumber(10)
-  set id($core.String value) => $_setString(5, value);
-  @$pb.TagNumber(10)
-  $core.bool hasId() => $_has(5);
-  @$pb.TagNumber(10)
-  void clearId() => $_clearField(10);
+  @$pb.TagNumber(7)
+  $core.List<$core.int> get profilePhoto => $_getN(6);
+  @$pb.TagNumber(7)
+  set profilePhoto($core.List<$core.int> value) => $_setBytes(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasProfilePhoto() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearProfilePhoto() => $_clearField(7);
 }
 
 class GetUserRequest extends $pb.GeneratedMessage {
@@ -1572,16 +1584,14 @@ class AddRoomRequest extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..aOS(2, _omitFieldNames ? '' : 'accommodationId',
-        protoName: 'accommodationId')
+    ..aOS(2, _omitFieldNames ? '' : 'accommodationId')
     ..aOS(3, _omitFieldNames ? '' : 'description')
     ..aOM<$1.Room_Prices>(4, _omitFieldNames ? '' : 'prices',
         subBuilder: $1.Room_Prices.create)
     ..a<$core.int>(5, _omitFieldNames ? '' : 'capacity', $pb.PbFieldType.O3)
     ..pPS(6, _omitFieldNames ? '' : 'utilities')
     ..a<$core.List<$core.int>>(
-        7, _omitFieldNames ? '' : 'photoUrl', $pb.PbFieldType.OY,
-        protoName: 'photoUrl')
+        7, _omitFieldNames ? '' : 'photoUrl', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1847,8 +1857,7 @@ class GetRoomsRequest extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'accommodationId',
-        protoName: 'accommodationId')
+    ..aOS(1, _omitFieldNames ? '' : 'accommodationId')
     ..pPS(2, _omitFieldNames ? '' : 'id')
     ..hasRequiredFields = false;
 
@@ -2460,7 +2469,7 @@ class LoginUserRequest extends $pb.GeneratedMessage {
     ..oo(0, [1, 2])
     ..aOM<LoginUserRequest_Manual>(1, _omitFieldNames ? '' : 'manual',
         subBuilder: LoginUserRequest_Manual.create)
-    ..aOS(2, _omitFieldNames ? '' : 'auth0Token', protoName: 'auth0Token')
+    ..aOS(2, _omitFieldNames ? '' : 'auth0Token')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
