@@ -57,7 +57,7 @@ class Amenity extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'name')
     ..e<Amenity_AmenityType>(
         3, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: Amenity_AmenityType.unknown_amenity,
+        defaultOrMaker: Amenity_AmenityType.UNKNOWN_AMENITY,
         valueOf: Amenity_AmenityType.valueOf,
         enumValues: Amenity_AmenityType.values)
     ..aOS(4, _omitFieldNames ? '' : 'owner')
@@ -595,17 +595,17 @@ class User extends $pb.GeneratedMessage {
     ..aOS(7, _omitFieldNames ? '' : 'password')
     ..e<User_AccountType>(
         8, _omitFieldNames ? '' : 'accountType', $pb.PbFieldType.OE,
-        defaultOrMaker: User_AccountType.manual,
+        defaultOrMaker: User_AccountType.MANUAL,
         valueOf: User_AccountType.valueOf,
         enumValues: User_AccountType.values)
     ..aOS(9, _omitFieldNames ? '' : 'birthday')
     ..e<User_Gender>(10, _omitFieldNames ? '' : 'gender', $pb.PbFieldType.OE,
-        defaultOrMaker: User_Gender.unknown_gender,
+        defaultOrMaker: User_Gender.UNKNOWN_GENDER,
         valueOf: User_Gender.valueOf,
         enumValues: User_Gender.values)
     ..aOS(11, _omitFieldNames ? '' : 'createdAt')
     ..e<User_Role>(12, _omitFieldNames ? '' : 'role', $pb.PbFieldType.OE,
-        defaultOrMaker: User_Role.unknown_role,
+        defaultOrMaker: User_Role.UNKNOWN_ROLE,
         valueOf: User_Role.valueOf,
         enumValues: User_Role.values)
     ..aOB(13, _omitFieldNames ? '' : 'isEmailVerified')
@@ -763,6 +763,7 @@ class Accommodation extends $pb.GeneratedMessage {
     $core.String? createdTime,
     Accommodation_Status? status,
     $core.String? lastUpdate,
+    $core.String? imageUrl,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -776,6 +777,7 @@ class Accommodation extends $pb.GeneratedMessage {
     if (createdTime != null) result.createdTime = createdTime;
     if (status != null) result.status = status;
     if (lastUpdate != null) result.lastUpdate = lastUpdate;
+    if (imageUrl != null) result.imageUrl = imageUrl;
     return result;
   }
 
@@ -800,7 +802,7 @@ class Accommodation extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'description')
     ..e<Accommodation_AccommodationType>(
         6, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: Accommodation_AccommodationType.unknown_type,
+        defaultOrMaker: Accommodation_AccommodationType.UNKNOWN_TYPE,
         valueOf: Accommodation_AccommodationType.valueOf,
         enumValues: Accommodation_AccommodationType.values)
     ..aOM<Coordinates>(7, _omitFieldNames ? '' : 'coordinates',
@@ -811,10 +813,11 @@ class Accommodation extends $pb.GeneratedMessage {
     ..aOS(10, _omitFieldNames ? '' : 'createdTime')
     ..e<Accommodation_Status>(
         11, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
-        defaultOrMaker: Accommodation_Status.unknown_status,
+        defaultOrMaker: Accommodation_Status.UNKNOWN_STATUS,
         valueOf: Accommodation_Status.valueOf,
         enumValues: Accommodation_Status.values)
     ..aOS(12, _omitFieldNames ? '' : 'lastUpdate')
+    ..aOS(13, _omitFieldNames ? '' : 'imageUrl')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -934,6 +937,15 @@ class Accommodation extends $pb.GeneratedMessage {
   $core.bool hasLastUpdate() => $_has(10);
   @$pb.TagNumber(12)
   void clearLastUpdate() => $_clearField(12);
+
+  @$pb.TagNumber(13)
+  $core.String get imageUrl => $_getSZ(11);
+  @$pb.TagNumber(13)
+  set imageUrl($core.String value) => $_setString(11, value);
+  @$pb.TagNumber(13)
+  $core.bool hasImageUrl() => $_has(11);
+  @$pb.TagNumber(13)
+  void clearImageUrl() => $_clearField(13);
 }
 
 const $core.bool _omitFieldNames =

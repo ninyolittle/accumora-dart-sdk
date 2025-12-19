@@ -15,17 +15,17 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Amenity_AmenityType extends $pb.ProtobufEnum {
-  static const Amenity_AmenityType unknown_amenity =
-      Amenity_AmenityType._(0, _omitEnumNames ? '' : 'unknown_amenity');
-  static const Amenity_AmenityType built_in =
-      Amenity_AmenityType._(1, _omitEnumNames ? '' : 'built_in');
-  static const Amenity_AmenityType custom =
-      Amenity_AmenityType._(2, _omitEnumNames ? '' : 'custom');
+  static const Amenity_AmenityType UNKNOWN_AMENITY =
+      Amenity_AmenityType._(0, _omitEnumNames ? '' : 'UNKNOWN_AMENITY');
+  static const Amenity_AmenityType BUILT_IN =
+      Amenity_AmenityType._(1, _omitEnumNames ? '' : 'BUILT_IN');
+  static const Amenity_AmenityType CUSTOM =
+      Amenity_AmenityType._(2, _omitEnumNames ? '' : 'CUSTOM');
 
   static const $core.List<Amenity_AmenityType> values = <Amenity_AmenityType>[
-    unknown_amenity,
-    built_in,
-    custom,
+    UNKNOWN_AMENITY,
+    BUILT_IN,
+    CUSTOM,
   ];
 
   static final $core.List<Amenity_AmenityType?> _byValue =
@@ -37,17 +37,17 @@ class Amenity_AmenityType extends $pb.ProtobufEnum {
 }
 
 class User_AccountType extends $pb.ProtobufEnum {
-  static const User_AccountType manual =
-      User_AccountType._(0, _omitEnumNames ? '' : 'manual');
-  static const User_AccountType google =
-      User_AccountType._(1, _omitEnumNames ? '' : 'google');
-  static const User_AccountType facebook =
-      User_AccountType._(2, _omitEnumNames ? '' : 'facebook');
+  static const User_AccountType MANUAL =
+      User_AccountType._(0, _omitEnumNames ? '' : 'MANUAL');
+  static const User_AccountType GOOGLE =
+      User_AccountType._(1, _omitEnumNames ? '' : 'GOOGLE');
+  static const User_AccountType FACEBOOK =
+      User_AccountType._(2, _omitEnumNames ? '' : 'FACEBOOK');
 
   static const $core.List<User_AccountType> values = <User_AccountType>[
-    manual,
-    google,
-    facebook,
+    MANUAL,
+    GOOGLE,
+    FACEBOOK,
   ];
 
   static final $core.List<User_AccountType?> _byValue =
@@ -59,17 +59,17 @@ class User_AccountType extends $pb.ProtobufEnum {
 }
 
 class User_Gender extends $pb.ProtobufEnum {
-  static const User_Gender unknown_gender =
-      User_Gender._(0, _omitEnumNames ? '' : 'unknown_gender');
-  static const User_Gender male =
-      User_Gender._(1, _omitEnumNames ? '' : 'male');
-  static const User_Gender female =
-      User_Gender._(2, _omitEnumNames ? '' : 'female');
+  static const User_Gender UNKNOWN_GENDER =
+      User_Gender._(0, _omitEnumNames ? '' : 'UNKNOWN_GENDER');
+  static const User_Gender MALE =
+      User_Gender._(1, _omitEnumNames ? '' : 'MALE');
+  static const User_Gender FEMALE =
+      User_Gender._(2, _omitEnumNames ? '' : 'FEMALE');
 
   static const $core.List<User_Gender> values = <User_Gender>[
-    unknown_gender,
-    male,
-    female,
+    UNKNOWN_GENDER,
+    MALE,
+    FEMALE,
   ];
 
   static final $core.List<User_Gender?> _byValue =
@@ -81,19 +81,19 @@ class User_Gender extends $pb.ProtobufEnum {
 }
 
 class User_Role extends $pb.ProtobufEnum {
-  static const User_Role unknown_role =
-      User_Role._(0, _omitEnumNames ? '' : 'unknown_role');
-  static const User_Role tenant =
-      User_Role._(1, _omitEnumNames ? '' : 'tenant');
-  static const User_Role landlord =
-      User_Role._(2, _omitEnumNames ? '' : 'landlord');
-  static const User_Role admin = User_Role._(3, _omitEnumNames ? '' : 'admin');
+  static const User_Role UNKNOWN_ROLE =
+      User_Role._(0, _omitEnumNames ? '' : 'UNKNOWN_ROLE');
+  static const User_Role TENANT =
+      User_Role._(1, _omitEnumNames ? '' : 'TENANT');
+  static const User_Role LANDLORD =
+      User_Role._(2, _omitEnumNames ? '' : 'LANDLORD');
+  static const User_Role ADMIN = User_Role._(3, _omitEnumNames ? '' : 'ADMIN');
 
   static const $core.List<User_Role> values = <User_Role>[
-    unknown_role,
-    tenant,
-    landlord,
-    admin,
+    UNKNOWN_ROLE,
+    TENANT,
+    LANDLORD,
+    ADMIN,
   ];
 
   static final $core.List<User_Role?> _byValue =
@@ -105,20 +105,20 @@ class User_Role extends $pb.ProtobufEnum {
 }
 
 class Accommodation_AccommodationType extends $pb.ProtobufEnum {
-  static const Accommodation_AccommodationType unknown_type =
+  static const Accommodation_AccommodationType UNKNOWN_TYPE =
       Accommodation_AccommodationType._(
-          0, _omitEnumNames ? '' : 'unknown_type');
-  static const Accommodation_AccommodationType apartment =
-      Accommodation_AccommodationType._(1, _omitEnumNames ? '' : 'apartment');
-  static const Accommodation_AccommodationType boarding_house =
+          0, _omitEnumNames ? '' : 'UNKNOWN_TYPE');
+  static const Accommodation_AccommodationType APARTMENT =
+      Accommodation_AccommodationType._(1, _omitEnumNames ? '' : 'APARTMENT');
+  static const Accommodation_AccommodationType BOARDING_HOUSE =
       Accommodation_AccommodationType._(
-          2, _omitEnumNames ? '' : 'boarding_house');
+          2, _omitEnumNames ? '' : 'BOARDING_HOUSE');
 
   static const $core.List<Accommodation_AccommodationType> values =
       <Accommodation_AccommodationType>[
-    unknown_type,
-    apartment,
-    boarding_house,
+    UNKNOWN_TYPE,
+    APARTMENT,
+    BOARDING_HOUSE,
   ];
 
   static final $core.List<Accommodation_AccommodationType?> _byValue =
@@ -130,17 +130,17 @@ class Accommodation_AccommodationType extends $pb.ProtobufEnum {
 }
 
 class Accommodation_Status extends $pb.ProtobufEnum {
-  static const Accommodation_Status unknown_status =
-      Accommodation_Status._(0, _omitEnumNames ? '' : 'unknown_status');
-  static const Accommodation_Status active =
-      Accommodation_Status._(1, _omitEnumNames ? '' : 'active');
-  static const Accommodation_Status inactive =
-      Accommodation_Status._(2, _omitEnumNames ? '' : 'inactive');
+  static const Accommodation_Status UNKNOWN_STATUS =
+      Accommodation_Status._(0, _omitEnumNames ? '' : 'UNKNOWN_STATUS');
+  static const Accommodation_Status ACTIVE =
+      Accommodation_Status._(1, _omitEnumNames ? '' : 'ACTIVE');
+  static const Accommodation_Status INACTIVE =
+      Accommodation_Status._(2, _omitEnumNames ? '' : 'INACTIVE');
 
   static const $core.List<Accommodation_Status> values = <Accommodation_Status>[
-    unknown_status,
-    active,
-    inactive,
+    UNKNOWN_STATUS,
+    ACTIVE,
+    INACTIVE,
   ];
 
   static final $core.List<Accommodation_Status?> _byValue =

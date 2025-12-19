@@ -354,7 +354,7 @@ class SetAccommodationStatusResponse extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..e<$1.Accommodation_Status>(
         2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
-        defaultOrMaker: $1.Accommodation_Status.unknown_status,
+        defaultOrMaker: $1.Accommodation_Status.UNKNOWN_STATUS,
         valueOf: $1.Accommodation_Status.valueOf,
         enumValues: $1.Accommodation_Status.values)
     ..hasRequiredFields = false;
@@ -431,7 +431,7 @@ class SetAccommodationStatusRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..e<$1.Accommodation_Status>(
         2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
-        defaultOrMaker: $1.Accommodation_Status.unknown_status,
+        defaultOrMaker: $1.Accommodation_Status.UNKNOWN_STATUS,
         valueOf: $1.Accommodation_Status.valueOf,
         enumValues: $1.Accommodation_Status.values)
     ..hasRequiredFields = false;
@@ -1419,7 +1419,7 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..e<$1.Accommodation_AccommodationType>(
         2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: $1.Accommodation_AccommodationType.unknown_type,
+        defaultOrMaker: $1.Accommodation_AccommodationType.UNKNOWN_TYPE,
         valueOf: $1.Accommodation_AccommodationType.valueOf,
         enumValues: $1.Accommodation_AccommodationType.values)
     ..pPS(4, _omitFieldNames ? '' : 'amenities')
@@ -2196,7 +2196,7 @@ class RegisterUserRequest extends $pb.GeneratedMessage {
     ..aOS(6, _omitFieldNames ? '' : 'password')
     ..aOS(7, _omitFieldNames ? '' : 'birthday')
     ..e<$1.User_Gender>(8, _omitFieldNames ? '' : 'gender', $pb.PbFieldType.OE,
-        defaultOrMaker: $1.User_Gender.unknown_gender,
+        defaultOrMaker: $1.User_Gender.UNKNOWN_GENDER,
         valueOf: $1.User_Gender.valueOf,
         enumValues: $1.User_Gender.values)
     ..hasRequiredFields = false;
@@ -2615,7 +2615,7 @@ class AddAccommodationRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..e<$1.Accommodation_AccommodationType>(
         2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: $1.Accommodation_AccommodationType.unknown_type,
+        defaultOrMaker: $1.Accommodation_AccommodationType.UNKNOWN_TYPE,
         valueOf: $1.Accommodation_AccommodationType.valueOf,
         enumValues: $1.Accommodation_AccommodationType.values)
     ..pPS(4, _omitFieldNames ? '' : 'amenities')
