@@ -483,7 +483,7 @@ const UpdateAccommodationRequest$json = {
       '17': true
     },
     {'1': 'rules', '3': 6, '4': 3, '5': 9, '10': 'rules'},
-    {'1': 'profile_pic', '3': 7, '4': 1, '5': 12, '10': 'profilePic'},
+    {'1': 'profile_photo', '3': 7, '4': 1, '5': 12, '10': 'profilePhoto'},
   ],
   '8': [
     {'1': '_description'},
@@ -496,7 +496,8 @@ final $typed_data.Uint8List updateAccommodationRequestDescriptor = $convert.base
     'EoCVIEbmFtZRJECgR0eXBlGAMgASgOMjAuYWNjdW1vcmFfcnBjLnYxLkFjY29tbW9kYXRpb24u'
     'QWNjb21tb2RhdGlvblR5cGVSBHR5cGUSHAoJYW1lbml0aWVzGAQgAygJUglhbWVuaXRpZXMSJQ'
     'oLZGVzY3JpcHRpb24YBSABKAlIAFILZGVzY3JpcHRpb26IAQESFAoFcnVsZXMYBiADKAlSBXJ1'
-    'bGVzEh8KC3Byb2ZpbGVfcGljGAcgASgMUgpwcm9maWxlUGljQg4KDF9kZXNjcmlwdGlvbg==');
+    'bGVzEiMKDXByb2ZpbGVfcGhvdG8YByABKAxSDHByb2ZpbGVQaG90b0IOCgxfZGVzY3JpcHRpb2'
+    '4=');
 
 @$core.Deprecated('Use getUserRequestDescriptor instead')
 const GetUserRequest$json = {
