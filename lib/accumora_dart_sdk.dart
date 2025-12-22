@@ -1,4 +1,4 @@
-export 'package:protobuf/well_known_types/google/protobuf/struct.pb.dart';
+library accumora_dart_sdk;
 
 // GENERATED EXPORTS
 export 'amor/v1/amor.pb.dart';

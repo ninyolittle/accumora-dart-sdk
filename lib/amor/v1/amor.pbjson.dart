@@ -15,6 +15,36 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use listNotificationsRequestDescriptor instead')
+const ListNotificationsRequest$json = {
+  '1': 'ListNotificationsRequest',
+};
+
+/// Descriptor for `ListNotificationsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listNotificationsRequestDescriptor =
+    $convert.base64Decode('ChhMaXN0Tm90aWZpY2F0aW9uc1JlcXVlc3Q=');
+
+@$core.Deprecated('Use listNotificationsResponseDescriptor instead')
+const ListNotificationsResponse$json = {
+  '1': 'ListNotificationsResponse',
+  '2': [
+    {
+      '1': 'notifications',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.accumora_rpc.v1.Notification',
+      '10': 'notifications'
+    },
+  ],
+};
+
+/// Descriptor for `ListNotificationsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listNotificationsResponseDescriptor =
+    $convert.base64Decode(
+        'ChlMaXN0Tm90aWZpY2F0aW9uc1Jlc3BvbnNlEkMKDW5vdGlmaWNhdGlvbnMYASADKAsyHS5hY2'
+        'N1bW9yYV9ycGMudjEuTm90aWZpY2F0aW9uUg1ub3RpZmljYXRpb25z');
+
 @$core.Deprecated('Use getAccommodationsBySectionRequestDescriptor instead')
 const GetAccommodationsBySectionRequest$json = {
   '1': 'GetAccommodationsBySectionRequest',

@@ -18,6 +18,97 @@ import 'types.pb.dart' as $1;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
+class ListNotificationsRequest extends $pb.GeneratedMessage {
+  factory ListNotificationsRequest() => create();
+
+  ListNotificationsRequest._();
+
+  factory ListNotificationsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListNotificationsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListNotificationsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListNotificationsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListNotificationsRequest copyWith(
+          void Function(ListNotificationsRequest) updates) =>
+      super.copyWith((message) => updates(message as ListNotificationsRequest))
+          as ListNotificationsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListNotificationsRequest create() => ListNotificationsRequest._();
+  @$core.override
+  ListNotificationsRequest createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static ListNotificationsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListNotificationsRequest>(create);
+  static ListNotificationsRequest? _defaultInstance;
+}
+
+class ListNotificationsResponse extends $pb.GeneratedMessage {
+  factory ListNotificationsResponse({
+    $core.Iterable<$1.Notification>? notifications,
+  }) {
+    final result = create();
+    if (notifications != null) result.notifications.addAll(notifications);
+    return result;
+  }
+
+  ListNotificationsResponse._();
+
+  factory ListNotificationsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ListNotificationsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListNotificationsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..pPM<$1.Notification>(1, _omitFieldNames ? '' : 'notifications',
+        subBuilder: $1.Notification.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListNotificationsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ListNotificationsResponse copyWith(
+          void Function(ListNotificationsResponse) updates) =>
+      super.copyWith((message) => updates(message as ListNotificationsResponse))
+          as ListNotificationsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListNotificationsResponse create() => ListNotificationsResponse._();
+  @$core.override
+  ListNotificationsResponse createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static ListNotificationsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListNotificationsResponse>(create);
+  static ListNotificationsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$1.Notification> get notifications => $_getList(0);
+}
+
 class GetAccommodationsBySectionRequest extends $pb.GeneratedMessage {
   factory GetAccommodationsBySectionRequest({
     $core.Iterable<$core.MapEntry<$core.String, $core.String>>? inputs,

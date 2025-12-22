@@ -198,6 +198,14 @@ class ProjectAmorClient extends $grpc.Client {
         options: options);
   }
 
+  /// ListNotifications retrieves all notifications for the current user
+  $grpc.ResponseFuture<$0.ListNotificationsResponse> listNotifications(
+    $0.ListNotificationsRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$listNotifications, request, options: options);
+  }
+
   // method descriptors
 
   static final _$addAccommodation =
@@ -300,6 +308,11 @@ class ProjectAmorClient extends $grpc.Client {
       '/accumora_rpc.v1.ProjectAmor/SetAccommodationStatus',
       ($0.SetAccommodationStatusRequest value) => value.writeToBuffer(),
       $0.SetAccommodationStatusResponse.fromBuffer);
+  static final _$listNotifications = $grpc.ClientMethod<
+          $0.ListNotificationsRequest, $0.ListNotificationsResponse>(
+      '/accumora_rpc.v1.ProjectAmor/ListNotifications',
+      ($0.ListNotificationsRequest value) => value.writeToBuffer(),
+      $0.ListNotificationsResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('accumora_rpc.v1.ProjectAmor')
@@ -473,6 +486,15 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.SetAccommodationStatusRequest.fromBuffer(value),
         ($0.SetAccommodationStatusResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListNotificationsRequest,
+            $0.ListNotificationsResponse>(
+        'ListNotifications',
+        listNotifications_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ListNotificationsRequest.fromBuffer(value),
+        ($0.ListNotificationsResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.Accommodation> addAccommodation_Pre($grpc.ServiceCall $call,
@@ -646,4 +668,13 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
 
   $async.Future<$0.SetAccommodationStatusResponse> setAccommodationStatus(
       $grpc.ServiceCall call, $0.SetAccommodationStatusRequest request);
+
+  $async.Future<$0.ListNotificationsResponse> listNotifications_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.ListNotificationsRequest> $request) async {
+    return listNotifications($call, await $request);
+  }
+
+  $async.Future<$0.ListNotificationsResponse> listNotifications(
+      $grpc.ServiceCall call, $0.ListNotificationsRequest request);
 }
