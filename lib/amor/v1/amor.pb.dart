@@ -8,7 +8,7 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -50,8 +50,7 @@ class GetAccommodationsBySectionRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetAccommodationsBySectionRequest clone() =>
-      GetAccommodationsBySectionRequest()..mergeFromMessage(this);
+  GetAccommodationsBySectionRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetAccommodationsBySectionRequest copyWith(
           void Function(GetAccommodationsBySectionRequest) updates) =>
@@ -67,8 +66,6 @@ class GetAccommodationsBySectionRequest extends $pb.GeneratedMessage {
       GetAccommodationsBySectionRequest._();
   @$core.override
   GetAccommodationsBySectionRequest createEmptyInstance() => create();
-  static $pb.PbList<GetAccommodationsBySectionRequest> createRepeated() =>
-      $pb.PbList<GetAccommodationsBySectionRequest>();
   @$core.pragma('dart2js:noInline')
   static GetAccommodationsBySectionRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetAccommodationsBySectionRequest>(
@@ -122,8 +119,7 @@ class GetAccommodationsBySectionResponse_SummarizedAccommodation
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetAccommodationsBySectionResponse_SummarizedAccommodation clone() =>
-      GetAccommodationsBySectionResponse_SummarizedAccommodation()
-        ..mergeFromMessage(this);
+      deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetAccommodationsBySectionResponse_SummarizedAccommodation copyWith(
           void Function(
@@ -142,9 +138,6 @@ class GetAccommodationsBySectionResponse_SummarizedAccommodation
   @$core.override
   GetAccommodationsBySectionResponse_SummarizedAccommodation
       createEmptyInstance() => create();
-  static $pb.PbList<GetAccommodationsBySectionResponse_SummarizedAccommodation>
-      createRepeated() => $pb.PbList<
-          GetAccommodationsBySectionResponse_SummarizedAccommodation>();
   @$core.pragma('dart2js:noInline')
   static GetAccommodationsBySectionResponse_SummarizedAccommodation
       getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -219,15 +212,14 @@ class GetAccommodationsBySectionResponse_Section extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..pc<GetAccommodationsBySectionResponse_SummarizedAccommodation>(
-        2, _omitFieldNames ? '' : 'accommodations', $pb.PbFieldType.PM,
+    ..pPM<GetAccommodationsBySectionResponse_SummarizedAccommodation>(
+        2, _omitFieldNames ? '' : 'accommodations',
         subBuilder:
             GetAccommodationsBySectionResponse_SummarizedAccommodation.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetAccommodationsBySectionResponse_Section clone() =>
-      GetAccommodationsBySectionResponse_Section()..mergeFromMessage(this);
+  GetAccommodationsBySectionResponse_Section clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetAccommodationsBySectionResponse_Section copyWith(
           void Function(GetAccommodationsBySectionResponse_Section) updates) =>
@@ -243,9 +235,6 @@ class GetAccommodationsBySectionResponse_Section extends $pb.GeneratedMessage {
       GetAccommodationsBySectionResponse_Section._();
   @$core.override
   GetAccommodationsBySectionResponse_Section createEmptyInstance() => create();
-  static $pb.PbList<GetAccommodationsBySectionResponse_Section>
-      createRepeated() =>
-          $pb.PbList<GetAccommodationsBySectionResponse_Section>();
   @$core.pragma('dart2js:noInline')
   static GetAccommodationsBySectionResponse_Section getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
@@ -290,14 +279,13 @@ class GetAccommodationsBySectionResponse extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
-    ..pc<GetAccommodationsBySectionResponse_Section>(
-        1, _omitFieldNames ? '' : 'sections', $pb.PbFieldType.PM,
+    ..pPM<GetAccommodationsBySectionResponse_Section>(
+        1, _omitFieldNames ? '' : 'sections',
         subBuilder: GetAccommodationsBySectionResponse_Section.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetAccommodationsBySectionResponse clone() =>
-      GetAccommodationsBySectionResponse()..mergeFromMessage(this);
+  GetAccommodationsBySectionResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetAccommodationsBySectionResponse copyWith(
           void Function(GetAccommodationsBySectionResponse) updates) =>
@@ -313,8 +301,6 @@ class GetAccommodationsBySectionResponse extends $pb.GeneratedMessage {
       GetAccommodationsBySectionResponse._();
   @$core.override
   GetAccommodationsBySectionResponse createEmptyInstance() => create();
-  static $pb.PbList<GetAccommodationsBySectionResponse> createRepeated() =>
-      $pb.PbList<GetAccommodationsBySectionResponse>();
   @$core.pragma('dart2js:noInline')
   static GetAccommodationsBySectionResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetAccommodationsBySectionResponse>(
@@ -352,16 +338,12 @@ class SetAccommodationStatusResponse extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..e<$1.Accommodation_Status>(
-        2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
-        defaultOrMaker: $1.Accommodation_Status.UNKNOWN_STATUS,
-        valueOf: $1.Accommodation_Status.valueOf,
+    ..aE<$1.Accommodation_Status>(2, _omitFieldNames ? '' : 'status',
         enumValues: $1.Accommodation_Status.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  SetAccommodationStatusResponse clone() =>
-      SetAccommodationStatusResponse()..mergeFromMessage(this);
+  SetAccommodationStatusResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SetAccommodationStatusResponse copyWith(
           void Function(SetAccommodationStatusResponse) updates) =>
@@ -377,8 +359,6 @@ class SetAccommodationStatusResponse extends $pb.GeneratedMessage {
       SetAccommodationStatusResponse._();
   @$core.override
   SetAccommodationStatusResponse createEmptyInstance() => create();
-  static $pb.PbList<SetAccommodationStatusResponse> createRepeated() =>
-      $pb.PbList<SetAccommodationStatusResponse>();
   @$core.pragma('dart2js:noInline')
   static SetAccommodationStatusResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SetAccommodationStatusResponse>(create);
@@ -429,16 +409,12 @@ class SetAccommodationStatusRequest extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..e<$1.Accommodation_Status>(
-        2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
-        defaultOrMaker: $1.Accommodation_Status.UNKNOWN_STATUS,
-        valueOf: $1.Accommodation_Status.valueOf,
+    ..aE<$1.Accommodation_Status>(2, _omitFieldNames ? '' : 'status',
         enumValues: $1.Accommodation_Status.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  SetAccommodationStatusRequest clone() =>
-      SetAccommodationStatusRequest()..mergeFromMessage(this);
+  SetAccommodationStatusRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SetAccommodationStatusRequest copyWith(
           void Function(SetAccommodationStatusRequest) updates) =>
@@ -454,8 +430,6 @@ class SetAccommodationStatusRequest extends $pb.GeneratedMessage {
       SetAccommodationStatusRequest._();
   @$core.override
   SetAccommodationStatusRequest createEmptyInstance() => create();
-  static $pb.PbList<SetAccommodationStatusRequest> createRepeated() =>
-      $pb.PbList<SetAccommodationStatusRequest>();
   @$core.pragma('dart2js:noInline')
   static SetAccommodationStatusRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SetAccommodationStatusRequest>(create);
@@ -507,8 +481,7 @@ class DeleteAmenitiesRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  DeleteAmenitiesRequest clone() =>
-      DeleteAmenitiesRequest()..mergeFromMessage(this);
+  DeleteAmenitiesRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteAmenitiesRequest copyWith(
           void Function(DeleteAmenitiesRequest) updates) =>
@@ -522,8 +495,6 @@ class DeleteAmenitiesRequest extends $pb.GeneratedMessage {
   static DeleteAmenitiesRequest create() => DeleteAmenitiesRequest._();
   @$core.override
   DeleteAmenitiesRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteAmenitiesRequest> createRepeated() =>
-      $pb.PbList<DeleteAmenitiesRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteAmenitiesRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteAmenitiesRequest>(create);
@@ -553,8 +524,7 @@ class DeleteAmenitiesResponse extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  DeleteAmenitiesResponse clone() =>
-      DeleteAmenitiesResponse()..mergeFromMessage(this);
+  DeleteAmenitiesResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteAmenitiesResponse copyWith(
           void Function(DeleteAmenitiesResponse) updates) =>
@@ -568,8 +538,6 @@ class DeleteAmenitiesResponse extends $pb.GeneratedMessage {
   static DeleteAmenitiesResponse create() => DeleteAmenitiesResponse._();
   @$core.override
   DeleteAmenitiesResponse createEmptyInstance() => create();
-  static $pb.PbList<DeleteAmenitiesResponse> createRepeated() =>
-      $pb.PbList<DeleteAmenitiesResponse>();
   @$core.pragma('dart2js:noInline')
   static DeleteAmenitiesResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteAmenitiesResponse>(create);
@@ -603,8 +571,7 @@ class ListAmenitiesRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ListAmenitiesRequest clone() =>
-      ListAmenitiesRequest()..mergeFromMessage(this);
+  ListAmenitiesRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListAmenitiesRequest copyWith(void Function(ListAmenitiesRequest) updates) =>
       super.copyWith((message) => updates(message as ListAmenitiesRequest))
@@ -617,8 +584,6 @@ class ListAmenitiesRequest extends $pb.GeneratedMessage {
   static ListAmenitiesRequest create() => ListAmenitiesRequest._();
   @$core.override
   ListAmenitiesRequest createEmptyInstance() => create();
-  static $pb.PbList<ListAmenitiesRequest> createRepeated() =>
-      $pb.PbList<ListAmenitiesRequest>();
   @$core.pragma('dart2js:noInline')
   static ListAmenitiesRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListAmenitiesRequest>(create);
@@ -657,13 +622,12 @@ class ListAmenitiesResponse extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
-    ..pc<$1.Amenity>(1, _omitFieldNames ? '' : 'amenities', $pb.PbFieldType.PM,
+    ..pPM<$1.Amenity>(1, _omitFieldNames ? '' : 'amenities',
         subBuilder: $1.Amenity.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ListAmenitiesResponse clone() =>
-      ListAmenitiesResponse()..mergeFromMessage(this);
+  ListAmenitiesResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ListAmenitiesResponse copyWith(
           void Function(ListAmenitiesResponse) updates) =>
@@ -677,8 +641,6 @@ class ListAmenitiesResponse extends $pb.GeneratedMessage {
   static ListAmenitiesResponse create() => ListAmenitiesResponse._();
   @$core.override
   ListAmenitiesResponse createEmptyInstance() => create();
-  static $pb.PbList<ListAmenitiesResponse> createRepeated() =>
-      $pb.PbList<ListAmenitiesResponse>();
   @$core.pragma('dart2js:noInline')
   static ListAmenitiesResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListAmenitiesResponse>(create);
@@ -708,7 +670,7 @@ class DeleteUserRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  DeleteUserRequest clone() => DeleteUserRequest()..mergeFromMessage(this);
+  DeleteUserRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteUserRequest copyWith(void Function(DeleteUserRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteUserRequest))
@@ -721,8 +683,6 @@ class DeleteUserRequest extends $pb.GeneratedMessage {
   static DeleteUserRequest create() => DeleteUserRequest._();
   @$core.override
   DeleteUserRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteUserRequest> createRepeated() =>
-      $pb.PbList<DeleteUserRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteUserRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteUserRequest>(create);
@@ -749,7 +709,7 @@ class DeleteUserResponse extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  DeleteUserResponse clone() => DeleteUserResponse()..mergeFromMessage(this);
+  DeleteUserResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteUserResponse copyWith(void Function(DeleteUserResponse) updates) =>
       super.copyWith((message) => updates(message as DeleteUserResponse))
@@ -762,8 +722,6 @@ class DeleteUserResponse extends $pb.GeneratedMessage {
   static DeleteUserResponse create() => DeleteUserResponse._();
   @$core.override
   DeleteUserResponse createEmptyInstance() => create();
-  static $pb.PbList<DeleteUserResponse> createRepeated() =>
-      $pb.PbList<DeleteUserResponse>();
   @$core.pragma('dart2js:noInline')
   static DeleteUserResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteUserResponse>(create);
@@ -797,8 +755,7 @@ class ConfirmEmailAddressRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ConfirmEmailAddressRequest clone() =>
-      ConfirmEmailAddressRequest()..mergeFromMessage(this);
+  ConfirmEmailAddressRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ConfirmEmailAddressRequest copyWith(
           void Function(ConfirmEmailAddressRequest) updates) =>
@@ -813,8 +770,6 @@ class ConfirmEmailAddressRequest extends $pb.GeneratedMessage {
   static ConfirmEmailAddressRequest create() => ConfirmEmailAddressRequest._();
   @$core.override
   ConfirmEmailAddressRequest createEmptyInstance() => create();
-  static $pb.PbList<ConfirmEmailAddressRequest> createRepeated() =>
-      $pb.PbList<ConfirmEmailAddressRequest>();
   @$core.pragma('dart2js:noInline')
   static ConfirmEmailAddressRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ConfirmEmailAddressRequest>(create);
@@ -850,8 +805,7 @@ class ConfirmEmailAddressResponse extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ConfirmEmailAddressResponse clone() =>
-      ConfirmEmailAddressResponse()..mergeFromMessage(this);
+  ConfirmEmailAddressResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ConfirmEmailAddressResponse copyWith(
           void Function(ConfirmEmailAddressResponse) updates) =>
@@ -867,8 +821,6 @@ class ConfirmEmailAddressResponse extends $pb.GeneratedMessage {
       ConfirmEmailAddressResponse._();
   @$core.override
   ConfirmEmailAddressResponse createEmptyInstance() => create();
-  static $pb.PbList<ConfirmEmailAddressResponse> createRepeated() =>
-      $pb.PbList<ConfirmEmailAddressResponse>();
   @$core.pragma('dart2js:noInline')
   static ConfirmEmailAddressResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ConfirmEmailAddressResponse>(create);
@@ -895,8 +847,7 @@ class SendVerificationEmailRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  SendVerificationEmailRequest clone() =>
-      SendVerificationEmailRequest()..mergeFromMessage(this);
+  SendVerificationEmailRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SendVerificationEmailRequest copyWith(
           void Function(SendVerificationEmailRequest) updates) =>
@@ -912,8 +863,6 @@ class SendVerificationEmailRequest extends $pb.GeneratedMessage {
       SendVerificationEmailRequest._();
   @$core.override
   SendVerificationEmailRequest createEmptyInstance() => create();
-  static $pb.PbList<SendVerificationEmailRequest> createRepeated() =>
-      $pb.PbList<SendVerificationEmailRequest>();
   @$core.pragma('dart2js:noInline')
   static SendVerificationEmailRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SendVerificationEmailRequest>(create);
@@ -940,8 +889,7 @@ class SendVerificationEmailResponse extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  SendVerificationEmailResponse clone() =>
-      SendVerificationEmailResponse()..mergeFromMessage(this);
+  SendVerificationEmailResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SendVerificationEmailResponse copyWith(
           void Function(SendVerificationEmailResponse) updates) =>
@@ -957,8 +905,6 @@ class SendVerificationEmailResponse extends $pb.GeneratedMessage {
       SendVerificationEmailResponse._();
   @$core.override
   SendVerificationEmailResponse createEmptyInstance() => create();
-  static $pb.PbList<SendVerificationEmailResponse> createRepeated() =>
-      $pb.PbList<SendVerificationEmailResponse>();
   @$core.pragma('dart2js:noInline')
   static SendVerificationEmailResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SendVerificationEmailResponse>(create);
@@ -998,8 +944,7 @@ class AddAmenitiesRequest_Input extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AddAmenitiesRequest_Input clone() =>
-      AddAmenitiesRequest_Input()..mergeFromMessage(this);
+  AddAmenitiesRequest_Input clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AddAmenitiesRequest_Input copyWith(
           void Function(AddAmenitiesRequest_Input) updates) =>
@@ -1013,8 +958,6 @@ class AddAmenitiesRequest_Input extends $pb.GeneratedMessage {
   static AddAmenitiesRequest_Input create() => AddAmenitiesRequest_Input._();
   @$core.override
   AddAmenitiesRequest_Input createEmptyInstance() => create();
-  static $pb.PbList<AddAmenitiesRequest_Input> createRepeated() =>
-      $pb.PbList<AddAmenitiesRequest_Input>();
   @$core.pragma('dart2js:noInline')
   static AddAmenitiesRequest_Input getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AddAmenitiesRequest_Input>(create);
@@ -1071,13 +1014,12 @@ class AddAmenitiesRequest extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
-    ..pc<AddAmenitiesRequest_Input>(
-        1, _omitFieldNames ? '' : 'amenities', $pb.PbFieldType.PM,
+    ..pPM<AddAmenitiesRequest_Input>(1, _omitFieldNames ? '' : 'amenities',
         subBuilder: AddAmenitiesRequest_Input.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AddAmenitiesRequest clone() => AddAmenitiesRequest()..mergeFromMessage(this);
+  AddAmenitiesRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AddAmenitiesRequest copyWith(void Function(AddAmenitiesRequest) updates) =>
       super.copyWith((message) => updates(message as AddAmenitiesRequest))
@@ -1090,8 +1032,6 @@ class AddAmenitiesRequest extends $pb.GeneratedMessage {
   static AddAmenitiesRequest create() => AddAmenitiesRequest._();
   @$core.override
   AddAmenitiesRequest createEmptyInstance() => create();
-  static $pb.PbList<AddAmenitiesRequest> createRepeated() =>
-      $pb.PbList<AddAmenitiesRequest>();
   @$core.pragma('dart2js:noInline')
   static AddAmenitiesRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AddAmenitiesRequest>(create);
@@ -1124,13 +1064,12 @@ class AddAmenitiesResponse extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
-    ..pc<$1.Amenity>(1, _omitFieldNames ? '' : 'amenities', $pb.PbFieldType.PM,
+    ..pPM<$1.Amenity>(1, _omitFieldNames ? '' : 'amenities',
         subBuilder: $1.Amenity.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AddAmenitiesResponse clone() =>
-      AddAmenitiesResponse()..mergeFromMessage(this);
+  AddAmenitiesResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AddAmenitiesResponse copyWith(void Function(AddAmenitiesResponse) updates) =>
       super.copyWith((message) => updates(message as AddAmenitiesResponse))
@@ -1143,8 +1082,6 @@ class AddAmenitiesResponse extends $pb.GeneratedMessage {
   static AddAmenitiesResponse create() => AddAmenitiesResponse._();
   @$core.override
   AddAmenitiesResponse createEmptyInstance() => create();
-  static $pb.PbList<AddAmenitiesResponse> createRepeated() =>
-      $pb.PbList<AddAmenitiesResponse>();
   @$core.pragma('dart2js:noInline')
   static AddAmenitiesResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AddAmenitiesResponse>(create);
@@ -1174,8 +1111,7 @@ class SetAsLandLordRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  SetAsLandLordRequest clone() =>
-      SetAsLandLordRequest()..mergeFromMessage(this);
+  SetAsLandLordRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SetAsLandLordRequest copyWith(void Function(SetAsLandLordRequest) updates) =>
       super.copyWith((message) => updates(message as SetAsLandLordRequest))
@@ -1188,8 +1124,6 @@ class SetAsLandLordRequest extends $pb.GeneratedMessage {
   static SetAsLandLordRequest create() => SetAsLandLordRequest._();
   @$core.override
   SetAsLandLordRequest createEmptyInstance() => create();
-  static $pb.PbList<SetAsLandLordRequest> createRepeated() =>
-      $pb.PbList<SetAsLandLordRequest>();
   @$core.pragma('dart2js:noInline')
   static SetAsLandLordRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SetAsLandLordRequest>(create);
@@ -1236,14 +1170,14 @@ class UpdateRoomRequest extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'description')
     ..aOM<$1.Room_Prices>(4, _omitFieldNames ? '' : 'prices',
         subBuilder: $1.Room_Prices.create)
-    ..a<$core.int>(5, _omitFieldNames ? '' : 'capacity', $pb.PbFieldType.O3)
+    ..aI(5, _omitFieldNames ? '' : 'capacity')
     ..pPS(6, _omitFieldNames ? '' : 'utilities')
     ..a<$core.List<$core.int>>(
         7, _omitFieldNames ? '' : 'photoUrl', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  UpdateRoomRequest clone() => UpdateRoomRequest()..mergeFromMessage(this);
+  UpdateRoomRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpdateRoomRequest copyWith(void Function(UpdateRoomRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateRoomRequest))
@@ -1256,8 +1190,6 @@ class UpdateRoomRequest extends $pb.GeneratedMessage {
   static UpdateRoomRequest create() => UpdateRoomRequest._();
   @$core.override
   UpdateRoomRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateRoomRequest> createRepeated() =>
-      $pb.PbList<UpdateRoomRequest>();
   @$core.pragma('dart2js:noInline')
   static UpdateRoomRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateRoomRequest>(create);
@@ -1350,7 +1282,7 @@ class UpdateRoomResponse extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  UpdateRoomResponse clone() => UpdateRoomResponse()..mergeFromMessage(this);
+  UpdateRoomResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpdateRoomResponse copyWith(void Function(UpdateRoomResponse) updates) =>
       super.copyWith((message) => updates(message as UpdateRoomResponse))
@@ -1363,8 +1295,6 @@ class UpdateRoomResponse extends $pb.GeneratedMessage {
   static UpdateRoomResponse create() => UpdateRoomResponse._();
   @$core.override
   UpdateRoomResponse createEmptyInstance() => create();
-  static $pb.PbList<UpdateRoomResponse> createRepeated() =>
-      $pb.PbList<UpdateRoomResponse>();
   @$core.pragma('dart2js:noInline')
   static UpdateRoomResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateRoomResponse>(create);
@@ -1419,10 +1349,7 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOS(2, _omitFieldNames ? '' : 'name')
-    ..e<$1.Accommodation_AccommodationType>(
-        3, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: $1.Accommodation_AccommodationType.UNKNOWN_TYPE,
-        valueOf: $1.Accommodation_AccommodationType.valueOf,
+    ..aE<$1.Accommodation_AccommodationType>(3, _omitFieldNames ? '' : 'type',
         enumValues: $1.Accommodation_AccommodationType.values)
     ..pPS(4, _omitFieldNames ? '' : 'amenities')
     ..aOS(5, _omitFieldNames ? '' : 'description')
@@ -1432,8 +1359,7 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  UpdateAccommodationRequest clone() =>
-      UpdateAccommodationRequest()..mergeFromMessage(this);
+  UpdateAccommodationRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   UpdateAccommodationRequest copyWith(
           void Function(UpdateAccommodationRequest) updates) =>
@@ -1448,8 +1374,6 @@ class UpdateAccommodationRequest extends $pb.GeneratedMessage {
   static UpdateAccommodationRequest create() => UpdateAccommodationRequest._();
   @$core.override
   UpdateAccommodationRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateAccommodationRequest> createRepeated() =>
-      $pb.PbList<UpdateAccommodationRequest>();
   @$core.pragma('dart2js:noInline')
   static UpdateAccommodationRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<UpdateAccommodationRequest>(create);
@@ -1527,7 +1451,7 @@ class GetUserRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetUserRequest clone() => GetUserRequest()..mergeFromMessage(this);
+  GetUserRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetUserRequest copyWith(void Function(GetUserRequest) updates) =>
       super.copyWith((message) => updates(message as GetUserRequest))
@@ -1540,8 +1464,6 @@ class GetUserRequest extends $pb.GeneratedMessage {
   static GetUserRequest create() => GetUserRequest._();
   @$core.override
   GetUserRequest createEmptyInstance() => create();
-  static $pb.PbList<GetUserRequest> createRepeated() =>
-      $pb.PbList<GetUserRequest>();
   @$core.pragma('dart2js:noInline')
   static GetUserRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetUserRequest>(create);
@@ -1588,14 +1510,14 @@ class AddRoomRequest extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'description')
     ..aOM<$1.Room_Prices>(4, _omitFieldNames ? '' : 'prices',
         subBuilder: $1.Room_Prices.create)
-    ..a<$core.int>(5, _omitFieldNames ? '' : 'capacity', $pb.PbFieldType.O3)
+    ..aI(5, _omitFieldNames ? '' : 'capacity')
     ..pPS(6, _omitFieldNames ? '' : 'utilities')
     ..a<$core.List<$core.int>>(
         7, _omitFieldNames ? '' : 'photoUrl', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AddRoomRequest clone() => AddRoomRequest()..mergeFromMessage(this);
+  AddRoomRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AddRoomRequest copyWith(void Function(AddRoomRequest) updates) =>
       super.copyWith((message) => updates(message as AddRoomRequest))
@@ -1608,8 +1530,6 @@ class AddRoomRequest extends $pb.GeneratedMessage {
   static AddRoomRequest create() => AddRoomRequest._();
   @$core.override
   AddRoomRequest createEmptyInstance() => create();
-  static $pb.PbList<AddRoomRequest> createRepeated() =>
-      $pb.PbList<AddRoomRequest>();
   @$core.pragma('dart2js:noInline')
   static AddRoomRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AddRoomRequest>(create);
@@ -1702,7 +1622,7 @@ class AddRoomResponse extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AddRoomResponse clone() => AddRoomResponse()..mergeFromMessage(this);
+  AddRoomResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AddRoomResponse copyWith(void Function(AddRoomResponse) updates) =>
       super.copyWith((message) => updates(message as AddRoomResponse))
@@ -1715,8 +1635,6 @@ class AddRoomResponse extends $pb.GeneratedMessage {
   static AddRoomResponse create() => AddRoomResponse._();
   @$core.override
   AddRoomResponse createEmptyInstance() => create();
-  static $pb.PbList<AddRoomResponse> createRepeated() =>
-      $pb.PbList<AddRoomResponse>();
   @$core.pragma('dart2js:noInline')
   static AddRoomResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AddRoomResponse>(create);
@@ -1761,7 +1679,7 @@ class DeleteRoomRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  DeleteRoomRequest clone() => DeleteRoomRequest()..mergeFromMessage(this);
+  DeleteRoomRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteRoomRequest copyWith(void Function(DeleteRoomRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteRoomRequest))
@@ -1774,8 +1692,6 @@ class DeleteRoomRequest extends $pb.GeneratedMessage {
   static DeleteRoomRequest create() => DeleteRoomRequest._();
   @$core.override
   DeleteRoomRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteRoomRequest> createRepeated() =>
-      $pb.PbList<DeleteRoomRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteRoomRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteRoomRequest>(create);
@@ -1811,7 +1727,7 @@ class DeleteRoomResponse extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  DeleteRoomResponse clone() => DeleteRoomResponse()..mergeFromMessage(this);
+  DeleteRoomResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteRoomResponse copyWith(void Function(DeleteRoomResponse) updates) =>
       super.copyWith((message) => updates(message as DeleteRoomResponse))
@@ -1824,8 +1740,6 @@ class DeleteRoomResponse extends $pb.GeneratedMessage {
   static DeleteRoomResponse create() => DeleteRoomResponse._();
   @$core.override
   DeleteRoomResponse createEmptyInstance() => create();
-  static $pb.PbList<DeleteRoomResponse> createRepeated() =>
-      $pb.PbList<DeleteRoomResponse>();
   @$core.pragma('dart2js:noInline')
   static DeleteRoomResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteRoomResponse>(create);
@@ -1862,7 +1776,7 @@ class GetRoomsRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetRoomsRequest clone() => GetRoomsRequest()..mergeFromMessage(this);
+  GetRoomsRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetRoomsRequest copyWith(void Function(GetRoomsRequest) updates) =>
       super.copyWith((message) => updates(message as GetRoomsRequest))
@@ -1875,8 +1789,6 @@ class GetRoomsRequest extends $pb.GeneratedMessage {
   static GetRoomsRequest create() => GetRoomsRequest._();
   @$core.override
   GetRoomsRequest createEmptyInstance() => create();
-  static $pb.PbList<GetRoomsRequest> createRepeated() =>
-      $pb.PbList<GetRoomsRequest>();
   @$core.pragma('dart2js:noInline')
   static GetRoomsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetRoomsRequest>(create);
@@ -1918,12 +1830,12 @@ class GetRoomsResponse extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
-    ..pc<$1.Room>(1, _omitFieldNames ? '' : 'rooms', $pb.PbFieldType.PM,
+    ..pPM<$1.Room>(1, _omitFieldNames ? '' : 'rooms',
         subBuilder: $1.Room.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetRoomsResponse clone() => GetRoomsResponse()..mergeFromMessage(this);
+  GetRoomsResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetRoomsResponse copyWith(void Function(GetRoomsResponse) updates) =>
       super.copyWith((message) => updates(message as GetRoomsResponse))
@@ -1936,8 +1848,6 @@ class GetRoomsResponse extends $pb.GeneratedMessage {
   static GetRoomsResponse create() => GetRoomsResponse._();
   @$core.override
   GetRoomsResponse createEmptyInstance() => create();
-  static $pb.PbList<GetRoomsResponse> createRepeated() =>
-      $pb.PbList<GetRoomsResponse>();
   @$core.pragma('dart2js:noInline')
   static GetRoomsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetRoomsResponse>(create);
@@ -1974,8 +1884,7 @@ class GetAccommodationsRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetAccommodationsRequest clone() =>
-      GetAccommodationsRequest()..mergeFromMessage(this);
+  GetAccommodationsRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetAccommodationsRequest copyWith(
           void Function(GetAccommodationsRequest) updates) =>
@@ -1989,8 +1898,6 @@ class GetAccommodationsRequest extends $pb.GeneratedMessage {
   static GetAccommodationsRequest create() => GetAccommodationsRequest._();
   @$core.override
   GetAccommodationsRequest createEmptyInstance() => create();
-  static $pb.PbList<GetAccommodationsRequest> createRepeated() =>
-      $pb.PbList<GetAccommodationsRequest>();
   @$core.pragma('dart2js:noInline')
   static GetAccommodationsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetAccommodationsRequest>(create);
@@ -2023,14 +1930,12 @@ class GetAccommodationsResponse extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
-    ..pc<$1.Accommodation>(
-        1, _omitFieldNames ? '' : 'accommodations', $pb.PbFieldType.PM,
+    ..pPM<$1.Accommodation>(1, _omitFieldNames ? '' : 'accommodations',
         subBuilder: $1.Accommodation.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GetAccommodationsResponse clone() =>
-      GetAccommodationsResponse()..mergeFromMessage(this);
+  GetAccommodationsResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   GetAccommodationsResponse copyWith(
           void Function(GetAccommodationsResponse) updates) =>
@@ -2044,8 +1949,6 @@ class GetAccommodationsResponse extends $pb.GeneratedMessage {
   static GetAccommodationsResponse create() => GetAccommodationsResponse._();
   @$core.override
   GetAccommodationsResponse createEmptyInstance() => create();
-  static $pb.PbList<GetAccommodationsResponse> createRepeated() =>
-      $pb.PbList<GetAccommodationsResponse>();
   @$core.pragma('dart2js:noInline')
   static GetAccommodationsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetAccommodationsResponse>(create);
@@ -2082,8 +1985,7 @@ class DeleteAccommodationRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  DeleteAccommodationRequest clone() =>
-      DeleteAccommodationRequest()..mergeFromMessage(this);
+  DeleteAccommodationRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteAccommodationRequest copyWith(
           void Function(DeleteAccommodationRequest) updates) =>
@@ -2098,8 +2000,6 @@ class DeleteAccommodationRequest extends $pb.GeneratedMessage {
   static DeleteAccommodationRequest create() => DeleteAccommodationRequest._();
   @$core.override
   DeleteAccommodationRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteAccommodationRequest> createRepeated() =>
-      $pb.PbList<DeleteAccommodationRequest>();
   @$core.pragma('dart2js:noInline')
   static DeleteAccommodationRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteAccommodationRequest>(create);
@@ -2135,8 +2035,7 @@ class DeleteAccommodationResponse extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  DeleteAccommodationResponse clone() =>
-      DeleteAccommodationResponse()..mergeFromMessage(this);
+  DeleteAccommodationResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DeleteAccommodationResponse copyWith(
           void Function(DeleteAccommodationResponse) updates) =>
@@ -2152,8 +2051,6 @@ class DeleteAccommodationResponse extends $pb.GeneratedMessage {
       DeleteAccommodationResponse._();
   @$core.override
   DeleteAccommodationResponse createEmptyInstance() => create();
-  static $pb.PbList<DeleteAccommodationResponse> createRepeated() =>
-      $pb.PbList<DeleteAccommodationResponse>();
   @$core.pragma('dart2js:noInline')
   static DeleteAccommodationResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<DeleteAccommodationResponse>(create);
@@ -2204,14 +2101,12 @@ class RegisterUserRequest extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'location')
     ..aOS(6, _omitFieldNames ? '' : 'password')
     ..aOS(7, _omitFieldNames ? '' : 'birthday')
-    ..e<$1.User_Gender>(8, _omitFieldNames ? '' : 'gender', $pb.PbFieldType.OE,
-        defaultOrMaker: $1.User_Gender.UNKNOWN_GENDER,
-        valueOf: $1.User_Gender.valueOf,
+    ..aE<$1.User_Gender>(8, _omitFieldNames ? '' : 'gender',
         enumValues: $1.User_Gender.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterUserRequest clone() => RegisterUserRequest()..mergeFromMessage(this);
+  RegisterUserRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RegisterUserRequest copyWith(void Function(RegisterUserRequest) updates) =>
       super.copyWith((message) => updates(message as RegisterUserRequest))
@@ -2224,8 +2119,6 @@ class RegisterUserRequest extends $pb.GeneratedMessage {
   static RegisterUserRequest create() => RegisterUserRequest._();
   @$core.override
   RegisterUserRequest createEmptyInstance() => create();
-  static $pb.PbList<RegisterUserRequest> createRepeated() =>
-      $pb.PbList<RegisterUserRequest>();
   @$core.pragma('dart2js:noInline')
   static RegisterUserRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RegisterUserRequest>(create);
@@ -2331,8 +2224,7 @@ class RegisterUserResponse extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RegisterUserResponse clone() =>
-      RegisterUserResponse()..mergeFromMessage(this);
+  RegisterUserResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RegisterUserResponse copyWith(void Function(RegisterUserResponse) updates) =>
       super.copyWith((message) => updates(message as RegisterUserResponse))
@@ -2345,8 +2237,6 @@ class RegisterUserResponse extends $pb.GeneratedMessage {
   static RegisterUserResponse create() => RegisterUserResponse._();
   @$core.override
   RegisterUserResponse createEmptyInstance() => create();
-  static $pb.PbList<RegisterUserResponse> createRepeated() =>
-      $pb.PbList<RegisterUserResponse>();
   @$core.pragma('dart2js:noInline')
   static RegisterUserResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RegisterUserResponse>(create);
@@ -2392,8 +2282,7 @@ class LoginUserRequest_Manual extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  LoginUserRequest_Manual clone() =>
-      LoginUserRequest_Manual()..mergeFromMessage(this);
+  LoginUserRequest_Manual clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   LoginUserRequest_Manual copyWith(
           void Function(LoginUserRequest_Manual) updates) =>
@@ -2407,8 +2296,6 @@ class LoginUserRequest_Manual extends $pb.GeneratedMessage {
   static LoginUserRequest_Manual create() => LoginUserRequest_Manual._();
   @$core.override
   LoginUserRequest_Manual createEmptyInstance() => create();
-  static $pb.PbList<LoginUserRequest_Manual> createRepeated() =>
-      $pb.PbList<LoginUserRequest_Manual>();
   @$core.pragma('dart2js:noInline')
   static LoginUserRequest_Manual getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<LoginUserRequest_Manual>(create);
@@ -2473,7 +2360,7 @@ class LoginUserRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  LoginUserRequest clone() => LoginUserRequest()..mergeFromMessage(this);
+  LoginUserRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   LoginUserRequest copyWith(void Function(LoginUserRequest) updates) =>
       super.copyWith((message) => updates(message as LoginUserRequest))
@@ -2486,15 +2373,17 @@ class LoginUserRequest extends $pb.GeneratedMessage {
   static LoginUserRequest create() => LoginUserRequest._();
   @$core.override
   LoginUserRequest createEmptyInstance() => create();
-  static $pb.PbList<LoginUserRequest> createRepeated() =>
-      $pb.PbList<LoginUserRequest>();
   @$core.pragma('dart2js:noInline')
   static LoginUserRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<LoginUserRequest>(create);
   static LoginUserRequest? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
   LoginUserRequest_Input whichInput() =>
       _LoginUserRequest_InputByTag[$_whichOneof(0)]!;
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
   void clearInput() => $_clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -2545,7 +2434,7 @@ class LoginUserResponse extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  LoginUserResponse clone() => LoginUserResponse()..mergeFromMessage(this);
+  LoginUserResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   LoginUserResponse copyWith(void Function(LoginUserResponse) updates) =>
       super.copyWith((message) => updates(message as LoginUserResponse))
@@ -2558,8 +2447,6 @@ class LoginUserResponse extends $pb.GeneratedMessage {
   static LoginUserResponse create() => LoginUserResponse._();
   @$core.override
   LoginUserResponse createEmptyInstance() => create();
-  static $pb.PbList<LoginUserResponse> createRepeated() =>
-      $pb.PbList<LoginUserResponse>();
   @$core.pragma('dart2js:noInline')
   static LoginUserResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<LoginUserResponse>(create);
@@ -2622,10 +2509,7 @@ class AddAccommodationRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..oo(0, [6, 7])
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..e<$1.Accommodation_AccommodationType>(
-        2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: $1.Accommodation_AccommodationType.UNKNOWN_TYPE,
-        valueOf: $1.Accommodation_AccommodationType.valueOf,
+    ..aE<$1.Accommodation_AccommodationType>(2, _omitFieldNames ? '' : 'type',
         enumValues: $1.Accommodation_AccommodationType.values)
     ..pPS(4, _omitFieldNames ? '' : 'amenities')
     ..aOS(5, _omitFieldNames ? '' : 'description')
@@ -2639,8 +2523,7 @@ class AddAccommodationRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AddAccommodationRequest clone() =>
-      AddAccommodationRequest()..mergeFromMessage(this);
+  AddAccommodationRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   AddAccommodationRequest copyWith(
           void Function(AddAccommodationRequest) updates) =>
@@ -2654,15 +2537,17 @@ class AddAccommodationRequest extends $pb.GeneratedMessage {
   static AddAccommodationRequest create() => AddAccommodationRequest._();
   @$core.override
   AddAccommodationRequest createEmptyInstance() => create();
-  static $pb.PbList<AddAccommodationRequest> createRepeated() =>
-      $pb.PbList<AddAccommodationRequest>();
   @$core.pragma('dart2js:noInline')
   static AddAccommodationRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AddAccommodationRequest>(create);
   static AddAccommodationRequest? _defaultInstance;
 
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
   AddAccommodationRequest_Geo whichGeo() =>
       _AddAccommodationRequest_GeoByTag[$_whichOneof(0)]!;
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
   void clearGeo() => $_clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)

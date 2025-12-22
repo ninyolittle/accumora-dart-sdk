@@ -8,13 +8,13 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:protobuf/well_known_types/google/protobuf/struct.pb.dart' as $0;
 
-import '../../google/protobuf/struct.pb.dart' as $0;
 import 'types.pbenum.dart';
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
@@ -55,23 +55,18 @@ class Notification extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..e<Notification_Type>(2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: Notification_Type.UNKNOWN_NOTIFICATION,
-        valueOf: Notification_Type.valueOf,
+    ..aE<Notification_Type>(2, _omitFieldNames ? '' : 'type',
         enumValues: Notification_Type.values)
     ..aOS(3, _omitFieldNames ? '' : 'content')
     ..aOS(4, _omitFieldNames ? '' : 'title')
-    ..e<Notification_Status>(
-        5, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
-        defaultOrMaker: Notification_Status.UNKNOWN_STATUS,
-        valueOf: Notification_Status.valueOf,
+    ..aE<Notification_Status>(5, _omitFieldNames ? '' : 'status',
         enumValues: Notification_Status.values)
     ..aOM<$0.Struct>(6, _omitFieldNames ? '' : 'metadata',
         subBuilder: $0.Struct.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Notification clone() => Notification()..mergeFromMessage(this);
+  Notification clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Notification copyWith(void Function(Notification) updates) =>
       super.copyWith((message) => updates(message as Notification))
@@ -84,8 +79,6 @@ class Notification extends $pb.GeneratedMessage {
   static Notification create() => Notification._();
   @$core.override
   Notification createEmptyInstance() => create();
-  static $pb.PbList<Notification> createRepeated() =>
-      $pb.PbList<Notification>();
   @$core.pragma('dart2js:noInline')
   static Notification getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Notification>(create);
@@ -183,10 +176,7 @@ class Amenity extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOS(2, _omitFieldNames ? '' : 'name')
-    ..e<Amenity_AmenityType>(
-        3, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: Amenity_AmenityType.UNKNOWN_AMENITY,
-        valueOf: Amenity_AmenityType.valueOf,
+    ..aE<Amenity_AmenityType>(3, _omitFieldNames ? '' : 'type',
         enumValues: Amenity_AmenityType.values)
     ..aOS(4, _omitFieldNames ? '' : 'owner')
     ..aOS(5, _omitFieldNames ? '' : 'icon')
@@ -194,7 +184,7 @@ class Amenity extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Amenity clone() => Amenity()..mergeFromMessage(this);
+  Amenity clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Amenity copyWith(void Function(Amenity) updates) =>
       super.copyWith((message) => updates(message as Amenity)) as Amenity;
@@ -206,7 +196,6 @@ class Amenity extends $pb.GeneratedMessage {
   static Amenity create() => Amenity._();
   @$core.override
   Amenity createEmptyInstance() => create();
-  static $pb.PbList<Amenity> createRepeated() => $pb.PbList<Amenity>();
   @$core.pragma('dart2js:noInline')
   static Amenity getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Amenity>(create);
@@ -292,12 +281,12 @@ class Coordinates extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'latitude', $pb.PbFieldType.OD)
-    ..a<$core.double>(2, _omitFieldNames ? '' : 'longitude', $pb.PbFieldType.OD)
+    ..aD(1, _omitFieldNames ? '' : 'latitude')
+    ..aD(2, _omitFieldNames ? '' : 'longitude')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Coordinates clone() => Coordinates()..mergeFromMessage(this);
+  Coordinates clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Coordinates copyWith(void Function(Coordinates) updates) =>
       super.copyWith((message) => updates(message as Coordinates))
@@ -310,7 +299,6 @@ class Coordinates extends $pb.GeneratedMessage {
   static Coordinates create() => Coordinates._();
   @$core.override
   Coordinates createEmptyInstance() => create();
-  static $pb.PbList<Coordinates> createRepeated() => $pb.PbList<Coordinates>();
   @$core.pragma('dart2js:noInline')
   static Coordinates getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Coordinates>(create);
@@ -374,7 +362,7 @@ class Location extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Location clone() => Location()..mergeFromMessage(this);
+  Location clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Location copyWith(void Function(Location) updates) =>
       super.copyWith((message) => updates(message as Location)) as Location;
@@ -386,7 +374,6 @@ class Location extends $pb.GeneratedMessage {
   static Location create() => Location._();
   @$core.override
   Location createEmptyInstance() => create();
-  static $pb.PbList<Location> createRepeated() => $pb.PbList<Location>();
   @$core.pragma('dart2js:noInline')
   static Location getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Location>(create);
@@ -467,14 +454,14 @@ class Room_Prices extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'daily', $pb.PbFieldType.OD)
-    ..a<$core.double>(2, _omitFieldNames ? '' : 'weekly', $pb.PbFieldType.OD)
-    ..a<$core.double>(3, _omitFieldNames ? '' : 'monthly', $pb.PbFieldType.OD)
-    ..a<$core.double>(4, _omitFieldNames ? '' : 'yearly', $pb.PbFieldType.OD)
+    ..aD(1, _omitFieldNames ? '' : 'daily')
+    ..aD(2, _omitFieldNames ? '' : 'weekly')
+    ..aD(3, _omitFieldNames ? '' : 'monthly')
+    ..aD(4, _omitFieldNames ? '' : 'yearly')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Room_Prices clone() => Room_Prices()..mergeFromMessage(this);
+  Room_Prices clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Room_Prices copyWith(void Function(Room_Prices) updates) =>
       super.copyWith((message) => updates(message as Room_Prices))
@@ -487,7 +474,6 @@ class Room_Prices extends $pb.GeneratedMessage {
   static Room_Prices create() => Room_Prices._();
   @$core.override
   Room_Prices createEmptyInstance() => create();
-  static $pb.PbList<Room_Prices> createRepeated() => $pb.PbList<Room_Prices>();
   @$core.pragma('dart2js:noInline')
   static Room_Prices getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Room_Prices>(create);
@@ -573,13 +559,13 @@ class Room extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'description')
     ..aOM<Room_Prices>(5, _omitFieldNames ? '' : 'prices',
         subBuilder: Room_Prices.create)
-    ..a<$core.int>(6, _omitFieldNames ? '' : 'capacity', $pb.PbFieldType.O3)
+    ..aI(6, _omitFieldNames ? '' : 'capacity')
     ..pPS(7, _omitFieldNames ? '' : 'utilities')
     ..aOS(8, _omitFieldNames ? '' : 'photoUrl')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Room clone() => Room()..mergeFromMessage(this);
+  Room clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Room copyWith(void Function(Room) updates) =>
       super.copyWith((message) => updates(message as Room)) as Room;
@@ -591,7 +577,6 @@ class Room extends $pb.GeneratedMessage {
   static Room create() => Room._();
   @$core.override
   Room createEmptyInstance() => create();
-  static $pb.PbList<Room> createRepeated() => $pb.PbList<Room>();
   @$core.pragma('dart2js:noInline')
   static Room getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Room>(create);
@@ -721,26 +706,19 @@ class User extends $pb.GeneratedMessage {
     ..aOM<Location>(6, _omitFieldNames ? '' : 'location',
         subBuilder: Location.create)
     ..aOS(7, _omitFieldNames ? '' : 'password')
-    ..e<User_AccountType>(
-        8, _omitFieldNames ? '' : 'accountType', $pb.PbFieldType.OE,
-        defaultOrMaker: User_AccountType.MANUAL,
-        valueOf: User_AccountType.valueOf,
+    ..aE<User_AccountType>(8, _omitFieldNames ? '' : 'accountType',
         enumValues: User_AccountType.values)
     ..aOS(9, _omitFieldNames ? '' : 'birthday')
-    ..e<User_Gender>(10, _omitFieldNames ? '' : 'gender', $pb.PbFieldType.OE,
-        defaultOrMaker: User_Gender.UNKNOWN_GENDER,
-        valueOf: User_Gender.valueOf,
+    ..aE<User_Gender>(10, _omitFieldNames ? '' : 'gender',
         enumValues: User_Gender.values)
     ..aOS(11, _omitFieldNames ? '' : 'createdAt')
-    ..e<User_Role>(12, _omitFieldNames ? '' : 'role', $pb.PbFieldType.OE,
-        defaultOrMaker: User_Role.UNKNOWN_ROLE,
-        valueOf: User_Role.valueOf,
+    ..aE<User_Role>(12, _omitFieldNames ? '' : 'role',
         enumValues: User_Role.values)
     ..aOB(13, _omitFieldNames ? '' : 'isEmailVerified')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  User clone() => User()..mergeFromMessage(this);
+  User clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   User copyWith(void Function(User) updates) =>
       super.copyWith((message) => updates(message as User)) as User;
@@ -752,7 +730,6 @@ class User extends $pb.GeneratedMessage {
   static User create() => User._();
   @$core.override
   User createEmptyInstance() => create();
-  static $pb.PbList<User> createRepeated() => $pb.PbList<User>();
   @$core.pragma('dart2js:noInline')
   static User getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<User>(create);
@@ -928,28 +905,22 @@ class Accommodation extends $pb.GeneratedMessage {
     ..aOM<Location>(3, _omitFieldNames ? '' : 'location',
         subBuilder: Location.create)
     ..aOS(4, _omitFieldNames ? '' : 'description')
-    ..e<Accommodation_AccommodationType>(
-        5, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: Accommodation_AccommodationType.UNKNOWN_TYPE,
-        valueOf: Accommodation_AccommodationType.valueOf,
+    ..aE<Accommodation_AccommodationType>(5, _omitFieldNames ? '' : 'type',
         enumValues: Accommodation_AccommodationType.values)
     ..aOM<Coordinates>(6, _omitFieldNames ? '' : 'coordinates',
         subBuilder: Coordinates.create)
-    ..pc<Amenity>(7, _omitFieldNames ? '' : 'amenities', $pb.PbFieldType.PM,
+    ..pPM<Amenity>(7, _omitFieldNames ? '' : 'amenities',
         subBuilder: Amenity.create)
     ..aOS(8, _omitFieldNames ? '' : 'owner')
     ..aOS(9, _omitFieldNames ? '' : 'createdTime')
-    ..e<Accommodation_Status>(
-        10, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
-        defaultOrMaker: Accommodation_Status.UNKNOWN_STATUS,
-        valueOf: Accommodation_Status.valueOf,
+    ..aE<Accommodation_Status>(10, _omitFieldNames ? '' : 'status',
         enumValues: Accommodation_Status.values)
     ..aOS(11, _omitFieldNames ? '' : 'lastUpdate')
     ..aOS(12, _omitFieldNames ? '' : 'imageUrl')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Accommodation clone() => Accommodation()..mergeFromMessage(this);
+  Accommodation clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Accommodation copyWith(void Function(Accommodation) updates) =>
       super.copyWith((message) => updates(message as Accommodation))
@@ -962,8 +933,6 @@ class Accommodation extends $pb.GeneratedMessage {
   static Accommodation create() => Accommodation._();
   @$core.override
   Accommodation createEmptyInstance() => create();
-  static $pb.PbList<Accommodation> createRepeated() =>
-      $pb.PbList<Accommodation>();
   @$core.pragma('dart2js:noInline')
   static Accommodation getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Accommodation>(create);
