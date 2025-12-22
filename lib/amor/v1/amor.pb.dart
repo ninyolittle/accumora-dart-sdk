@@ -18,6 +18,116 @@ import 'types.pb.dart' as $1;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
+class UpdateNotificationStatusRequest extends $pb.GeneratedMessage {
+  factory UpdateNotificationStatusRequest({
+    $core.Iterable<$core.String>? notificationIds,
+    $1.Notification_Status? status,
+  }) {
+    final result = create();
+    if (notificationIds != null) result.notificationIds.addAll(notificationIds);
+    if (status != null) result.status = status;
+    return result;
+  }
+
+  UpdateNotificationStatusRequest._();
+
+  factory UpdateNotificationStatusRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateNotificationStatusRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateNotificationStatusRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'notificationIds')
+    ..aE<$1.Notification_Status>(2, _omitFieldNames ? '' : 'status',
+        enumValues: $1.Notification_Status.values)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateNotificationStatusRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateNotificationStatusRequest copyWith(
+          void Function(UpdateNotificationStatusRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as UpdateNotificationStatusRequest))
+          as UpdateNotificationStatusRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateNotificationStatusRequest create() =>
+      UpdateNotificationStatusRequest._();
+  @$core.override
+  UpdateNotificationStatusRequest createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static UpdateNotificationStatusRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateNotificationStatusRequest>(
+          create);
+  static UpdateNotificationStatusRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$core.String> get notificationIds => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $1.Notification_Status get status => $_getN(1);
+  @$pb.TagNumber(2)
+  set status($1.Notification_Status value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasStatus() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStatus() => $_clearField(2);
+}
+
+class UpdateNotificationStatusResponse extends $pb.GeneratedMessage {
+  factory UpdateNotificationStatusResponse() => create();
+
+  UpdateNotificationStatusResponse._();
+
+  factory UpdateNotificationStatusResponse.fromBuffer(
+          $core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory UpdateNotificationStatusResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateNotificationStatusResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateNotificationStatusResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  UpdateNotificationStatusResponse copyWith(
+          void Function(UpdateNotificationStatusResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as UpdateNotificationStatusResponse))
+          as UpdateNotificationStatusResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateNotificationStatusResponse create() =>
+      UpdateNotificationStatusResponse._();
+  @$core.override
+  UpdateNotificationStatusResponse createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static UpdateNotificationStatusResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateNotificationStatusResponse>(
+          create);
+  static UpdateNotificationStatusResponse? _defaultInstance;
+}
+
 class ListNotificationsRequest extends $pb.GeneratedMessage {
   factory ListNotificationsRequest({
     $core.String? nextPageToken,

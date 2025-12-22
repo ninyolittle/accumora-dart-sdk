@@ -15,6 +15,38 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use updateNotificationStatusRequestDescriptor instead')
+const UpdateNotificationStatusRequest$json = {
+  '1': 'UpdateNotificationStatusRequest',
+  '2': [
+    {'1': 'notification_ids', '3': 1, '4': 3, '5': 9, '10': 'notificationIds'},
+    {
+      '1': 'status',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.accumora_rpc.v1.Notification.Status',
+      '10': 'status'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateNotificationStatusRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateNotificationStatusRequestDescriptor =
+    $convert.base64Decode(
+        'Ch9VcGRhdGVOb3RpZmljYXRpb25TdGF0dXNSZXF1ZXN0EikKEG5vdGlmaWNhdGlvbl9pZHMYAS'
+        'ADKAlSD25vdGlmaWNhdGlvbklkcxI8CgZzdGF0dXMYAiABKA4yJC5hY2N1bW9yYV9ycGMudjEu'
+        'Tm90aWZpY2F0aW9uLlN0YXR1c1IGc3RhdHVz');
+
+@$core.Deprecated('Use updateNotificationStatusResponseDescriptor instead')
+const UpdateNotificationStatusResponse$json = {
+  '1': 'UpdateNotificationStatusResponse',
+};
+
+/// Descriptor for `UpdateNotificationStatusResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateNotificationStatusResponseDescriptor =
+    $convert.base64Decode('CiBVcGRhdGVOb3RpZmljYXRpb25TdGF0dXNSZXNwb25zZQ==');
+
 @$core.Deprecated('Use listNotificationsRequestDescriptor instead')
 const ListNotificationsRequest$json = {
   '1': 'ListNotificationsRequest',

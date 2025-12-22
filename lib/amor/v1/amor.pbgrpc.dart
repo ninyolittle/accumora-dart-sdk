@@ -206,6 +206,16 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$listNotifications, request, options: options);
   }
 
+  /// UpdateNotificationStatus updates the status of one or more notifications
+  $grpc.ResponseFuture<$0.UpdateNotificationStatusResponse>
+      updateNotificationStatus(
+    $0.UpdateNotificationStatusRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$updateNotificationStatus, request,
+        options: options);
+  }
+
   // method descriptors
 
   static final _$addAccommodation =
@@ -313,6 +323,12 @@ class ProjectAmorClient extends $grpc.Client {
       '/accumora_rpc.v1.ProjectAmor/ListNotifications',
       ($0.ListNotificationsRequest value) => value.writeToBuffer(),
       $0.ListNotificationsResponse.fromBuffer);
+  static final _$updateNotificationStatus = $grpc.ClientMethod<
+          $0.UpdateNotificationStatusRequest,
+          $0.UpdateNotificationStatusResponse>(
+      '/accumora_rpc.v1.ProjectAmor/UpdateNotificationStatus',
+      ($0.UpdateNotificationStatusRequest value) => value.writeToBuffer(),
+      $0.UpdateNotificationStatusResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('accumora_rpc.v1.ProjectAmor')
@@ -495,6 +511,15 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.ListNotificationsRequest.fromBuffer(value),
         ($0.ListNotificationsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateNotificationStatusRequest,
+            $0.UpdateNotificationStatusResponse>(
+        'UpdateNotificationStatus',
+        updateNotificationStatus_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.UpdateNotificationStatusRequest.fromBuffer(value),
+        ($0.UpdateNotificationStatusResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.Accommodation> addAccommodation_Pre($grpc.ServiceCall $call,
@@ -677,4 +702,13 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
 
   $async.Future<$0.ListNotificationsResponse> listNotifications(
       $grpc.ServiceCall call, $0.ListNotificationsRequest request);
+
+  $async.Future<$0.UpdateNotificationStatusResponse>
+      updateNotificationStatus_Pre($grpc.ServiceCall $call,
+          $async.Future<$0.UpdateNotificationStatusRequest> $request) async {
+    return updateNotificationStatus($call, await $request);
+  }
+
+  $async.Future<$0.UpdateNotificationStatusResponse> updateNotificationStatus(
+      $grpc.ServiceCall call, $0.UpdateNotificationStatusRequest request);
 }
