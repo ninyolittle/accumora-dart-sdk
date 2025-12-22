@@ -15,6 +15,32 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use reserveRoomRequestDescriptor instead')
+const ReserveRoomRequest$json = {
+  '1': 'ReserveRoomRequest',
+  '2': [
+    {'1': 'room_id', '3': 1, '4': 1, '5': 9, '10': 'roomId'},
+  ],
+};
+
+/// Descriptor for `ReserveRoomRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List reserveRoomRequestDescriptor =
+    $convert.base64Decode(
+        'ChJSZXNlcnZlUm9vbVJlcXVlc3QSFwoHcm9vbV9pZBgBIAEoCVIGcm9vbUlk');
+
+@$core.Deprecated('Use reserveRoomResponseDescriptor instead')
+const ReserveRoomResponse$json = {
+  '1': 'ReserveRoomResponse',
+  '2': [
+    {'1': 'reservation_id', '3': 1, '4': 1, '5': 9, '10': 'reservationId'},
+  ],
+};
+
+/// Descriptor for `ReserveRoomResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List reserveRoomResponseDescriptor = $convert.base64Decode(
+    'ChNSZXNlcnZlUm9vbVJlc3BvbnNlEiUKDnJlc2VydmF0aW9uX2lkGAEgASgJUg1yZXNlcnZhdG'
+    'lvbklk');
+
 @$core.Deprecated('Use updateNotificationStatusRequestDescriptor instead')
 const UpdateNotificationStatusRequest$json = {
   '1': 'UpdateNotificationStatusRequest',

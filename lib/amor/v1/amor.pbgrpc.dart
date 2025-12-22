@@ -216,6 +216,13 @@ class ProjectAmorClient extends $grpc.Client {
         options: options);
   }
 
+  $grpc.ResponseFuture<$0.ReserveRoomResponse> reserveRoom(
+    $0.ReserveRoomRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$reserveRoom, request, options: options);
+  }
+
   // method descriptors
 
   static final _$addAccommodation =
@@ -329,6 +336,11 @@ class ProjectAmorClient extends $grpc.Client {
       '/accumora_rpc.v1.ProjectAmor/UpdateNotificationStatus',
       ($0.UpdateNotificationStatusRequest value) => value.writeToBuffer(),
       $0.UpdateNotificationStatusResponse.fromBuffer);
+  static final _$reserveRoom =
+      $grpc.ClientMethod<$0.ReserveRoomRequest, $0.ReserveRoomResponse>(
+          '/accumora_rpc.v1.ProjectAmor/ReserveRoom',
+          ($0.ReserveRoomRequest value) => value.writeToBuffer(),
+          $0.ReserveRoomResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('accumora_rpc.v1.ProjectAmor')
@@ -520,6 +532,15 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.UpdateNotificationStatusRequest.fromBuffer(value),
         ($0.UpdateNotificationStatusResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.ReserveRoomRequest, $0.ReserveRoomResponse>(
+            'ReserveRoom',
+            reserveRoom_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.ReserveRoomRequest.fromBuffer(value),
+            ($0.ReserveRoomResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.Accommodation> addAccommodation_Pre($grpc.ServiceCall $call,
@@ -711,4 +732,12 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
 
   $async.Future<$0.UpdateNotificationStatusResponse> updateNotificationStatus(
       $grpc.ServiceCall call, $0.UpdateNotificationStatusRequest request);
+
+  $async.Future<$0.ReserveRoomResponse> reserveRoom_Pre($grpc.ServiceCall $call,
+      $async.Future<$0.ReserveRoomRequest> $request) async {
+    return reserveRoom($call, await $request);
+  }
+
+  $async.Future<$0.ReserveRoomResponse> reserveRoom(
+      $grpc.ServiceCall call, $0.ReserveRoomRequest request);
 }

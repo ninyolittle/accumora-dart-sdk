@@ -18,6 +18,116 @@ import 'types.pb.dart' as $1;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
+class ReserveRoomRequest extends $pb.GeneratedMessage {
+  factory ReserveRoomRequest({
+    $core.String? roomId,
+  }) {
+    final result = create();
+    if (roomId != null) result.roomId = roomId;
+    return result;
+  }
+
+  ReserveRoomRequest._();
+
+  factory ReserveRoomRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ReserveRoomRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ReserveRoomRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'roomId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReserveRoomRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReserveRoomRequest copyWith(void Function(ReserveRoomRequest) updates) =>
+      super.copyWith((message) => updates(message as ReserveRoomRequest))
+          as ReserveRoomRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ReserveRoomRequest create() => ReserveRoomRequest._();
+  @$core.override
+  ReserveRoomRequest createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static ReserveRoomRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReserveRoomRequest>(create);
+  static ReserveRoomRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get roomId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set roomId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasRoomId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearRoomId() => $_clearField(1);
+}
+
+class ReserveRoomResponse extends $pb.GeneratedMessage {
+  factory ReserveRoomResponse({
+    $core.String? reservationId,
+  }) {
+    final result = create();
+    if (reservationId != null) result.reservationId = reservationId;
+    return result;
+  }
+
+  ReserveRoomResponse._();
+
+  factory ReserveRoomResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ReserveRoomResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ReserveRoomResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'reservationId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReserveRoomResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ReserveRoomResponse copyWith(void Function(ReserveRoomResponse) updates) =>
+      super.copyWith((message) => updates(message as ReserveRoomResponse))
+          as ReserveRoomResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ReserveRoomResponse create() => ReserveRoomResponse._();
+  @$core.override
+  ReserveRoomResponse createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static ReserveRoomResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReserveRoomResponse>(create);
+  static ReserveRoomResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get reservationId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set reservationId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasReservationId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearReservationId() => $_clearField(1);
+}
+
 class UpdateNotificationStatusRequest extends $pb.GeneratedMessage {
   factory UpdateNotificationStatusRequest({
     $core.Iterable<$core.String>? notificationIds,
