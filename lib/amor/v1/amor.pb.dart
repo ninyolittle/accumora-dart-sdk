@@ -19,7 +19,13 @@ import 'types.pb.dart' as $1;
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 class ListNotificationsRequest extends $pb.GeneratedMessage {
-  factory ListNotificationsRequest() => create();
+  factory ListNotificationsRequest({
+    $core.String? nextPageToken,
+  }) {
+    final result = create();
+    if (nextPageToken != null) result.nextPageToken = nextPageToken;
+    return result;
+  }
 
   ListNotificationsRequest._();
 
@@ -35,6 +41,7 @@ class ListNotificationsRequest extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -56,6 +63,15 @@ class ListNotificationsRequest extends $pb.GeneratedMessage {
   static ListNotificationsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ListNotificationsRequest>(create);
   static ListNotificationsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get nextPageToken => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set nextPageToken($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasNextPageToken() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNextPageToken() => $_clearField(1);
 }
 
 class ListNotificationsResponse extends $pb.GeneratedMessage {

@@ -18,11 +18,27 @@ import 'dart:typed_data' as $typed_data;
 @$core.Deprecated('Use listNotificationsRequestDescriptor instead')
 const ListNotificationsRequest$json = {
   '1': 'ListNotificationsRequest',
+  '2': [
+    {
+      '1': 'next_page_token',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'nextPageToken',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_next_page_token'},
+  ],
 };
 
 /// Descriptor for `ListNotificationsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listNotificationsRequestDescriptor =
-    $convert.base64Decode('ChhMaXN0Tm90aWZpY2F0aW9uc1JlcXVlc3Q=');
+    $convert.base64Decode(
+        'ChhMaXN0Tm90aWZpY2F0aW9uc1JlcXVlc3QSKwoPbmV4dF9wYWdlX3Rva2VuGAEgASgJSABSDW'
+        '5leHRQYWdlVG9rZW6IAQFCEgoQX25leHRfcGFnZV90b2tlbg==');
 
 @$core.Deprecated('Use listNotificationsResponseDescriptor instead')
 const ListNotificationsResponse$json = {
