@@ -29,6 +29,7 @@ class Notification extends $pb.GeneratedMessage {
     $core.String? title,
     Notification_Status? status,
     $0.Struct? metadata,
+    $core.String? timestamp,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -37,6 +38,7 @@ class Notification extends $pb.GeneratedMessage {
     if (title != null) result.title = title;
     if (status != null) result.status = status;
     if (metadata != null) result.metadata = metadata;
+    if (timestamp != null) result.timestamp = timestamp;
     return result;
   }
 
@@ -63,6 +65,7 @@ class Notification extends $pb.GeneratedMessage {
         enumValues: Notification_Status.values)
     ..aOM<$0.Struct>(6, _omitFieldNames ? '' : 'metadata',
         subBuilder: $0.Struct.create)
+    ..aOS(7, _omitFieldNames ? '' : 'timestamp')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -139,6 +142,15 @@ class Notification extends $pb.GeneratedMessage {
   void clearMetadata() => $_clearField(6);
   @$pb.TagNumber(6)
   $0.Struct ensureMetadata() => $_ensure(5);
+
+  @$pb.TagNumber(7)
+  $core.String get timestamp => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set timestamp($core.String value) => $_setString(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasTimestamp() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearTimestamp() => $_clearField(7);
 }
 
 class Amenity extends $pb.GeneratedMessage {
