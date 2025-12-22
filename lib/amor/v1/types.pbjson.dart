@@ -24,26 +24,34 @@ const Notification$json = {
       '3': 2,
       '4': 1,
       '5': 14,
-      '6': '.accumora_rpc.v1.Notification.NotificationType',
+      '6': '.accumora_rpc.v1.Notification.Type',
       '10': 'type'
     },
     {'1': 'content', '3': 3, '4': 1, '5': 9, '10': 'content'},
     {'1': 'title', '3': 4, '4': 1, '5': 9, '10': 'title'},
     {
-      '1': 'metadata',
+      '1': 'status',
       '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.accumora_rpc.v1.Notification.Status',
+      '10': 'status'
+    },
+    {
+      '1': 'metadata',
+      '3': 6,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Struct',
       '10': 'metadata'
     },
   ],
-  '4': [Notification_NotificationType$json],
+  '4': [Notification_Type$json, Notification_Status$json],
 };
 
 @$core.Deprecated('Use notificationDescriptor instead')
-const Notification_NotificationType$json = {
-  '1': 'NotificationType',
+const Notification_Type$json = {
+  '1': 'Type',
   '2': [
     {'1': 'UNKNOWN_NOTIFICATION', '2': 0},
     {'1': 'RESERVE_ROOM', '2': 1},
@@ -53,14 +61,27 @@ const Notification_NotificationType$json = {
   ],
 };
 
+@$core.Deprecated('Use notificationDescriptor instead')
+const Notification_Status$json = {
+  '1': 'Status',
+  '2': [
+    {'1': 'UNKNOWN_STATUS', '2': 0},
+    {'1': 'UNREAD', '2': 1},
+    {'1': 'READ', '2': 2},
+    {'1': 'SEEN_BUT_UNREAD', '2': 3},
+  ],
+};
+
 /// Descriptor for `Notification`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List notificationDescriptor = $convert.base64Decode(
-    'CgxOb3RpZmljYXRpb24SDgoCaWQYASABKAlSAmlkEkIKBHR5cGUYAiABKA4yLi5hY2N1bW9yYV'
-    '9ycGMudjEuTm90aWZpY2F0aW9uLk5vdGlmaWNhdGlvblR5cGVSBHR5cGUSGAoHY29udGVudBgD'
-    'IAEoCVIHY29udGVudBIUCgV0aXRsZRgEIAEoCVIFdGl0bGUSMwoIbWV0YWRhdGEYBSABKAsyFy'
-    '5nb29nbGUucHJvdG9idWYuU3RydWN0UghtZXRhZGF0YSJ8ChBOb3RpZmljYXRpb25UeXBlEhgK'
-    'FFVOS05PV05fTk9USUZJQ0FUSU9OEAASEAoMUkVTRVJWRV9ST09NEAESFgoSQ0FOQ0VMX1JFU0'
-    'VSVkFUSU9OEAISEAoMUEFZTUVOVF9NQURFEAMSEgoOUEFZTUVOVF9GQUlMRUQQBA==');
+    'CgxOb3RpZmljYXRpb24SDgoCaWQYASABKAlSAmlkEjYKBHR5cGUYAiABKA4yIi5hY2N1bW9yYV'
+    '9ycGMudjEuTm90aWZpY2F0aW9uLlR5cGVSBHR5cGUSGAoHY29udGVudBgDIAEoCVIHY29udGVu'
+    'dBIUCgV0aXRsZRgEIAEoCVIFdGl0bGUSPAoGc3RhdHVzGAUgASgOMiQuYWNjdW1vcmFfcnBjLn'
+    'YxLk5vdGlmaWNhdGlvbi5TdGF0dXNSBnN0YXR1cxIzCghtZXRhZGF0YRgGIAEoCzIXLmdvb2ds'
+    'ZS5wcm90b2J1Zi5TdHJ1Y3RSCG1ldGFkYXRhInAKBFR5cGUSGAoUVU5LTk9XTl9OT1RJRklDQV'
+    'RJT04QABIQCgxSRVNFUlZFX1JPT00QARIWChJDQU5DRUxfUkVTRVJWQVRJT04QAhIQCgxQQVlN'
+    'RU5UX01BREUQAxISCg5QQVlNRU5UX0ZBSUxFRBAEIkcKBlN0YXR1cxISCg5VTktOT1dOX1NUQV'
+    'RVUxAAEgoKBlVOUkVBRBABEggKBFJFQUQQAhITCg9TRUVOX0JVVF9VTlJFQUQQAw==');
 
 @$core.Deprecated('Use amenityDescriptor instead')
 const Amenity$json = {

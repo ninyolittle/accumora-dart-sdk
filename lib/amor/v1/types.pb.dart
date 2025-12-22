@@ -24,9 +24,10 @@ export 'types.pbenum.dart';
 class Notification extends $pb.GeneratedMessage {
   factory Notification({
     $core.String? id,
-    Notification_NotificationType? type,
+    Notification_Type? type,
     $core.String? content,
     $core.String? title,
+    Notification_Status? status,
     $0.Struct? metadata,
   }) {
     final result = create();
@@ -34,6 +35,7 @@ class Notification extends $pb.GeneratedMessage {
     if (type != null) result.type = type;
     if (content != null) result.content = content;
     if (title != null) result.title = title;
+    if (status != null) result.status = status;
     if (metadata != null) result.metadata = metadata;
     return result;
   }
@@ -53,14 +55,18 @@ class Notification extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..e<Notification_NotificationType>(
-        2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: Notification_NotificationType.UNKNOWN_NOTIFICATION,
-        valueOf: Notification_NotificationType.valueOf,
-        enumValues: Notification_NotificationType.values)
+    ..e<Notification_Type>(2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: Notification_Type.UNKNOWN_NOTIFICATION,
+        valueOf: Notification_Type.valueOf,
+        enumValues: Notification_Type.values)
     ..aOS(3, _omitFieldNames ? '' : 'content')
     ..aOS(4, _omitFieldNames ? '' : 'title')
-    ..aOM<$0.Struct>(5, _omitFieldNames ? '' : 'metadata',
+    ..e<Notification_Status>(
+        5, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
+        defaultOrMaker: Notification_Status.UNKNOWN_STATUS,
+        valueOf: Notification_Status.valueOf,
+        enumValues: Notification_Status.values)
+    ..aOM<$0.Struct>(6, _omitFieldNames ? '' : 'metadata',
         subBuilder: $0.Struct.create)
     ..hasRequiredFields = false;
 
@@ -95,9 +101,9 @@ class Notification extends $pb.GeneratedMessage {
   void clearId() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  Notification_NotificationType get type => $_getN(1);
+  Notification_Type get type => $_getN(1);
   @$pb.TagNumber(2)
-  set type(Notification_NotificationType value) => $_setField(2, value);
+  set type(Notification_Type value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasType() => $_has(1);
   @$pb.TagNumber(2)
@@ -122,15 +128,24 @@ class Notification extends $pb.GeneratedMessage {
   void clearTitle() => $_clearField(4);
 
   @$pb.TagNumber(5)
-  $0.Struct get metadata => $_getN(4);
+  Notification_Status get status => $_getN(4);
   @$pb.TagNumber(5)
-  set metadata($0.Struct value) => $_setField(5, value);
+  set status(Notification_Status value) => $_setField(5, value);
   @$pb.TagNumber(5)
-  $core.bool hasMetadata() => $_has(4);
+  $core.bool hasStatus() => $_has(4);
   @$pb.TagNumber(5)
-  void clearMetadata() => $_clearField(5);
-  @$pb.TagNumber(5)
-  $0.Struct ensureMetadata() => $_ensure(4);
+  void clearStatus() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $0.Struct get metadata => $_getN(5);
+  @$pb.TagNumber(6)
+  set metadata($0.Struct value) => $_setField(6, value);
+  @$pb.TagNumber(6)
+  $core.bool hasMetadata() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearMetadata() => $_clearField(6);
+  @$pb.TagNumber(6)
+  $0.Struct ensureMetadata() => $_ensure(5);
 }
 
 class Amenity extends $pb.GeneratedMessage {

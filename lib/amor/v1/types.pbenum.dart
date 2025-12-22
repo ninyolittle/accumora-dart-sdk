@@ -14,23 +14,19 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class Notification_NotificationType extends $pb.ProtobufEnum {
-  static const Notification_NotificationType UNKNOWN_NOTIFICATION =
-      Notification_NotificationType._(
-          0, _omitEnumNames ? '' : 'UNKNOWN_NOTIFICATION');
-  static const Notification_NotificationType RESERVE_ROOM =
-      Notification_NotificationType._(1, _omitEnumNames ? '' : 'RESERVE_ROOM');
-  static const Notification_NotificationType CANCEL_RESERVATION =
-      Notification_NotificationType._(
-          2, _omitEnumNames ? '' : 'CANCEL_RESERVATION');
-  static const Notification_NotificationType PAYMENT_MADE =
-      Notification_NotificationType._(3, _omitEnumNames ? '' : 'PAYMENT_MADE');
-  static const Notification_NotificationType PAYMENT_FAILED =
-      Notification_NotificationType._(
-          4, _omitEnumNames ? '' : 'PAYMENT_FAILED');
+class Notification_Type extends $pb.ProtobufEnum {
+  static const Notification_Type UNKNOWN_NOTIFICATION =
+      Notification_Type._(0, _omitEnumNames ? '' : 'UNKNOWN_NOTIFICATION');
+  static const Notification_Type RESERVE_ROOM =
+      Notification_Type._(1, _omitEnumNames ? '' : 'RESERVE_ROOM');
+  static const Notification_Type CANCEL_RESERVATION =
+      Notification_Type._(2, _omitEnumNames ? '' : 'CANCEL_RESERVATION');
+  static const Notification_Type PAYMENT_MADE =
+      Notification_Type._(3, _omitEnumNames ? '' : 'PAYMENT_MADE');
+  static const Notification_Type PAYMENT_FAILED =
+      Notification_Type._(4, _omitEnumNames ? '' : 'PAYMENT_FAILED');
 
-  static const $core.List<Notification_NotificationType> values =
-      <Notification_NotificationType>[
+  static const $core.List<Notification_Type> values = <Notification_Type>[
     UNKNOWN_NOTIFICATION,
     RESERVE_ROOM,
     CANCEL_RESERVATION,
@@ -38,12 +34,37 @@ class Notification_NotificationType extends $pb.ProtobufEnum {
     PAYMENT_FAILED,
   ];
 
-  static final $core.List<Notification_NotificationType?> _byValue =
+  static final $core.List<Notification_Type?> _byValue =
       $pb.ProtobufEnum.$_initByValueList(values, 4);
-  static Notification_NotificationType? valueOf($core.int value) =>
+  static Notification_Type? valueOf($core.int value) =>
       value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const Notification_NotificationType._(super.value, super.name);
+  const Notification_Type._(super.value, super.name);
+}
+
+class Notification_Status extends $pb.ProtobufEnum {
+  static const Notification_Status UNKNOWN_STATUS =
+      Notification_Status._(0, _omitEnumNames ? '' : 'UNKNOWN_STATUS');
+  static const Notification_Status UNREAD =
+      Notification_Status._(1, _omitEnumNames ? '' : 'UNREAD');
+  static const Notification_Status READ =
+      Notification_Status._(2, _omitEnumNames ? '' : 'READ');
+  static const Notification_Status SEEN_BUT_UNREAD =
+      Notification_Status._(3, _omitEnumNames ? '' : 'SEEN_BUT_UNREAD');
+
+  static const $core.List<Notification_Status> values = <Notification_Status>[
+    UNKNOWN_STATUS,
+    UNREAD,
+    READ,
+    SEEN_BUT_UNREAD,
+  ];
+
+  static final $core.List<Notification_Status?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 3);
+  static Notification_Status? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const Notification_Status._(super.value, super.name);
 }
 
 class Amenity_AmenityType extends $pb.ProtobufEnum {
