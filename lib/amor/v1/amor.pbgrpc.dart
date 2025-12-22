@@ -216,6 +216,7 @@ class ProjectAmorClient extends $grpc.Client {
         options: options);
   }
 
+  /// ReserveRoom creates a reservation for a specific room
   $grpc.ResponseFuture<$0.ReserveRoomResponse> reserveRoom(
     $0.ReserveRoomRequest request, {
     $grpc.CallOptions? options,
