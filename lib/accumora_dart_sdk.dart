@@ -1,4 +1,4 @@
-library accumora_dart_sdk;
+export 'package:protobuf/well_known_types/google/protobuf/struct.pb.dart';
 
 // GENERATED EXPORTS
 export 'amor/v1/amor.pb.dart';
@@ -9,27 +9,3 @@ export 'amor/v1/client.dart';
 export 'amor/v1/types.pb.dart';
 export 'amor/v1/types.pbenum.dart';
 export 'amor/v1/types.pbjson.dart';
-export 'google/protobuf/any.pb.dart';
-export 'google/protobuf/any.pbenum.dart';
-export 'google/protobuf/any.pbjson.dart';
-export 'google/protobuf/descriptor.pb.dart';
-export 'google/protobuf/descriptor.pbenum.dart';
-export 'google/protobuf/descriptor.pbjson.dart';
-export 'google/protobuf/duration.pb.dart';
-export 'google/protobuf/duration.pbenum.dart';
-export 'google/protobuf/duration.pbjson.dart';
-export 'google/protobuf/empty.pb.dart';
-export 'google/protobuf/empty.pbenum.dart';
-export 'google/protobuf/empty.pbjson.dart';
-export 'google/protobuf/field_mask.pb.dart';
-export 'google/protobuf/field_mask.pbenum.dart';
-export 'google/protobuf/field_mask.pbjson.dart';
-export 'google/protobuf/struct.pb.dart';
-export 'google/protobuf/struct.pbenum.dart';
-export 'google/protobuf/struct.pbjson.dart';
-export 'google/protobuf/timestamp.pb.dart';
-export 'google/protobuf/timestamp.pbenum.dart';
-export 'google/protobuf/timestamp.pbjson.dart';
-export 'google/protobuf/wrappers.pb.dart';
-export 'google/protobuf/wrappers.pbenum.dart';
-export 'google/protobuf/wrappers.pbjson.dart';
