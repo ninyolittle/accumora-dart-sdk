@@ -14,6 +14,54 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use notificationDescriptor instead')
+const Notification$json = {
+  '1': 'Notification',
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    {
+      '1': 'type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.accumora_rpc.v1.Notification.NotificationType',
+      '10': 'type'
+    },
+    {'1': 'content', '3': 3, '4': 1, '5': 9, '10': 'content'},
+    {'1': 'title', '3': 4, '4': 1, '5': 9, '10': 'title'},
+    {
+      '1': 'metadata',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Struct',
+      '10': 'metadata'
+    },
+  ],
+  '4': [Notification_NotificationType$json],
+};
+
+@$core.Deprecated('Use notificationDescriptor instead')
+const Notification_NotificationType$json = {
+  '1': 'NotificationType',
+  '2': [
+    {'1': 'UNKNOWN_NOTIFICATION', '2': 0},
+    {'1': 'RESERVE_ROOM', '2': 1},
+    {'1': 'CANCEL_RESERVATION', '2': 2},
+    {'1': 'PAYMENT_MADE', '2': 3},
+    {'1': 'PAYMENT_FAILED', '2': 4},
+  ],
+};
+
+/// Descriptor for `Notification`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List notificationDescriptor = $convert.base64Decode(
+    'CgxOb3RpZmljYXRpb24SDgoCaWQYASABKAlSAmlkEkIKBHR5cGUYAiABKA4yLi5hY2N1bW9yYV'
+    '9ycGMudjEuTm90aWZpY2F0aW9uLk5vdGlmaWNhdGlvblR5cGVSBHR5cGUSGAoHY29udGVudBgD'
+    'IAEoCVIHY29udGVudBIUCgV0aXRsZRgEIAEoCVIFdGl0bGUSMwoIbWV0YWRhdGEYBSABKAsyFy'
+    '5nb29nbGUucHJvdG9idWYuU3RydWN0UghtZXRhZGF0YSJ8ChBOb3RpZmljYXRpb25UeXBlEhgK'
+    'FFVOS05PV05fTk9USUZJQ0FUSU9OEAASEAoMUkVTRVJWRV9ST09NEAESFgoSQ0FOQ0VMX1JFU0'
+    'VSVkFUSU9OEAISEAoMUEFZTUVOVF9NQURFEAMSEgoOUEFZTUVOVF9GQUlMRUQQBA==');
+
 @$core.Deprecated('Use amenityDescriptor instead')
 const Amenity$json = {
   '1': 'Amenity',

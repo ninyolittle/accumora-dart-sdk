@@ -14,6 +14,38 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+class Notification_NotificationType extends $pb.ProtobufEnum {
+  static const Notification_NotificationType UNKNOWN_NOTIFICATION =
+      Notification_NotificationType._(
+          0, _omitEnumNames ? '' : 'UNKNOWN_NOTIFICATION');
+  static const Notification_NotificationType RESERVE_ROOM =
+      Notification_NotificationType._(1, _omitEnumNames ? '' : 'RESERVE_ROOM');
+  static const Notification_NotificationType CANCEL_RESERVATION =
+      Notification_NotificationType._(
+          2, _omitEnumNames ? '' : 'CANCEL_RESERVATION');
+  static const Notification_NotificationType PAYMENT_MADE =
+      Notification_NotificationType._(3, _omitEnumNames ? '' : 'PAYMENT_MADE');
+  static const Notification_NotificationType PAYMENT_FAILED =
+      Notification_NotificationType._(
+          4, _omitEnumNames ? '' : 'PAYMENT_FAILED');
+
+  static const $core.List<Notification_NotificationType> values =
+      <Notification_NotificationType>[
+    UNKNOWN_NOTIFICATION,
+    RESERVE_ROOM,
+    CANCEL_RESERVATION,
+    PAYMENT_MADE,
+    PAYMENT_FAILED,
+  ];
+
+  static final $core.List<Notification_NotificationType?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 4);
+  static Notification_NotificationType? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const Notification_NotificationType._(super.value, super.name);
+}
+
 class Amenity_AmenityType extends $pb.ProtobufEnum {
   static const Amenity_AmenityType UNKNOWN_AMENITY =
       Amenity_AmenityType._(0, _omitEnumNames ? '' : 'UNKNOWN_AMENITY');

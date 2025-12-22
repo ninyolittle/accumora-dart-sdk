@@ -14,11 +14,124 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../../google/protobuf/struct.pb.dart' as $0;
 import 'types.pbenum.dart';
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'types.pbenum.dart';
+
+class Notification extends $pb.GeneratedMessage {
+  factory Notification({
+    $core.String? id,
+    Notification_NotificationType? type,
+    $core.String? content,
+    $core.String? title,
+    $0.Struct? metadata,
+  }) {
+    final result = create();
+    if (id != null) result.id = id;
+    if (type != null) result.type = type;
+    if (content != null) result.content = content;
+    if (title != null) result.title = title;
+    if (metadata != null) result.metadata = metadata;
+    return result;
+  }
+
+  Notification._();
+
+  factory Notification.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Notification.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Notification',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..e<Notification_NotificationType>(
+        2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: Notification_NotificationType.UNKNOWN_NOTIFICATION,
+        valueOf: Notification_NotificationType.valueOf,
+        enumValues: Notification_NotificationType.values)
+    ..aOS(3, _omitFieldNames ? '' : 'content')
+    ..aOS(4, _omitFieldNames ? '' : 'title')
+    ..aOM<$0.Struct>(5, _omitFieldNames ? '' : 'metadata',
+        subBuilder: $0.Struct.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Notification clone() => Notification()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Notification copyWith(void Function(Notification) updates) =>
+      super.copyWith((message) => updates(message as Notification))
+          as Notification;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Notification create() => Notification._();
+  @$core.override
+  Notification createEmptyInstance() => create();
+  static $pb.PbList<Notification> createRepeated() =>
+      $pb.PbList<Notification>();
+  @$core.pragma('dart2js:noInline')
+  static Notification getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Notification>(create);
+  static Notification? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  Notification_NotificationType get type => $_getN(1);
+  @$pb.TagNumber(2)
+  set type(Notification_NotificationType value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasType() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearType() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get content => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set content($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasContent() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearContent() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get title => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set title($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasTitle() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearTitle() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $0.Struct get metadata => $_getN(4);
+  @$pb.TagNumber(5)
+  set metadata($0.Struct value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasMetadata() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearMetadata() => $_clearField(5);
+  @$pb.TagNumber(5)
+  $0.Struct ensureMetadata() => $_ensure(4);
+}
 
 class Amenity extends $pb.GeneratedMessage {
   factory Amenity({
