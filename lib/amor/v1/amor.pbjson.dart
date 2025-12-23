@@ -432,7 +432,8 @@ const AddAmenitiesRequest_Input$json = {
       '1': 'icon_color',
       '3': 3,
       '4': 1,
-      '5': 9,
+      '5': 14,
+      '6': '.accumora_rpc.v1.Color',
       '9': 1,
       '10': 'iconColor',
       '17': true
@@ -447,9 +448,10 @@ const AddAmenitiesRequest_Input$json = {
 /// Descriptor for `AddAmenitiesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List addAmenitiesRequestDescriptor = $convert.base64Decode(
     'ChNBZGRBbWVuaXRpZXNSZXF1ZXN0EkgKCWFtZW5pdGllcxgBIAMoCzIqLmFjY3Vtb3JhX3JwYy'
-    '52MS5BZGRBbWVuaXRpZXNSZXF1ZXN0LklucHV0UglhbWVuaXRpZXMacAoFSW5wdXQSEgoEbmFt'
-    'ZRgBIAEoCVIEbmFtZRIXCgRpY29uGAIgASgJSABSBGljb26IAQESIgoKaWNvbl9jb2xvchgDIA'
-    'EoCUgBUglpY29uQ29sb3KIAQFCBwoFX2ljb25CDQoLX2ljb25fY29sb3I=');
+    '52MS5BZGRBbWVuaXRpZXNSZXF1ZXN0LklucHV0UglhbWVuaXRpZXMaiAEKBUlucHV0EhIKBG5h'
+    'bWUYASABKAlSBG5hbWUSFwoEaWNvbhgCIAEoCUgAUgRpY29uiAEBEjoKCmljb25fY29sb3IYAy'
+    'ABKA4yFi5hY2N1bW9yYV9ycGMudjEuQ29sb3JIAVIJaWNvbkNvbG9yiAEBQgcKBV9pY29uQg0K'
+    'C19pY29uX2NvbG9y');
 
 @$core.Deprecated('Use addAmenitiesResponseDescriptor instead')
 const AddAmenitiesResponse$json = {

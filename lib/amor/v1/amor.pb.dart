@@ -1242,7 +1242,7 @@ class AddAmenitiesRequest_Input extends $pb.GeneratedMessage {
   factory AddAmenitiesRequest_Input({
     $core.String? name,
     $core.String? icon,
-    $core.String? iconColor,
+    $1.Color? iconColor,
   }) {
     final result = create();
     if (name != null) result.name = name;
@@ -1267,7 +1267,8 @@ class AddAmenitiesRequest_Input extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aOS(2, _omitFieldNames ? '' : 'icon')
-    ..aOS(3, _omitFieldNames ? '' : 'iconColor')
+    ..aE<$1.Color>(3, _omitFieldNames ? '' : 'iconColor',
+        enumValues: $1.Color.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1309,9 +1310,9 @@ class AddAmenitiesRequest_Input extends $pb.GeneratedMessage {
   void clearIcon() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get iconColor => $_getSZ(2);
+  $1.Color get iconColor => $_getN(2);
   @$pb.TagNumber(3)
-  set iconColor($core.String value) => $_setString(2, value);
+  set iconColor($1.Color value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasIconColor() => $_has(2);
   @$pb.TagNumber(3)
