@@ -647,7 +647,7 @@ const AddRoomRequest$json = {
       '10': 'capacity',
       '17': true
     },
-    {'1': 'utilities', '3': 6, '4': 3, '5': 9, '10': 'utilities'},
+    {'1': 'amenities', '3': 6, '4': 3, '5': 9, '10': 'amenities'},
     {
       '1': 'photo_url',
       '3': 7,
@@ -670,8 +670,8 @@ final $typed_data.Uint8List addRoomRequestDescriptor = $convert.base64Decode(
     'Cg5BZGRSb29tUmVxdWVzdBISCgRuYW1lGAEgASgJUgRuYW1lEikKEGFjY29tbW9kYXRpb25faW'
     'QYAiABKAlSD2FjY29tbW9kYXRpb25JZBIlCgtkZXNjcmlwdGlvbhgDIAEoCUgAUgtkZXNjcmlw'
     'dGlvbogBARI0CgZwcmljZXMYBCABKAsyHC5hY2N1bW9yYV9ycGMudjEuUm9vbS5QcmljZXNSBn'
-    'ByaWNlcxIfCghjYXBhY2l0eRgFIAEoBUgBUghjYXBhY2l0eYgBARIcCgl1dGlsaXRpZXMYBiAD'
-    'KAlSCXV0aWxpdGllcxIgCglwaG90b191cmwYByABKAxIAlIIcGhvdG9VcmyIAQFCDgoMX2Rlc2'
+    'ByaWNlcxIfCghjYXBhY2l0eRgFIAEoBUgBUghjYXBhY2l0eYgBARIcCglhbWVuaXRpZXMYBiAD'
+    'KAlSCWFtZW5pdGllcxIgCglwaG90b191cmwYByABKAxIAlIIcGhvdG9VcmyIAQFCDgoMX2Rlc2'
     'NyaXB0aW9uQgsKCV9jYXBhY2l0eUIMCgpfcGhvdG9fdXJs');
 
 @$core.Deprecated('Use addRoomResponseDescriptor instead')

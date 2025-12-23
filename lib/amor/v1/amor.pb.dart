@@ -1805,7 +1805,7 @@ class AddRoomRequest extends $pb.GeneratedMessage {
     $core.String? description,
     $1.Room_Prices? prices,
     $core.int? capacity,
-    $core.Iterable<$core.String>? utilities,
+    $core.Iterable<$core.String>? amenities,
     $core.List<$core.int>? photoUrl,
   }) {
     final result = create();
@@ -1814,7 +1814,7 @@ class AddRoomRequest extends $pb.GeneratedMessage {
     if (description != null) result.description = description;
     if (prices != null) result.prices = prices;
     if (capacity != null) result.capacity = capacity;
-    if (utilities != null) result.utilities.addAll(utilities);
+    if (amenities != null) result.amenities.addAll(amenities);
     if (photoUrl != null) result.photoUrl = photoUrl;
     return result;
   }
@@ -1839,7 +1839,7 @@ class AddRoomRequest extends $pb.GeneratedMessage {
     ..aOM<$1.Room_Prices>(4, _omitFieldNames ? '' : 'prices',
         subBuilder: $1.Room_Prices.create)
     ..aI(5, _omitFieldNames ? '' : 'capacity')
-    ..pPS(6, _omitFieldNames ? '' : 'utilities')
+    ..pPS(6, _omitFieldNames ? '' : 'amenities')
     ..a<$core.List<$core.int>>(
         7, _omitFieldNames ? '' : 'photoUrl', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
@@ -1911,7 +1911,7 @@ class AddRoomRequest extends $pb.GeneratedMessage {
   void clearCapacity() => $_clearField(5);
 
   @$pb.TagNumber(6)
-  $pb.PbList<$core.String> get utilities => $_getList(5);
+  $pb.PbList<$core.String> get amenities => $_getList(5);
 
   @$pb.TagNumber(7)
   $core.List<$core.int> get photoUrl => $_getN(6);
