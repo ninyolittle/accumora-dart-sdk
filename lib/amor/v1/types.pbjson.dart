@@ -279,15 +279,22 @@ const Room$json = {
       '10': 'capacity',
       '17': true
     },
-    {'1': 'utilities', '3': 7, '4': 3, '5': 9, '10': 'utilities'},
     {
       '1': 'photo_url',
-      '3': 8,
+      '3': 7,
       '4': 1,
       '5': 9,
       '9': 2,
       '10': 'photoUrl',
       '17': true
+    },
+    {
+      '1': 'amenities',
+      '3': 8,
+      '4': 3,
+      '5': 11,
+      '6': '.accumora_rpc.v1.Amenity',
+      '10': 'amenities'
     },
   ],
   '3': [Room_Prices$json],
@@ -328,12 +335,13 @@ final $typed_data.Uint8List roomDescriptor = $convert.base64Decode(
     'CgRSb29tEg4KAmlkGAEgASgJUgJpZBISCgRuYW1lGAIgASgJUgRuYW1lEikKEGFjY29tbW9kYX'
     'Rpb25faWQYAyABKAlSD2FjY29tbW9kYXRpb25JZBIlCgtkZXNjcmlwdGlvbhgEIAEoCUgAUgtk'
     'ZXNjcmlwdGlvbogBARI0CgZwcmljZXMYBSABKAsyHC5hY2N1bW9yYV9ycGMudjEuUm9vbS5Qcm'
-    'ljZXNSBnByaWNlcxIfCghjYXBhY2l0eRgGIAEoBUgBUghjYXBhY2l0eYgBARIcCgl1dGlsaXRp'
-    'ZXMYByADKAlSCXV0aWxpdGllcxIgCglwaG90b191cmwYCCABKAlIAlIIcGhvdG9VcmyIAQEaqA'
-    'EKBlByaWNlcxIZCgVkYWlseRgBIAEoAUgAUgVkYWlseYgBARIbCgZ3ZWVrbHkYAiABKAFIAVIG'
-    'd2Vla2x5iAEBEh0KB21vbnRobHkYAyABKAFIAlIHbW9udGhseYgBARIbCgZ5ZWFybHkYBCABKA'
-    'FIA1IGeWVhcmx5iAEBQggKBl9kYWlseUIJCgdfd2Vla2x5QgoKCF9tb250aGx5QgkKB195ZWFy'
-    'bHlCDgoMX2Rlc2NyaXB0aW9uQgsKCV9jYXBhY2l0eUIMCgpfcGhvdG9fdXJs');
+    'ljZXNSBnByaWNlcxIfCghjYXBhY2l0eRgGIAEoBUgBUghjYXBhY2l0eYgBARIgCglwaG90b191'
+    'cmwYByABKAlIAlIIcGhvdG9VcmyIAQESNgoJYW1lbml0aWVzGAggAygLMhguYWNjdW1vcmFfcn'
+    'BjLnYxLkFtZW5pdHlSCWFtZW5pdGllcxqoAQoGUHJpY2VzEhkKBWRhaWx5GAEgASgBSABSBWRh'
+    'aWx5iAEBEhsKBndlZWtseRgCIAEoAUgBUgZ3ZWVrbHmIAQESHQoHbW9udGhseRgDIAEoAUgCUg'
+    'dtb250aGx5iAEBEhsKBnllYXJseRgEIAEoAUgDUgZ5ZWFybHmIAQFCCAoGX2RhaWx5QgkKB193'
+    'ZWVrbHlCCgoIX21vbnRobHlCCQoHX3llYXJseUIOCgxfZGVzY3JpcHRpb25CCwoJX2NhcGFjaX'
+    'R5QgwKCl9waG90b191cmw=');
 
 @$core.Deprecated('Use userDescriptor instead')
 const User$json = {

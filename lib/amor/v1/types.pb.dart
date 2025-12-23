@@ -536,8 +536,8 @@ class Room extends $pb.GeneratedMessage {
     $core.String? description,
     Room_Prices? prices,
     $core.int? capacity,
-    $core.Iterable<$core.String>? utilities,
     $core.String? photoUrl,
+    $core.Iterable<Amenity>? amenities,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -546,8 +546,8 @@ class Room extends $pb.GeneratedMessage {
     if (description != null) result.description = description;
     if (prices != null) result.prices = prices;
     if (capacity != null) result.capacity = capacity;
-    if (utilities != null) result.utilities.addAll(utilities);
     if (photoUrl != null) result.photoUrl = photoUrl;
+    if (amenities != null) result.amenities.addAll(amenities);
     return result;
   }
 
@@ -572,8 +572,9 @@ class Room extends $pb.GeneratedMessage {
     ..aOM<Room_Prices>(5, _omitFieldNames ? '' : 'prices',
         subBuilder: Room_Prices.create)
     ..aI(6, _omitFieldNames ? '' : 'capacity')
-    ..pPS(7, _omitFieldNames ? '' : 'utilities')
-    ..aOS(8, _omitFieldNames ? '' : 'photoUrl')
+    ..aOS(7, _omitFieldNames ? '' : 'photoUrl')
+    ..pPM<Amenity>(8, _omitFieldNames ? '' : 'amenities',
+        subBuilder: Amenity.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -651,16 +652,16 @@ class Room extends $pb.GeneratedMessage {
   void clearCapacity() => $_clearField(6);
 
   @$pb.TagNumber(7)
-  $pb.PbList<$core.String> get utilities => $_getList(6);
+  $core.String get photoUrl => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set photoUrl($core.String value) => $_setString(6, value);
+  @$pb.TagNumber(7)
+  $core.bool hasPhotoUrl() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearPhotoUrl() => $_clearField(7);
 
   @$pb.TagNumber(8)
-  $core.String get photoUrl => $_getSZ(7);
-  @$pb.TagNumber(8)
-  set photoUrl($core.String value) => $_setString(7, value);
-  @$pb.TagNumber(8)
-  $core.bool hasPhotoUrl() => $_has(7);
-  @$pb.TagNumber(8)
-  void clearPhotoUrl() => $_clearField(8);
+  $pb.PbList<Amenity> get amenities => $_getList(7);
 }
 
 class User extends $pb.GeneratedMessage {
