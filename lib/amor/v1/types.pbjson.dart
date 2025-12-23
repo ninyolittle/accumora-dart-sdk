@@ -15,6 +15,29 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use colorsDescriptor instead')
+const Colors$json = {
+  '1': 'Colors',
+  '2': [
+    {'1': 'COLOR_UNSPECIFIED', '2': 0},
+    {'1': 'RED', '2': 1},
+    {'1': 'BLUE', '2': 2},
+    {'1': 'GREEN', '2': 3},
+    {'1': 'YELLOW', '2': 4},
+    {'1': 'ORANGE', '2': 5},
+    {'1': 'PURPLE', '2': 6},
+    {'1': 'BLACK', '2': 7},
+    {'1': 'WHITE', '2': 8},
+    {'1': 'GRAY', '2': 9},
+  ],
+};
+
+/// Descriptor for `Colors`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List colorsDescriptor = $convert.base64Decode(
+    'CgZDb2xvcnMSFQoRQ09MT1JfVU5TUEVDSUZJRUQQABIHCgNSRUQQARIICgRCTFVFEAISCQoFR1'
+    'JFRU4QAxIKCgZZRUxMT1cQBBIKCgZPUkFOR0UQBRIKCgZQVVJQTEUQBhIJCgVCTEFDSxAHEgkK'
+    'BVdISVRFEAgSCAoER1JBWRAJ');
+
 @$core.Deprecated('Use notificationDescriptor instead')
 const Notification$json = {
   '1': 'Notification',
