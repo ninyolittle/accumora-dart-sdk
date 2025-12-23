@@ -15,9 +15,9 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
-@$core.Deprecated('Use colorsDescriptor instead')
-const Colors$json = {
-  '1': 'Colors',
+@$core.Deprecated('Use colorDescriptor instead')
+const Color$json = {
+  '1': 'Color',
   '2': [
     {'1': 'COLOR_UNSPECIFIED', '2': 0},
     {'1': 'RED', '2': 1},
@@ -32,11 +32,11 @@ const Colors$json = {
   ],
 };
 
-/// Descriptor for `Colors`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List colorsDescriptor = $convert.base64Decode(
-    'CgZDb2xvcnMSFQoRQ09MT1JfVU5TUEVDSUZJRUQQABIHCgNSRUQQARIICgRCTFVFEAISCQoFR1'
-    'JFRU4QAxIKCgZZRUxMT1cQBBIKCgZPUkFOR0UQBRIKCgZQVVJQTEUQBhIJCgVCTEFDSxAHEgkK'
-    'BVdISVRFEAgSCAoER1JBWRAJ');
+/// Descriptor for `Color`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List colorDescriptor = $convert.base64Decode(
+    'CgVDb2xvchIVChFDT0xPUl9VTlNQRUNJRklFRBAAEgcKA1JFRBABEggKBEJMVUUQAhIJCgVHUk'
+    'VFThADEgoKBllFTExPVxAEEgoKBk9SQU5HRRAFEgoKBlBVUlBMRRAGEgkKBUJMQUNLEAcSCQoF'
+    'V0hJVEUQCBIICgRHUkFZEAk=');
 
 @$core.Deprecated('Use notificationDescriptor instead')
 const Notification$json = {
@@ -129,7 +129,8 @@ const Amenity$json = {
       '1': 'icon_color',
       '3': 6,
       '4': 1,
-      '5': 9,
+      '5': 14,
+      '6': '.accumora_rpc.v1.Color',
       '9': 1,
       '10': 'iconColor',
       '17': true
@@ -156,9 +157,10 @@ const Amenity_AmenityType$json = {
 final $typed_data.Uint8List amenityDescriptor = $convert.base64Decode(
     'CgdBbWVuaXR5Eg4KAmlkGAEgASgJUgJpZBISCgRuYW1lGAIgASgJUgRuYW1lEjgKBHR5cGUYAy'
     'ABKA4yJC5hY2N1bW9yYV9ycGMudjEuQW1lbml0eS5BbWVuaXR5VHlwZVIEdHlwZRIUCgVvd25l'
-    'chgEIAEoCVIFb3duZXISFwoEaWNvbhgFIAEoCUgAUgRpY29uiAEBEiIKCmljb25fY29sb3IYBi'
-    'ABKAlIAVIJaWNvbkNvbG9yiAEBIjwKC0FtZW5pdHlUeXBlEhMKD1VOS05PV05fQU1FTklUWRAA'
-    'EgwKCEJVSUxUX0lOEAESCgoGQ1VTVE9NEAJCBwoFX2ljb25CDQoLX2ljb25fY29sb3I=');
+    'chgEIAEoCVIFb3duZXISFwoEaWNvbhgFIAEoCUgAUgRpY29uiAEBEjoKCmljb25fY29sb3IYBi'
+    'ABKA4yFi5hY2N1bW9yYV9ycGMudjEuQ29sb3JIAVIJaWNvbkNvbG9yiAEBIjwKC0FtZW5pdHlU'
+    'eXBlEhMKD1VOS05PV05fQU1FTklUWRAAEgwKCEJVSUxUX0lOEAESCgoGQ1VTVE9NEAJCBwoFX2'
+    'ljb25CDQoLX2ljb25fY29sb3I=');
 
 @$core.Deprecated('Use coordinatesDescriptor instead')
 const Coordinates$json = {

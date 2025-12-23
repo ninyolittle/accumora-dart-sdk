@@ -160,7 +160,7 @@ class Amenity extends $pb.GeneratedMessage {
     Amenity_AmenityType? type,
     $core.String? owner,
     $core.String? icon,
-    $core.String? iconColor,
+    Color? iconColor,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -192,7 +192,7 @@ class Amenity extends $pb.GeneratedMessage {
         enumValues: Amenity_AmenityType.values)
     ..aOS(4, _omitFieldNames ? '' : 'owner')
     ..aOS(5, _omitFieldNames ? '' : 'icon')
-    ..aOS(6, _omitFieldNames ? '' : 'iconColor')
+    ..aE<Color>(6, _omitFieldNames ? '' : 'iconColor', enumValues: Color.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -259,9 +259,9 @@ class Amenity extends $pb.GeneratedMessage {
   void clearIcon() => $_clearField(5);
 
   @$pb.TagNumber(6)
-  $core.String get iconColor => $_getSZ(5);
+  Color get iconColor => $_getN(5);
   @$pb.TagNumber(6)
-  set iconColor($core.String value) => $_setString(5, value);
+  set iconColor(Color value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasIconColor() => $_has(5);
   @$pb.TagNumber(6)

@@ -14,20 +14,20 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class Colors extends $pb.ProtobufEnum {
-  static const Colors COLOR_UNSPECIFIED =
-      Colors._(0, _omitEnumNames ? '' : 'COLOR_UNSPECIFIED');
-  static const Colors RED = Colors._(1, _omitEnumNames ? '' : 'RED');
-  static const Colors BLUE = Colors._(2, _omitEnumNames ? '' : 'BLUE');
-  static const Colors GREEN = Colors._(3, _omitEnumNames ? '' : 'GREEN');
-  static const Colors YELLOW = Colors._(4, _omitEnumNames ? '' : 'YELLOW');
-  static const Colors ORANGE = Colors._(5, _omitEnumNames ? '' : 'ORANGE');
-  static const Colors PURPLE = Colors._(6, _omitEnumNames ? '' : 'PURPLE');
-  static const Colors BLACK = Colors._(7, _omitEnumNames ? '' : 'BLACK');
-  static const Colors WHITE = Colors._(8, _omitEnumNames ? '' : 'WHITE');
-  static const Colors GRAY = Colors._(9, _omitEnumNames ? '' : 'GRAY');
+class Color extends $pb.ProtobufEnum {
+  static const Color COLOR_UNSPECIFIED =
+      Color._(0, _omitEnumNames ? '' : 'COLOR_UNSPECIFIED');
+  static const Color RED = Color._(1, _omitEnumNames ? '' : 'RED');
+  static const Color BLUE = Color._(2, _omitEnumNames ? '' : 'BLUE');
+  static const Color GREEN = Color._(3, _omitEnumNames ? '' : 'GREEN');
+  static const Color YELLOW = Color._(4, _omitEnumNames ? '' : 'YELLOW');
+  static const Color ORANGE = Color._(5, _omitEnumNames ? '' : 'ORANGE');
+  static const Color PURPLE = Color._(6, _omitEnumNames ? '' : 'PURPLE');
+  static const Color BLACK = Color._(7, _omitEnumNames ? '' : 'BLACK');
+  static const Color WHITE = Color._(8, _omitEnumNames ? '' : 'WHITE');
+  static const Color GRAY = Color._(9, _omitEnumNames ? '' : 'GRAY');
 
-  static const $core.List<Colors> values = <Colors>[
+  static const $core.List<Color> values = <Color>[
     COLOR_UNSPECIFIED,
     RED,
     BLUE,
@@ -40,12 +40,12 @@ class Colors extends $pb.ProtobufEnum {
     GRAY,
   ];
 
-  static final $core.List<Colors?> _byValue =
+  static final $core.List<Color?> _byValue =
       $pb.ProtobufEnum.$_initByValueList(values, 9);
-  static Colors? valueOf($core.int value) =>
+  static Color? valueOf($core.int value) =>
       value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const Colors._(super.value, super.name);
+  const Color._(super.value, super.name);
 }
 
 class Notification_Type extends $pb.ProtobufEnum {
