@@ -516,7 +516,7 @@ const UpdateRoomRequest$json = {
       '10': 'capacity',
       '17': true
     },
-    {'1': 'utilities', '3': 6, '4': 3, '5': 9, '10': 'utilities'},
+    {'1': 'amenities', '3': 6, '4': 3, '5': 9, '10': 'amenities'},
     {
       '1': 'photo_url',
       '3': 7,
@@ -541,7 +541,7 @@ final $typed_data.Uint8List updateRoomRequestDescriptor = $convert.base64Decode(
     'ChFVcGRhdGVSb29tUmVxdWVzdBIOCgJpZBgBIAEoCVICaWQSFwoEbmFtZRgCIAEoCUgAUgRuYW'
     '1liAEBEiUKC2Rlc2NyaXB0aW9uGAMgASgJSAFSC2Rlc2NyaXB0aW9uiAEBEjkKBnByaWNlcxgE'
     'IAEoCzIcLmFjY3Vtb3JhX3JwYy52MS5Sb29tLlByaWNlc0gCUgZwcmljZXOIAQESHwoIY2FwYW'
-    'NpdHkYBSABKAVIA1IIY2FwYWNpdHmIAQESHAoJdXRpbGl0aWVzGAYgAygJUgl1dGlsaXRpZXMS'
+    'NpdHkYBSABKAVIA1IIY2FwYWNpdHmIAQESHAoJYW1lbml0aWVzGAYgAygJUglhbWVuaXRpZXMS'
     'IAoJcGhvdG9fdXJsGAcgASgMSARSCHBob3RvVXJsiAEBQgcKBV9uYW1lQg4KDF9kZXNjcmlwdG'
     'lvbkIJCgdfcHJpY2VzQgsKCV9jYXBhY2l0eUIMCgpfcGhvdG9fdXJs');
 
