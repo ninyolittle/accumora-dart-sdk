@@ -615,9 +615,25 @@ const GetUserRequest$json = {
 final $typed_data.Uint8List getUserRequestDescriptor =
     $convert.base64Decode('Cg5HZXRVc2VyUmVxdWVzdA==');
 
-@$core.Deprecated('Use addRoomRequestDescriptor instead')
-const AddRoomRequest$json = {
-  '1': 'AddRoomRequest',
+@$core.Deprecated('Use addRoomsRequestDescriptor instead')
+const AddRoomsRequest$json = {
+  '1': 'AddRoomsRequest',
+  '2': [
+    {
+      '1': 'inputs',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.accumora_rpc.v1.AddRoomsRequest.Input',
+      '10': 'inputs'
+    },
+  ],
+  '3': [AddRoomsRequest_Input$json],
+};
+
+@$core.Deprecated('Use addRoomsRequestDescriptor instead')
+const AddRoomsRequest_Input$json = {
+  '1': 'Input',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
     {'1': 'accommodation_id', '3': 2, '4': 1, '5': 9, '10': 'accommodationId'},
@@ -665,34 +681,35 @@ const AddRoomRequest$json = {
   ],
 };
 
-/// Descriptor for `AddRoomRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addRoomRequestDescriptor = $convert.base64Decode(
-    'Cg5BZGRSb29tUmVxdWVzdBISCgRuYW1lGAEgASgJUgRuYW1lEikKEGFjY29tbW9kYXRpb25faW'
-    'QYAiABKAlSD2FjY29tbW9kYXRpb25JZBIlCgtkZXNjcmlwdGlvbhgDIAEoCUgAUgtkZXNjcmlw'
-    'dGlvbogBARI0CgZwcmljZXMYBCABKAsyHC5hY2N1bW9yYV9ycGMudjEuUm9vbS5QcmljZXNSBn'
-    'ByaWNlcxIfCghjYXBhY2l0eRgFIAEoBUgBUghjYXBhY2l0eYgBARIcCglhbWVuaXRpZXMYBiAD'
-    'KAlSCWFtZW5pdGllcxIgCglwaG90b191cmwYByABKAxIAlIIcGhvdG9VcmyIAQFCDgoMX2Rlc2'
-    'NyaXB0aW9uQgsKCV9jYXBhY2l0eUIMCgpfcGhvdG9fdXJs');
+/// Descriptor for `AddRoomsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addRoomsRequestDescriptor = $convert.base64Decode(
+    'Cg9BZGRSb29tc1JlcXVlc3QSPgoGaW5wdXRzGAEgAygLMiYuYWNjdW1vcmFfcnBjLnYxLkFkZF'
+    'Jvb21zUmVxdWVzdC5JbnB1dFIGaW5wdXRzGq8CCgVJbnB1dBISCgRuYW1lGAEgASgJUgRuYW1l'
+    'EikKEGFjY29tbW9kYXRpb25faWQYAiABKAlSD2FjY29tbW9kYXRpb25JZBIlCgtkZXNjcmlwdG'
+    'lvbhgDIAEoCUgAUgtkZXNjcmlwdGlvbogBARI0CgZwcmljZXMYBCABKAsyHC5hY2N1bW9yYV9y'
+    'cGMudjEuUm9vbS5QcmljZXNSBnByaWNlcxIfCghjYXBhY2l0eRgFIAEoBUgBUghjYXBhY2l0eY'
+    'gBARIcCglhbWVuaXRpZXMYBiADKAlSCWFtZW5pdGllcxIgCglwaG90b191cmwYByABKAxIAlII'
+    'cGhvdG9VcmyIAQFCDgoMX2Rlc2NyaXB0aW9uQgsKCV9jYXBhY2l0eUIMCgpfcGhvdG9fdXJs');
 
-@$core.Deprecated('Use addRoomResponseDescriptor instead')
-const AddRoomResponse$json = {
-  '1': 'AddRoomResponse',
+@$core.Deprecated('Use addRoomsResponseDescriptor instead')
+const AddRoomsResponse$json = {
+  '1': 'AddRoomsResponse',
   '2': [
     {
-      '1': 'room',
+      '1': 'rooms',
       '3': 1,
-      '4': 1,
+      '4': 3,
       '5': 11,
       '6': '.accumora_rpc.v1.Room',
-      '10': 'room'
+      '10': 'rooms'
     },
   ],
 };
 
-/// Descriptor for `AddRoomResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addRoomResponseDescriptor = $convert.base64Decode(
-    'Cg9BZGRSb29tUmVzcG9uc2USKQoEcm9vbRgBIAEoCzIVLmFjY3Vtb3JhX3JwYy52MS5Sb29tUg'
-    'Ryb29t');
+/// Descriptor for `AddRoomsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List addRoomsResponseDescriptor = $convert.base64Decode(
+    'ChBBZGRSb29tc1Jlc3BvbnNlEisKBXJvb21zGAEgAygLMhUuYWNjdW1vcmFfcnBjLnYxLlJvb2'
+    '1SBXJvb21z');
 
 @$core.Deprecated('Use deleteRoomRequestDescriptor instead')
 const DeleteRoomRequest$json = {

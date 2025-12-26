@@ -1798,8 +1798,8 @@ class GetUserRequest extends $pb.GeneratedMessage {
   static GetUserRequest? _defaultInstance;
 }
 
-class AddRoomRequest extends $pb.GeneratedMessage {
-  factory AddRoomRequest({
+class AddRoomsRequest_Input extends $pb.GeneratedMessage {
+  factory AddRoomsRequest_Input({
     $core.String? name,
     $core.String? accommodationId,
     $core.String? description,
@@ -1819,17 +1819,17 @@ class AddRoomRequest extends $pb.GeneratedMessage {
     return result;
   }
 
-  AddRoomRequest._();
+  AddRoomsRequest_Input._();
 
-  factory AddRoomRequest.fromBuffer($core.List<$core.int> data,
+  factory AddRoomsRequest_Input.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory AddRoomRequest.fromJson($core.String json,
+  factory AddRoomsRequest_Input.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'AddRoomRequest',
+      _omitMessageNames ? '' : 'AddRoomsRequest.Input',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
@@ -1845,23 +1845,24 @@ class AddRoomRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AddRoomRequest clone() => deepCopy();
+  AddRoomsRequest_Input clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AddRoomRequest copyWith(void Function(AddRoomRequest) updates) =>
-      super.copyWith((message) => updates(message as AddRoomRequest))
-          as AddRoomRequest;
+  AddRoomsRequest_Input copyWith(
+          void Function(AddRoomsRequest_Input) updates) =>
+      super.copyWith((message) => updates(message as AddRoomsRequest_Input))
+          as AddRoomsRequest_Input;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static AddRoomRequest create() => AddRoomRequest._();
+  static AddRoomsRequest_Input create() => AddRoomsRequest_Input._();
   @$core.override
-  AddRoomRequest createEmptyInstance() => create();
+  AddRoomsRequest_Input createEmptyInstance() => create();
   @$core.pragma('dart2js:noInline')
-  static AddRoomRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<AddRoomRequest>(create);
-  static AddRoomRequest? _defaultInstance;
+  static AddRoomsRequest_Input getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddRoomsRequest_Input>(create);
+  static AddRoomsRequest_Input? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
@@ -1923,61 +1924,104 @@ class AddRoomRequest extends $pb.GeneratedMessage {
   void clearPhotoUrl() => $_clearField(7);
 }
 
-class AddRoomResponse extends $pb.GeneratedMessage {
-  factory AddRoomResponse({
-    $1.Room? room,
+class AddRoomsRequest extends $pb.GeneratedMessage {
+  factory AddRoomsRequest({
+    $core.Iterable<AddRoomsRequest_Input>? inputs,
   }) {
     final result = create();
-    if (room != null) result.room = room;
+    if (inputs != null) result.inputs.addAll(inputs);
     return result;
   }
 
-  AddRoomResponse._();
+  AddRoomsRequest._();
 
-  factory AddRoomResponse.fromBuffer($core.List<$core.int> data,
+  factory AddRoomsRequest.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory AddRoomResponse.fromJson($core.String json,
+  factory AddRoomsRequest.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'AddRoomResponse',
+      _omitMessageNames ? '' : 'AddRoomsRequest',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
-    ..aOM<$1.Room>(1, _omitFieldNames ? '' : 'room', subBuilder: $1.Room.create)
+    ..pPM<AddRoomsRequest_Input>(1, _omitFieldNames ? '' : 'inputs',
+        subBuilder: AddRoomsRequest_Input.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AddRoomResponse clone() => deepCopy();
+  AddRoomsRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AddRoomResponse copyWith(void Function(AddRoomResponse) updates) =>
-      super.copyWith((message) => updates(message as AddRoomResponse))
-          as AddRoomResponse;
+  AddRoomsRequest copyWith(void Function(AddRoomsRequest) updates) =>
+      super.copyWith((message) => updates(message as AddRoomsRequest))
+          as AddRoomsRequest;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static AddRoomResponse create() => AddRoomResponse._();
+  static AddRoomsRequest create() => AddRoomsRequest._();
   @$core.override
-  AddRoomResponse createEmptyInstance() => create();
+  AddRoomsRequest createEmptyInstance() => create();
   @$core.pragma('dart2js:noInline')
-  static AddRoomResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<AddRoomResponse>(create);
-  static AddRoomResponse? _defaultInstance;
+  static AddRoomsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddRoomsRequest>(create);
+  static AddRoomsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $1.Room get room => $_getN(0);
+  $pb.PbList<AddRoomsRequest_Input> get inputs => $_getList(0);
+}
+
+class AddRoomsResponse extends $pb.GeneratedMessage {
+  factory AddRoomsResponse({
+    $core.Iterable<$1.Room>? rooms,
+  }) {
+    final result = create();
+    if (rooms != null) result.rooms.addAll(rooms);
+    return result;
+  }
+
+  AddRoomsResponse._();
+
+  factory AddRoomsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory AddRoomsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AddRoomsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..pPM<$1.Room>(1, _omitFieldNames ? '' : 'rooms',
+        subBuilder: $1.Room.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddRoomsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  AddRoomsResponse copyWith(void Function(AddRoomsResponse) updates) =>
+      super.copyWith((message) => updates(message as AddRoomsResponse))
+          as AddRoomsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AddRoomsResponse create() => AddRoomsResponse._();
+  @$core.override
+  AddRoomsResponse createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static AddRoomsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddRoomsResponse>(create);
+  static AddRoomsResponse? _defaultInstance;
+
   @$pb.TagNumber(1)
-  set room($1.Room value) => $_setField(1, value);
-  @$pb.TagNumber(1)
-  $core.bool hasRoom() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearRoom() => $_clearField(1);
-  @$pb.TagNumber(1)
-  $1.Room ensureRoom() => $_ensure(0);
+  $pb.PbList<$1.Room> get rooms => $_getList(0);
 }
 
 class DeleteRoomRequest extends $pb.GeneratedMessage {

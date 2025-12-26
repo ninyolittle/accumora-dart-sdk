@@ -100,12 +100,12 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$updateAccommodation, request, options: options);
   }
 
-  /// AddRoom creates a new room for an accommodation
-  $grpc.ResponseFuture<$0.AddRoomResponse> addRoom(
-    $0.AddRoomRequest request, {
+  /// AddRooms creates new rooms for an accommodation
+  $grpc.ResponseFuture<$0.AddRoomsResponse> addRooms(
+    $0.AddRoomsRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$addRoom, request, options: options);
+    return $createUnaryCall(_$addRooms, request, options: options);
   }
 
   /// GetRooms retrieves rooms by accommodation ID or specific room IDs
@@ -267,11 +267,11 @@ class ProjectAmorClient extends $grpc.Client {
           '/accumora_rpc.v1.ProjectAmor/UpdateAccommodation',
           ($0.UpdateAccommodationRequest value) => value.writeToBuffer(),
           $1.Accommodation.fromBuffer);
-  static final _$addRoom =
-      $grpc.ClientMethod<$0.AddRoomRequest, $0.AddRoomResponse>(
-          '/accumora_rpc.v1.ProjectAmor/AddRoom',
-          ($0.AddRoomRequest value) => value.writeToBuffer(),
-          $0.AddRoomResponse.fromBuffer);
+  static final _$addRooms =
+      $grpc.ClientMethod<$0.AddRoomsRequest, $0.AddRoomsResponse>(
+          '/accumora_rpc.v1.ProjectAmor/AddRooms',
+          ($0.AddRoomsRequest value) => value.writeToBuffer(),
+          $0.AddRoomsResponse.fromBuffer);
   static final _$getRooms =
       $grpc.ClientMethod<$0.GetRoomsRequest, $0.GetRoomsResponse>(
           '/accumora_rpc.v1.ProjectAmor/GetRooms',
@@ -418,13 +418,13 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $0.UpdateAccommodationRequest.fromBuffer(value),
             ($1.Accommodation value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.AddRoomRequest, $0.AddRoomResponse>(
-        'AddRoom',
-        addRoom_Pre,
+    $addMethod($grpc.ServiceMethod<$0.AddRoomsRequest, $0.AddRoomsResponse>(
+        'AddRooms',
+        addRooms_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.AddRoomRequest.fromBuffer(value),
-        ($0.AddRoomResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $0.AddRoomsRequest.fromBuffer(value),
+        ($0.AddRoomsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetRoomsRequest, $0.GetRoomsResponse>(
         'GetRooms',
         getRooms_Pre,
@@ -614,13 +614,13 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
   $async.Future<$1.Accommodation> updateAccommodation(
       $grpc.ServiceCall call, $0.UpdateAccommodationRequest request);
 
-  $async.Future<$0.AddRoomResponse> addRoom_Pre($grpc.ServiceCall $call,
-      $async.Future<$0.AddRoomRequest> $request) async {
-    return addRoom($call, await $request);
+  $async.Future<$0.AddRoomsResponse> addRooms_Pre($grpc.ServiceCall $call,
+      $async.Future<$0.AddRoomsRequest> $request) async {
+    return addRooms($call, await $request);
   }
 
-  $async.Future<$0.AddRoomResponse> addRoom(
-      $grpc.ServiceCall call, $0.AddRoomRequest request);
+  $async.Future<$0.AddRoomsResponse> addRooms(
+      $grpc.ServiceCall call, $0.AddRoomsRequest request);
 
   $async.Future<$0.GetRoomsResponse> getRooms_Pre($grpc.ServiceCall $call,
       $async.Future<$0.GetRoomsRequest> $request) async {
