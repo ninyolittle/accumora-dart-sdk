@@ -526,6 +526,7 @@ const UpdateRoomRequest$json = {
       '10': 'photoUrl',
       '17': true
     },
+    {'1': 'visibility', '3': 8, '4': 1, '5': 8, '10': 'visibility'},
   ],
   '8': [
     {'1': '_name'},
@@ -542,8 +543,9 @@ final $typed_data.Uint8List updateRoomRequestDescriptor = $convert.base64Decode(
     '1liAEBEiUKC2Rlc2NyaXB0aW9uGAMgASgJSAFSC2Rlc2NyaXB0aW9uiAEBEjkKBnByaWNlcxgE'
     'IAEoCzIcLmFjY3Vtb3JhX3JwYy52MS5Sb29tLlByaWNlc0gCUgZwcmljZXOIAQESHwoIY2FwYW'
     'NpdHkYBSABKAVIA1IIY2FwYWNpdHmIAQESHAoJYW1lbml0aWVzGAYgAygJUglhbWVuaXRpZXMS'
-    'IAoJcGhvdG9fdXJsGAcgASgMSARSCHBob3RvVXJsiAEBQgcKBV9uYW1lQg4KDF9kZXNjcmlwdG'
-    'lvbkIJCgdfcHJpY2VzQgsKCV9jYXBhY2l0eUIMCgpfcGhvdG9fdXJs');
+    'IAoJcGhvdG9fdXJsGAcgASgMSARSCHBob3RvVXJsiAEBEh4KCnZpc2liaWxpdHkYCCABKAhSCn'
+    'Zpc2liaWxpdHlCBwoFX25hbWVCDgoMX2Rlc2NyaXB0aW9uQgkKB19wcmljZXNCCwoJX2NhcGFj'
+    'aXR5QgwKCl9waG90b191cmw=');
 
 @$core.Deprecated('Use updateRoomResponseDescriptor instead')
 const UpdateRoomResponse$json = {
@@ -673,6 +675,7 @@ const AddRoomsRequest_Input$json = {
       '10': 'photoUrl',
       '17': true
     },
+    {'1': 'visibility', '3': 8, '4': 1, '5': 8, '10': 'visibility'},
   ],
   '8': [
     {'1': '_description'},
@@ -684,12 +687,13 @@ const AddRoomsRequest_Input$json = {
 /// Descriptor for `AddRoomsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List addRoomsRequestDescriptor = $convert.base64Decode(
     'Cg9BZGRSb29tc1JlcXVlc3QSPgoGaW5wdXRzGAEgAygLMiYuYWNjdW1vcmFfcnBjLnYxLkFkZF'
-    'Jvb21zUmVxdWVzdC5JbnB1dFIGaW5wdXRzGq8CCgVJbnB1dBISCgRuYW1lGAEgASgJUgRuYW1l'
+    'Jvb21zUmVxdWVzdC5JbnB1dFIGaW5wdXRzGs8CCgVJbnB1dBISCgRuYW1lGAEgASgJUgRuYW1l'
     'EikKEGFjY29tbW9kYXRpb25faWQYAiABKAlSD2FjY29tbW9kYXRpb25JZBIlCgtkZXNjcmlwdG'
     'lvbhgDIAEoCUgAUgtkZXNjcmlwdGlvbogBARI0CgZwcmljZXMYBCABKAsyHC5hY2N1bW9yYV9y'
     'cGMudjEuUm9vbS5QcmljZXNSBnByaWNlcxIfCghjYXBhY2l0eRgFIAEoBUgBUghjYXBhY2l0eY'
     'gBARIcCglhbWVuaXRpZXMYBiADKAlSCWFtZW5pdGllcxIgCglwaG90b191cmwYByABKAxIAlII'
-    'cGhvdG9VcmyIAQFCDgoMX2Rlc2NyaXB0aW9uQgsKCV9jYXBhY2l0eUIMCgpfcGhvdG9fdXJs');
+    'cGhvdG9VcmyIAQESHgoKdmlzaWJpbGl0eRgIIAEoCFIKdmlzaWJpbGl0eUIOCgxfZGVzY3JpcH'
+    'Rpb25CCwoJX2NhcGFjaXR5QgwKCl9waG90b191cmw=');
 
 @$core.Deprecated('Use addRoomsResponseDescriptor instead')
 const AddRoomsResponse$json = {

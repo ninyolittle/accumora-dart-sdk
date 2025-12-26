@@ -1467,6 +1467,7 @@ class UpdateRoomRequest extends $pb.GeneratedMessage {
     $core.int? capacity,
     $core.Iterable<$core.String>? amenities,
     $core.List<$core.int>? photoUrl,
+    $core.bool? visibility,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -1476,6 +1477,7 @@ class UpdateRoomRequest extends $pb.GeneratedMessage {
     if (capacity != null) result.capacity = capacity;
     if (amenities != null) result.amenities.addAll(amenities);
     if (photoUrl != null) result.photoUrl = photoUrl;
+    if (visibility != null) result.visibility = visibility;
     return result;
   }
 
@@ -1502,6 +1504,7 @@ class UpdateRoomRequest extends $pb.GeneratedMessage {
     ..pPS(6, _omitFieldNames ? '' : 'amenities')
     ..a<$core.List<$core.int>>(
         7, _omitFieldNames ? '' : 'photoUrl', $pb.PbFieldType.OY)
+    ..aOB(8, _omitFieldNames ? '' : 'visibility')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1581,6 +1584,15 @@ class UpdateRoomRequest extends $pb.GeneratedMessage {
   $core.bool hasPhotoUrl() => $_has(6);
   @$pb.TagNumber(7)
   void clearPhotoUrl() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.bool get visibility => $_getBF(7);
+  @$pb.TagNumber(8)
+  set visibility($core.bool value) => $_setBool(7, value);
+  @$pb.TagNumber(8)
+  $core.bool hasVisibility() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearVisibility() => $_clearField(8);
 }
 
 class UpdateRoomResponse extends $pb.GeneratedMessage {
@@ -1807,6 +1819,7 @@ class AddRoomsRequest_Input extends $pb.GeneratedMessage {
     $core.int? capacity,
     $core.Iterable<$core.String>? amenities,
     $core.List<$core.int>? photoUrl,
+    $core.bool? visibility,
   }) {
     final result = create();
     if (name != null) result.name = name;
@@ -1816,6 +1829,7 @@ class AddRoomsRequest_Input extends $pb.GeneratedMessage {
     if (capacity != null) result.capacity = capacity;
     if (amenities != null) result.amenities.addAll(amenities);
     if (photoUrl != null) result.photoUrl = photoUrl;
+    if (visibility != null) result.visibility = visibility;
     return result;
   }
 
@@ -1842,6 +1856,7 @@ class AddRoomsRequest_Input extends $pb.GeneratedMessage {
     ..pPS(6, _omitFieldNames ? '' : 'amenities')
     ..a<$core.List<$core.int>>(
         7, _omitFieldNames ? '' : 'photoUrl', $pb.PbFieldType.OY)
+    ..aOB(8, _omitFieldNames ? '' : 'visibility')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1922,6 +1937,15 @@ class AddRoomsRequest_Input extends $pb.GeneratedMessage {
   $core.bool hasPhotoUrl() => $_has(6);
   @$pb.TagNumber(7)
   void clearPhotoUrl() => $_clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.bool get visibility => $_getBF(7);
+  @$pb.TagNumber(8)
+  set visibility($core.bool value) => $_setBool(7, value);
+  @$pb.TagNumber(8)
+  $core.bool hasVisibility() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearVisibility() => $_clearField(8);
 }
 
 class AddRoomsRequest extends $pb.GeneratedMessage {
