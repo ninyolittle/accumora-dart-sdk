@@ -15,6 +15,33 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use changeSortOrderRequestDescriptor instead')
+const ChangeSortOrderRequest$json = {
+  '1': 'ChangeSortOrderRequest',
+  '2': [
+    {'1': 'table_name', '3': 1, '4': 1, '5': 9, '10': 'tableName'},
+    {'1': 'old_id', '3': 2, '4': 1, '5': 9, '10': 'oldId'},
+    {'1': 'new_id', '3': 3, '4': 1, '5': 9, '10': 'newId'},
+    {'1': 'old_index', '3': 4, '4': 1, '5': 5, '10': 'oldIndex'},
+    {'1': 'new_index', '3': 5, '4': 1, '5': 5, '10': 'newIndex'},
+  ],
+};
+
+/// Descriptor for `ChangeSortOrderRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List changeSortOrderRequestDescriptor = $convert.base64Decode(
+    'ChZDaGFuZ2VTb3J0T3JkZXJSZXF1ZXN0Eh0KCnRhYmxlX25hbWUYASABKAlSCXRhYmxlTmFtZR'
+    'IVCgZvbGRfaWQYAiABKAlSBW9sZElkEhUKBm5ld19pZBgDIAEoCVIFbmV3SWQSGwoJb2xkX2lu'
+    'ZGV4GAQgASgFUghvbGRJbmRleBIbCgluZXdfaW5kZXgYBSABKAVSCG5ld0luZGV4');
+
+@$core.Deprecated('Use changeSortOrderResponseDescriptor instead')
+const ChangeSortOrderResponse$json = {
+  '1': 'ChangeSortOrderResponse',
+};
+
+/// Descriptor for `ChangeSortOrderResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List changeSortOrderResponseDescriptor =
+    $convert.base64Decode('ChdDaGFuZ2VTb3J0T3JkZXJSZXNwb25zZQ==');
+
 @$core.Deprecated('Use reserveRoomRequestDescriptor instead')
 const ReserveRoomRequest$json = {
   '1': 'ReserveRoomRequest',

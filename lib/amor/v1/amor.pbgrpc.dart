@@ -224,6 +224,14 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$reserveRoom, request, options: options);
   }
 
+  /// ChangeSortOrder updates the order of items in a specified table
+  $grpc.ResponseFuture<$0.ChangeSortOrderResponse> changeSortOrder(
+    $0.ChangeSortOrderRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$changeSortOrder, request, options: options);
+  }
+
   // method descriptors
 
   static final _$addAccommodation =
@@ -342,6 +350,11 @@ class ProjectAmorClient extends $grpc.Client {
           '/accumora_rpc.v1.ProjectAmor/ReserveRoom',
           ($0.ReserveRoomRequest value) => value.writeToBuffer(),
           $0.ReserveRoomResponse.fromBuffer);
+  static final _$changeSortOrder =
+      $grpc.ClientMethod<$0.ChangeSortOrderRequest, $0.ChangeSortOrderResponse>(
+          '/accumora_rpc.v1.ProjectAmor/ChangeSortOrder',
+          ($0.ChangeSortOrderRequest value) => value.writeToBuffer(),
+          $0.ChangeSortOrderResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('accumora_rpc.v1.ProjectAmor')
@@ -542,6 +555,15 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
             ($core.List<$core.int> value) =>
                 $0.ReserveRoomRequest.fromBuffer(value),
             ($0.ReserveRoomResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ChangeSortOrderRequest,
+            $0.ChangeSortOrderResponse>(
+        'ChangeSortOrder',
+        changeSortOrder_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.ChangeSortOrderRequest.fromBuffer(value),
+        ($0.ChangeSortOrderResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.Accommodation> addAccommodation_Pre($grpc.ServiceCall $call,
@@ -741,4 +763,13 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
 
   $async.Future<$0.ReserveRoomResponse> reserveRoom(
       $grpc.ServiceCall call, $0.ReserveRoomRequest request);
+
+  $async.Future<$0.ChangeSortOrderResponse> changeSortOrder_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.ChangeSortOrderRequest> $request) async {
+    return changeSortOrder($call, await $request);
+  }
+
+  $async.Future<$0.ChangeSortOrderResponse> changeSortOrder(
+      $grpc.ServiceCall call, $0.ChangeSortOrderRequest request);
 }
