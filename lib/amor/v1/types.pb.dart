@@ -538,6 +538,7 @@ class Room extends $pb.GeneratedMessage {
     $core.int? capacity,
     $core.String? photoUrl,
     $core.Iterable<Amenity>? amenities,
+    $core.bool? visibility,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -548,6 +549,7 @@ class Room extends $pb.GeneratedMessage {
     if (capacity != null) result.capacity = capacity;
     if (photoUrl != null) result.photoUrl = photoUrl;
     if (amenities != null) result.amenities.addAll(amenities);
+    if (visibility != null) result.visibility = visibility;
     return result;
   }
 
@@ -575,6 +577,7 @@ class Room extends $pb.GeneratedMessage {
     ..aOS(7, _omitFieldNames ? '' : 'photoUrl')
     ..pPM<Amenity>(8, _omitFieldNames ? '' : 'amenities',
         subBuilder: Amenity.create)
+    ..aOB(9, _omitFieldNames ? '' : 'visibility')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -662,6 +665,15 @@ class Room extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(8)
   $pb.PbList<Amenity> get amenities => $_getList(7);
+
+  @$pb.TagNumber(9)
+  $core.bool get visibility => $_getBF(8);
+  @$pb.TagNumber(9)
+  set visibility($core.bool value) => $_setBool(8, value);
+  @$pb.TagNumber(9)
+  $core.bool hasVisibility() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearVisibility() => $_clearField(9);
 }
 
 class User extends $pb.GeneratedMessage {
