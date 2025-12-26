@@ -20,18 +20,33 @@ const ChangeSortOrderRequest$json = {
   '1': 'ChangeSortOrderRequest',
   '2': [
     {'1': 'table_name', '3': 1, '4': 1, '5': 9, '10': 'tableName'},
-    {'1': 'old_id', '3': 2, '4': 1, '5': 9, '10': 'oldId'},
-    {'1': 'new_id', '3': 3, '4': 1, '5': 9, '10': 'newId'},
-    {'1': 'old_index', '3': 4, '4': 1, '5': 5, '10': 'oldIndex'},
-    {'1': 'new_index', '3': 5, '4': 1, '5': 5, '10': 'newIndex'},
+    {
+      '1': 'items',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.accumora_rpc.v1.ChangeSortOrderRequest.Item',
+      '10': 'items'
+    },
+  ],
+  '3': [ChangeSortOrderRequest_Item$json],
+};
+
+@$core.Deprecated('Use changeSortOrderRequestDescriptor instead')
+const ChangeSortOrderRequest_Item$json = {
+  '1': 'Item',
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'index', '3': 2, '4': 1, '5': 5, '10': 'index'},
   ],
 };
 
 /// Descriptor for `ChangeSortOrderRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List changeSortOrderRequestDescriptor = $convert.base64Decode(
     'ChZDaGFuZ2VTb3J0T3JkZXJSZXF1ZXN0Eh0KCnRhYmxlX25hbWUYASABKAlSCXRhYmxlTmFtZR'
-    'IVCgZvbGRfaWQYAiABKAlSBW9sZElkEhUKBm5ld19pZBgDIAEoCVIFbmV3SWQSGwoJb2xkX2lu'
-    'ZGV4GAQgASgFUghvbGRJbmRleBIbCgluZXdfaW5kZXgYBSABKAVSCG5ld0luZGV4');
+    'JCCgVpdGVtcxgCIAMoCzIsLmFjY3Vtb3JhX3JwYy52MS5DaGFuZ2VTb3J0T3JkZXJSZXF1ZXN0'
+    'Lkl0ZW1SBWl0ZW1zGiwKBEl0ZW0SDgoCaWQYASABKAlSAmlkEhQKBWluZGV4GAIgASgFUgVpbm'
+    'RleA==');
 
 @$core.Deprecated('Use changeSortOrderResponseDescriptor instead')
 const ChangeSortOrderResponse$json = {

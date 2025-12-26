@@ -18,20 +18,84 @@ import 'types.pb.dart' as $1;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
+class ChangeSortOrderRequest_Item extends $pb.GeneratedMessage {
+  factory ChangeSortOrderRequest_Item({
+    $core.String? id,
+    $core.int? index,
+  }) {
+    final result = create();
+    if (id != null) result.id = id;
+    if (index != null) result.index = index;
+    return result;
+  }
+
+  ChangeSortOrderRequest_Item._();
+
+  factory ChangeSortOrderRequest_Item.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory ChangeSortOrderRequest_Item.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ChangeSortOrderRequest.Item',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aI(2, _omitFieldNames ? '' : 'index')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ChangeSortOrderRequest_Item clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ChangeSortOrderRequest_Item copyWith(
+          void Function(ChangeSortOrderRequest_Item) updates) =>
+      super.copyWith(
+              (message) => updates(message as ChangeSortOrderRequest_Item))
+          as ChangeSortOrderRequest_Item;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ChangeSortOrderRequest_Item create() =>
+      ChangeSortOrderRequest_Item._();
+  @$core.override
+  ChangeSortOrderRequest_Item createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static ChangeSortOrderRequest_Item getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ChangeSortOrderRequest_Item>(create);
+  static ChangeSortOrderRequest_Item? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get index => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set index($core.int value) => $_setSignedInt32(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasIndex() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearIndex() => $_clearField(2);
+}
+
 class ChangeSortOrderRequest extends $pb.GeneratedMessage {
   factory ChangeSortOrderRequest({
     $core.String? tableName,
-    $core.String? oldId,
-    $core.String? newId,
-    $core.int? oldIndex,
-    $core.int? newIndex,
+    $core.Iterable<ChangeSortOrderRequest_Item>? items,
   }) {
     final result = create();
     if (tableName != null) result.tableName = tableName;
-    if (oldId != null) result.oldId = oldId;
-    if (newId != null) result.newId = newId;
-    if (oldIndex != null) result.oldIndex = oldIndex;
-    if (newIndex != null) result.newIndex = newIndex;
+    if (items != null) result.items.addAll(items);
     return result;
   }
 
@@ -50,10 +114,8 @@ class ChangeSortOrderRequest extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'tableName')
-    ..aOS(2, _omitFieldNames ? '' : 'oldId')
-    ..aOS(3, _omitFieldNames ? '' : 'newId')
-    ..aI(4, _omitFieldNames ? '' : 'oldIndex')
-    ..aI(5, _omitFieldNames ? '' : 'newIndex')
+    ..pPM<ChangeSortOrderRequest_Item>(2, _omitFieldNames ? '' : 'items',
+        subBuilder: ChangeSortOrderRequest_Item.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -86,40 +148,7 @@ class ChangeSortOrderRequest extends $pb.GeneratedMessage {
   void clearTableName() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get oldId => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set oldId($core.String value) => $_setString(1, value);
-  @$pb.TagNumber(2)
-  $core.bool hasOldId() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearOldId() => $_clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.String get newId => $_getSZ(2);
-  @$pb.TagNumber(3)
-  set newId($core.String value) => $_setString(2, value);
-  @$pb.TagNumber(3)
-  $core.bool hasNewId() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearNewId() => $_clearField(3);
-
-  @$pb.TagNumber(4)
-  $core.int get oldIndex => $_getIZ(3);
-  @$pb.TagNumber(4)
-  set oldIndex($core.int value) => $_setSignedInt32(3, value);
-  @$pb.TagNumber(4)
-  $core.bool hasOldIndex() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearOldIndex() => $_clearField(4);
-
-  @$pb.TagNumber(5)
-  $core.int get newIndex => $_getIZ(4);
-  @$pb.TagNumber(5)
-  set newIndex($core.int value) => $_setSignedInt32(4, value);
-  @$pb.TagNumber(5)
-  $core.bool hasNewIndex() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearNewIndex() => $_clearField(5);
+  $pb.PbList<ChangeSortOrderRequest_Item> get items => $_getList(1);
 }
 
 class ChangeSortOrderResponse extends $pb.GeneratedMessage {
