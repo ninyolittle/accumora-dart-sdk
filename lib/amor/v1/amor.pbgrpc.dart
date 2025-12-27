@@ -240,6 +240,7 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$addRoomGroup, request, options: options);
   }
 
+  /// GetRoomGroups retrieves room groups for a specific accommodation
   $grpc.ResponseFuture<$0.GetRoomGroupsResponse> getRoomGroups(
     $0.GetRoomGroupsRequest request, {
     $grpc.CallOptions? options,
