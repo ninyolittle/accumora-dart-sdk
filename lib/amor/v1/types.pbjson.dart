@@ -38,6 +38,23 @@ final $typed_data.Uint8List colorDescriptor = $convert.base64Decode(
     'VFThADEgoKBllFTExPVxAEEgoKBk9SQU5HRRAFEgoKBlBVUlBMRRAGEgkKBUJMQUNLEAcSCQoF'
     'V0hJVEUQCBIICgRHUkFZEAk=');
 
+@$core.Deprecated('Use roomGroupDescriptor instead')
+const RoomGroup$json = {
+  '1': 'RoomGroup',
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'accommodation_id', '3': 3, '4': 1, '5': 9, '10': 'accommodationId'},
+    {'1': 'room_ids', '3': 4, '4': 3, '5': 9, '10': 'roomIds'},
+  ],
+};
+
+/// Descriptor for `RoomGroup`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List roomGroupDescriptor = $convert.base64Decode(
+    'CglSb29tR3JvdXASDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSKQoQYWNjb2'
+    '1tb2RhdGlvbl9pZBgDIAEoCVIPYWNjb21tb2RhdGlvbklkEhkKCHJvb21faWRzGAQgAygJUgdy'
+    'b29tSWRz');
+
 @$core.Deprecated('Use notificationDescriptor instead')
 const Notification$json = {
   '1': 'Notification',

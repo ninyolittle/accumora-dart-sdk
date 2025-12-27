@@ -21,6 +21,90 @@ export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'types.pbenum.dart';
 
+class RoomGroup extends $pb.GeneratedMessage {
+  factory RoomGroup({
+    $core.String? id,
+    $core.String? name,
+    $core.String? accommodationId,
+    $core.Iterable<$core.String>? roomIds,
+  }) {
+    final result = create();
+    if (id != null) result.id = id;
+    if (name != null) result.name = name;
+    if (accommodationId != null) result.accommodationId = accommodationId;
+    if (roomIds != null) result.roomIds.addAll(roomIds);
+    return result;
+  }
+
+  RoomGroup._();
+
+  factory RoomGroup.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RoomGroup.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RoomGroup',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'name')
+    ..aOS(3, _omitFieldNames ? '' : 'accommodationId')
+    ..pPS(4, _omitFieldNames ? '' : 'roomIds')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RoomGroup clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RoomGroup copyWith(void Function(RoomGroup) updates) =>
+      super.copyWith((message) => updates(message as RoomGroup)) as RoomGroup;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RoomGroup create() => RoomGroup._();
+  @$core.override
+  RoomGroup createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static RoomGroup getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RoomGroup>(create);
+  static RoomGroup? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get name => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set name($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearName() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get accommodationId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set accommodationId($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasAccommodationId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearAccommodationId() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $pb.PbList<$core.String> get roomIds => $_getList(3);
+}
+
 class Notification extends $pb.GeneratedMessage {
   factory Notification({
     $core.String? id,

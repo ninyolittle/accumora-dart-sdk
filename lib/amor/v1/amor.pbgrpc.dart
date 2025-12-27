@@ -232,6 +232,14 @@ class ProjectAmorClient extends $grpc.Client {
     return $createUnaryCall(_$changeSortOrder, request, options: options);
   }
 
+  /// AddRoomGroup creates a new room group with the provided details
+  $grpc.ResponseFuture<$1.RoomGroup> addRoomGroup(
+    $0.AddRoomGroupRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$addRoomGroup, request, options: options);
+  }
+
   // method descriptors
 
   static final _$addAccommodation =
@@ -355,6 +363,11 @@ class ProjectAmorClient extends $grpc.Client {
           '/accumora_rpc.v1.ProjectAmor/ChangeSortOrder',
           ($0.ChangeSortOrderRequest value) => value.writeToBuffer(),
           $0.ChangeSortOrderResponse.fromBuffer);
+  static final _$addRoomGroup =
+      $grpc.ClientMethod<$0.AddRoomGroupRequest, $1.RoomGroup>(
+          '/accumora_rpc.v1.ProjectAmor/AddRoomGroup',
+          ($0.AddRoomGroupRequest value) => value.writeToBuffer(),
+          $1.RoomGroup.fromBuffer);
 }
 
 @$pb.GrpcServiceName('accumora_rpc.v1.ProjectAmor')
@@ -564,6 +577,14 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.ChangeSortOrderRequest.fromBuffer(value),
         ($0.ChangeSortOrderResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.AddRoomGroupRequest, $1.RoomGroup>(
+        'AddRoomGroup',
+        addRoomGroup_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.AddRoomGroupRequest.fromBuffer(value),
+        ($1.RoomGroup value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.Accommodation> addAccommodation_Pre($grpc.ServiceCall $call,
@@ -772,4 +793,12 @@ abstract class ProjectAmorServiceBase extends $grpc.Service {
 
   $async.Future<$0.ChangeSortOrderResponse> changeSortOrder(
       $grpc.ServiceCall call, $0.ChangeSortOrderRequest request);
+
+  $async.Future<$1.RoomGroup> addRoomGroup_Pre($grpc.ServiceCall $call,
+      $async.Future<$0.AddRoomGroupRequest> $request) async {
+    return addRoomGroup($call, await $request);
+  }
+
+  $async.Future<$1.RoomGroup> addRoomGroup(
+      $grpc.ServiceCall call, $0.AddRoomGroupRequest request);
 }
