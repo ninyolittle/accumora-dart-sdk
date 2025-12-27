@@ -45,17 +45,16 @@ const RoomGroup$json = {
     {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
     {'1': 'accommodation_id', '3': 3, '4': 1, '5': 9, '10': 'accommodationId'},
-    {'1': 'room_ids', '3': 4, '4': 3, '5': 9, '10': 'roomIds'},
     {
       '1': 'description',
-      '3': 5,
+      '3': 4,
       '4': 1,
       '5': 9,
       '9': 0,
       '10': 'description',
       '17': true
     },
-    {'1': 'parent', '3': 6, '4': 1, '5': 9, '9': 1, '10': 'parent', '17': true},
+    {'1': 'parent', '3': 5, '4': 1, '5': 9, '9': 1, '10': 'parent', '17': true},
   ],
   '8': [
     {'1': '_description'},
@@ -66,9 +65,9 @@ const RoomGroup$json = {
 /// Descriptor for `RoomGroup`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List roomGroupDescriptor = $convert.base64Decode(
     'CglSb29tR3JvdXASDgoCaWQYASABKAlSAmlkEhIKBG5hbWUYAiABKAlSBG5hbWUSKQoQYWNjb2'
-    '1tb2RhdGlvbl9pZBgDIAEoCVIPYWNjb21tb2RhdGlvbklkEhkKCHJvb21faWRzGAQgAygJUgdy'
-    'b29tSWRzEiUKC2Rlc2NyaXB0aW9uGAUgASgJSABSC2Rlc2NyaXB0aW9uiAEBEhsKBnBhcmVudB'
-    'gGIAEoCUgBUgZwYXJlbnSIAQFCDgoMX2Rlc2NyaXB0aW9uQgkKB19wYXJlbnQ=');
+    '1tb2RhdGlvbl9pZBgDIAEoCVIPYWNjb21tb2RhdGlvbklkEiUKC2Rlc2NyaXB0aW9uGAQgASgJ'
+    'SABSC2Rlc2NyaXB0aW9uiAEBEhsKBnBhcmVudBgFIAEoCUgBUgZwYXJlbnSIAQFCDgoMX2Rlc2'
+    'NyaXB0aW9uQgkKB19wYXJlbnQ=');
 
 @$core.Deprecated('Use notificationDescriptor instead')
 const Notification$json = {
