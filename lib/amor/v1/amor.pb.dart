@@ -24,12 +24,14 @@ class AddRoomGroupRequest extends $pb.GeneratedMessage {
     $core.String? description,
     $core.String? accommodationId,
     $core.Iterable<$core.String>? roomIds,
+    $core.String? parent,
   }) {
     final result = create();
     if (name != null) result.name = name;
     if (description != null) result.description = description;
     if (accommodationId != null) result.accommodationId = accommodationId;
     if (roomIds != null) result.roomIds.addAll(roomIds);
+    if (parent != null) result.parent = parent;
     return result;
   }
 
@@ -51,6 +53,7 @@ class AddRoomGroupRequest extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'description')
     ..aOS(3, _omitFieldNames ? '' : 'accommodationId')
     ..pPS(4, _omitFieldNames ? '' : 'roomIds')
+    ..aOS(5, _omitFieldNames ? '' : 'parent')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -101,6 +104,15 @@ class AddRoomGroupRequest extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(4)
   $pb.PbList<$core.String> get roomIds => $_getList(3);
+
+  @$pb.TagNumber(5)
+  $core.String get parent => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set parent($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasParent() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearParent() => $_clearField(5);
 }
 
 class ChangeSortOrderRequest_Item extends $pb.GeneratedMessage {
