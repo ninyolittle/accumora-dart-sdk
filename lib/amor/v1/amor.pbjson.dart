@@ -15,6 +15,39 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use getRoomGroupsRequestDescriptor instead')
+const GetRoomGroupsRequest$json = {
+  '1': 'GetRoomGroupsRequest',
+  '2': [
+    {'1': 'accommodation_id', '3': 1, '4': 1, '5': 9, '10': 'accommodationId'},
+  ],
+};
+
+/// Descriptor for `GetRoomGroupsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getRoomGroupsRequestDescriptor = $convert.base64Decode(
+    'ChRHZXRSb29tR3JvdXBzUmVxdWVzdBIpChBhY2NvbW1vZGF0aW9uX2lkGAEgASgJUg9hY2NvbW'
+    '1vZGF0aW9uSWQ=');
+
+@$core.Deprecated('Use getRoomGroupsResponseDescriptor instead')
+const GetRoomGroupsResponse$json = {
+  '1': 'GetRoomGroupsResponse',
+  '2': [
+    {
+      '1': 'room_groups',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.accumora_rpc.v1.RoomGroup',
+      '10': 'roomGroups'
+    },
+  ],
+};
+
+/// Descriptor for `GetRoomGroupsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getRoomGroupsResponseDescriptor = $convert.base64Decode(
+    'ChVHZXRSb29tR3JvdXBzUmVzcG9uc2USOwoLcm9vbV9ncm91cHMYASADKAsyGi5hY2N1bW9yYV'
+    '9ycGMudjEuUm9vbUdyb3VwUgpyb29tR3JvdXBz');
+
 @$core.Deprecated('Use addRoomGroupRequestDescriptor instead')
 const AddRoomGroupRequest$json = {
   '1': 'AddRoomGroupRequest',

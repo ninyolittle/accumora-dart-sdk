@@ -18,6 +18,112 @@ import 'types.pb.dart' as $1;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
+class GetRoomGroupsRequest extends $pb.GeneratedMessage {
+  factory GetRoomGroupsRequest({
+    $core.String? accommodationId,
+  }) {
+    final result = create();
+    if (accommodationId != null) result.accommodationId = accommodationId;
+    return result;
+  }
+
+  GetRoomGroupsRequest._();
+
+  factory GetRoomGroupsRequest.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetRoomGroupsRequest.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetRoomGroupsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'accommodationId')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetRoomGroupsRequest clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetRoomGroupsRequest copyWith(void Function(GetRoomGroupsRequest) updates) =>
+      super.copyWith((message) => updates(message as GetRoomGroupsRequest))
+          as GetRoomGroupsRequest;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetRoomGroupsRequest create() => GetRoomGroupsRequest._();
+  @$core.override
+  GetRoomGroupsRequest createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static GetRoomGroupsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetRoomGroupsRequest>(create);
+  static GetRoomGroupsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get accommodationId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set accommodationId($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasAccommodationId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAccommodationId() => $_clearField(1);
+}
+
+class GetRoomGroupsResponse extends $pb.GeneratedMessage {
+  factory GetRoomGroupsResponse({
+    $core.Iterable<$1.RoomGroup>? roomGroups,
+  }) {
+    final result = create();
+    if (roomGroups != null) result.roomGroups.addAll(roomGroups);
+    return result;
+  }
+
+  GetRoomGroupsResponse._();
+
+  factory GetRoomGroupsResponse.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory GetRoomGroupsResponse.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetRoomGroupsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'accumora_rpc.v1'),
+      createEmptyInstance: create)
+    ..pPM<$1.RoomGroup>(1, _omitFieldNames ? '' : 'roomGroups',
+        subBuilder: $1.RoomGroup.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetRoomGroupsResponse clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  GetRoomGroupsResponse copyWith(
+          void Function(GetRoomGroupsResponse) updates) =>
+      super.copyWith((message) => updates(message as GetRoomGroupsResponse))
+          as GetRoomGroupsResponse;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetRoomGroupsResponse create() => GetRoomGroupsResponse._();
+  @$core.override
+  GetRoomGroupsResponse createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static GetRoomGroupsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetRoomGroupsResponse>(create);
+  static GetRoomGroupsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $pb.PbList<$1.RoomGroup> get roomGroups => $_getList(0);
+}
+
 class AddRoomGroupRequest extends $pb.GeneratedMessage {
   factory AddRoomGroupRequest({
     $core.String? name,
