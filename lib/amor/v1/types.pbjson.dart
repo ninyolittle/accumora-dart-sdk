@@ -329,12 +329,22 @@ const Room$json = {
       '10': 'amenities'
     },
     {'1': 'visibility', '3': 9, '4': 1, '5': 8, '10': 'visibility'},
+    {
+      '1': 'group_id',
+      '3': 10,
+      '4': 1,
+      '5': 9,
+      '9': 3,
+      '10': 'groupId',
+      '17': true
+    },
   ],
   '3': [Room_Prices$json],
   '8': [
     {'1': '_description'},
     {'1': '_capacity'},
     {'1': '_photo_url'},
+    {'1': '_group_id'},
   ],
 };
 
@@ -371,10 +381,11 @@ final $typed_data.Uint8List roomDescriptor = $convert.base64Decode(
     'ljZXNSBnByaWNlcxIfCghjYXBhY2l0eRgGIAEoBUgBUghjYXBhY2l0eYgBARIgCglwaG90b191'
     'cmwYByABKAlIAlIIcGhvdG9VcmyIAQESNgoJYW1lbml0aWVzGAggAygLMhguYWNjdW1vcmFfcn'
     'BjLnYxLkFtZW5pdHlSCWFtZW5pdGllcxIeCgp2aXNpYmlsaXR5GAkgASgIUgp2aXNpYmlsaXR5'
-    'GqgBCgZQcmljZXMSGQoFZGFpbHkYASABKAFIAFIFZGFpbHmIAQESGwoGd2Vla2x5GAIgASgBSA'
-    'FSBndlZWtseYgBARIdCgdtb250aGx5GAMgASgBSAJSB21vbnRobHmIAQESGwoGeWVhcmx5GAQg'
-    'ASgBSANSBnllYXJseYgBAUIICgZfZGFpbHlCCQoHX3dlZWtseUIKCghfbW9udGhseUIJCgdfeW'
-    'Vhcmx5Qg4KDF9kZXNjcmlwdGlvbkILCglfY2FwYWNpdHlCDAoKX3Bob3RvX3VybA==');
+    'Eh4KCGdyb3VwX2lkGAogASgJSANSB2dyb3VwSWSIAQEaqAEKBlByaWNlcxIZCgVkYWlseRgBIA'
+    'EoAUgAUgVkYWlseYgBARIbCgZ3ZWVrbHkYAiABKAFIAVIGd2Vla2x5iAEBEh0KB21vbnRobHkY'
+    'AyABKAFIAlIHbW9udGhseYgBARIbCgZ5ZWFybHkYBCABKAFIA1IGeWVhcmx5iAEBQggKBl9kYW'
+    'lseUIJCgdfd2Vla2x5QgoKCF9tb250aGx5QgkKB195ZWFybHlCDgoMX2Rlc2NyaXB0aW9uQgsK'
+    'CV9jYXBhY2l0eUIMCgpfcGhvdG9fdXJsQgsKCV9ncm91cF9pZA==');
 
 @$core.Deprecated('Use userDescriptor instead')
 const User$json = {

@@ -647,6 +647,7 @@ class Room extends $pb.GeneratedMessage {
     $core.String? photoUrl,
     $core.Iterable<Amenity>? amenities,
     $core.bool? visibility,
+    $core.String? groupId,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -658,6 +659,7 @@ class Room extends $pb.GeneratedMessage {
     if (photoUrl != null) result.photoUrl = photoUrl;
     if (amenities != null) result.amenities.addAll(amenities);
     if (visibility != null) result.visibility = visibility;
+    if (groupId != null) result.groupId = groupId;
     return result;
   }
 
@@ -686,6 +688,7 @@ class Room extends $pb.GeneratedMessage {
     ..pPM<Amenity>(8, _omitFieldNames ? '' : 'amenities',
         subBuilder: Amenity.create)
     ..aOB(9, _omitFieldNames ? '' : 'visibility')
+    ..aOS(10, _omitFieldNames ? '' : 'groupId')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -782,6 +785,15 @@ class Room extends $pb.GeneratedMessage {
   $core.bool hasVisibility() => $_has(8);
   @$pb.TagNumber(9)
   void clearVisibility() => $_clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.String get groupId => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set groupId($core.String value) => $_setString(9, value);
+  @$pb.TagNumber(10)
+  $core.bool hasGroupId() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearGroupId() => $_clearField(10);
 }
 
 class User extends $pb.GeneratedMessage {
