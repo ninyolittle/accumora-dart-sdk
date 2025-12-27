@@ -20,22 +20,31 @@ const AddRoomGroupRequest$json = {
   '1': 'AddRoomGroupRequest',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'description', '3': 2, '4': 1, '5': 9, '10': 'description'},
+    {
+      '1': 'description',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'description',
+      '17': true
+    },
     {'1': 'accommodation_id', '3': 3, '4': 1, '5': 9, '10': 'accommodationId'},
     {'1': 'room_ids', '3': 4, '4': 3, '5': 9, '10': 'roomIds'},
-    {'1': 'parent', '3': 5, '4': 1, '5': 9, '9': 0, '10': 'parent', '17': true},
+    {'1': 'parent', '3': 5, '4': 1, '5': 9, '9': 1, '10': 'parent', '17': true},
   ],
   '8': [
+    {'1': '_description'},
     {'1': '_parent'},
   ],
 };
 
 /// Descriptor for `AddRoomGroupRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List addRoomGroupRequestDescriptor = $convert.base64Decode(
-    'ChNBZGRSb29tR3JvdXBSZXF1ZXN0EhIKBG5hbWUYASABKAlSBG5hbWUSIAoLZGVzY3JpcHRpb2'
-    '4YAiABKAlSC2Rlc2NyaXB0aW9uEikKEGFjY29tbW9kYXRpb25faWQYAyABKAlSD2FjY29tbW9k'
-    'YXRpb25JZBIZCghyb29tX2lkcxgEIAMoCVIHcm9vbUlkcxIbCgZwYXJlbnQYBSABKAlIAFIGcG'
-    'FyZW50iAEBQgkKB19wYXJlbnQ=');
+    'ChNBZGRSb29tR3JvdXBSZXF1ZXN0EhIKBG5hbWUYASABKAlSBG5hbWUSJQoLZGVzY3JpcHRpb2'
+    '4YAiABKAlIAFILZGVzY3JpcHRpb26IAQESKQoQYWNjb21tb2RhdGlvbl9pZBgDIAEoCVIPYWNj'
+    'b21tb2RhdGlvbklkEhkKCHJvb21faWRzGAQgAygJUgdyb29tSWRzEhsKBnBhcmVudBgFIAEoCU'
+    'gBUgZwYXJlbnSIAQFCDgoMX2Rlc2NyaXB0aW9uQgkKB19wYXJlbnQ=');
 
 @$core.Deprecated('Use changeSortOrderRequestDescriptor instead')
 const ChangeSortOrderRequest$json = {

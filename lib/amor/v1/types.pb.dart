@@ -27,12 +27,16 @@ class RoomGroup extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? accommodationId,
     $core.Iterable<$core.String>? roomIds,
+    $core.String? description,
+    $core.String? parent,
   }) {
     final result = create();
     if (id != null) result.id = id;
     if (name != null) result.name = name;
     if (accommodationId != null) result.accommodationId = accommodationId;
     if (roomIds != null) result.roomIds.addAll(roomIds);
+    if (description != null) result.description = description;
+    if (parent != null) result.parent = parent;
     return result;
   }
 
@@ -54,6 +58,8 @@ class RoomGroup extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'name')
     ..aOS(3, _omitFieldNames ? '' : 'accommodationId')
     ..pPS(4, _omitFieldNames ? '' : 'roomIds')
+    ..aOS(5, _omitFieldNames ? '' : 'description')
+    ..aOS(6, _omitFieldNames ? '' : 'parent')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -103,6 +109,24 @@ class RoomGroup extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(4)
   $pb.PbList<$core.String> get roomIds => $_getList(3);
+
+  @$pb.TagNumber(5)
+  $core.String get description => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set description($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasDescription() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearDescription() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get parent => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set parent($core.String value) => $_setString(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasParent() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearParent() => $_clearField(6);
 }
 
 class Notification extends $pb.GeneratedMessage {
